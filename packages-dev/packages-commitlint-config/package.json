@@ -1,11 +1,13 @@
 {
   "name": "mb-commitlint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Git lint",
   "scripts": {
     "clear": "rm -fr node_modules"
   },
-  "keywords": [],
+  "keywords": [
+    "commitlint"
+  ],
   "author": "LiYong",
   "type": "module",
   "main": "./index.mjs",
