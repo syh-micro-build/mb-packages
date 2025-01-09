@@ -1,0 +1,6 @@
+{
+  // 启用文件嵌套功能。这意味着在资源管理器中，VS Code 会根据某些文件的关系（例如，组件文件与其测试文件，或主文件与它的子文件）将文件组织成嵌套结构，从而使你能够以层次化的方式查看文件。
+  "explorer.fileNesting.enabled": true,
+  // 这个设置控制是否在嵌套文件时展开文件
+  "explorer.fileNesting.expand": false
+}

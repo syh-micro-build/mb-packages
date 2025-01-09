@@ -1,0 +1,3 @@
+# https://pnpm.io/zh/next/pnpm-workspace_yaml
+packages:
+  - packages*/**
