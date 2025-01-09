@@ -1,0 +1,31 @@
+{
+  "name": "mb-prettier-config",
+  "version": "1.0.2",
+  "description": "",
+  "main": "./index.mjs",
+  "module": "./index.mjs",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "default": "./index.mjs"
+    }
+  },
+  "scripts": {
+    "clear": "rm -fr node_modules",
+    "lint": "prettier . --write"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "keywords": [
+    "prettier",
+    "mb-prettier-config",
+    "mb-prettier"
+  ],
+  "type": "module",
+  "author": "LiYong",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.4.2"
+  }
+}
