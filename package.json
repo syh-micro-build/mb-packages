@@ -4,10 +4,9 @@
   "description": "micro-build-packages",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky"
   },
-  "author": "",
+  "author": "LiYong",
   "license": "ISC",
   "type": "module",
   "engines": {
