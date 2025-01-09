@@ -1,17 +1,30 @@
 {
   "name": "mb-commitlint-config",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Git lint",
   "scripts": {
     "clear": "rm -fr node_modules"
   },
   "keywords": [],
-  "author": "",
+  "author": "LiYong",
+  "type": "module",
+  "main": "./index.mjs",
+  "module": "./index.mjs",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "default": "./index.mjs"
+    }
+  },
   "license": "ISC",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   "devDependencies": {
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
-    "commitlint-plugin-function-rules": "^4.0.1"
+    "commitlint-plugin-function-rules": "^4.0.1",
+    "cz-git": "^1.11.0",
+    "czg": "^1.11.0"
   }
 }
