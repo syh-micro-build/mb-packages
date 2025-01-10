@@ -32,7 +32,7 @@ export default {
   semi: true,
 
   // 使用单引号（除非是字符串内部有单引号时）
-  singleQuote: true,
+  // singleQuote: true,
 
   // 对象和数组的尾部是否添加逗号
   trailingComma: 'none',
