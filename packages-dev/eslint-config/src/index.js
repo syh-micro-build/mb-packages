@@ -1,9 +1,11 @@
 import {
-  javascript
+  javascript,
+  typescript
 } from "./config/index.js";
 
 const _default = [
-  javascript
+  javascript,
+  typescript
 ];
 
 export default _default;

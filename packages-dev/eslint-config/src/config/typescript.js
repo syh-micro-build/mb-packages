@@ -146,7 +146,7 @@ export default {
       ignoreRestSiblings: true
     }],
 
-    "@typescript-eslint/indent": ["error", 2, {
+    "indent": ["error", 2, {
       SwitchCase: 1,
       ArrayExpression: 1,
       MemberExpression: 2,
