@@ -1,23 +1,26 @@
 {
-  "name": "mb-eslint-conf",
+  "name": "mb-eslint-config",
   "version": "1.0.0",
-  "description": "Eslint",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "Eslint 的规则配置",
   "keywords": [
-    "eslint"
+    "eslint",
+    "eslint-config",
+    "conf"
   ],
-  "author": "",
   "license": "ISC",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
+  "author": "LiYong",
+  "type": "module",
+  "scripts": {
+    "clear": "rm -fr node_modules",
+    "lint": "pnpm eslint .",
+    "test": "eslint \"./test/**/*.{css,tsx,vue,ts,js,html}\" --fix"
   },
-  "devDependencies": {
-    "eslint": "^9.17.0",
-    "eslint-plugin-command": "^2.0.7",
-    "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import": "^2.31.0"
+  "main": "./src/index.js",
+  "module": "./index.mjs",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "default": "./index.mjs"
+    }
   }
 }
