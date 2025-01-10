@@ -4,7 +4,8 @@ import {
   ignores,
   command,
   comments,
-  jsdoc
+  jsdoc,
+  jsonc
 } from "./config/index.js";
 
 const DEFAULT = [
@@ -13,7 +14,8 @@ const DEFAULT = [
   ignores,
   command,
   comments,
-  jsdoc
+  jsdoc,
+  ...jsonc
 ];
 
 export default DEFAULT;
