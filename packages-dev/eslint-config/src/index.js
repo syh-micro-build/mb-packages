@@ -5,7 +5,9 @@ import {
   command,
   comments,
   jsdoc,
-  jsonc
+  jsonc,
+  regexp,
+  perfectionist
 } from "./config/index.js";
 
 const DEFAULT = [
@@ -15,7 +17,9 @@ const DEFAULT = [
   command,
   comments,
   jsdoc,
-  ...jsonc
+  ...jsonc,
+  regexp,
+  perfectionist
 ];
 
 export default DEFAULT;
