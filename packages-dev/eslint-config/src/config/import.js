@@ -1,11 +1,11 @@
-import js from "@eslint/js";
-import importPlugin from "eslint-plugin-import";
-
 /**
  * 介绍
  *
  * https://www.npmjs.com/package/eslint-plugin-import
  */
+
+import js from "@eslint/js";
+import importPlugin from "eslint-plugin-import";
 
 export default [
 
@@ -37,14 +37,11 @@ export default [
       // 强制使用命名空间导入（例如：import * as X from 'x'）
       "import/namespace": "off",
 
-      // 禁止无效的路径片段（例如：import './foo/../bar'）
-      "import/no-useless-path-segments": 1, // 设置为警告级别
-
       // 强制将导出语句放在文件的最后
       "import/exports-last": 1, // 设置为警告级别
 
       // 配置模块导入的顺序
-      "import/order": ["error", {
+      "import/order": ["off", {
         groups: [
           "builtin", // Node.js 内建模块（例如 fs, path 等）
           "external", // 外部模块（例如 react, lodash 等）
@@ -77,7 +74,7 @@ export default [
         pathGroupsExcludedImportTypes: [],
 
         // 组与组之间必须加空行
-        "newlines-between": "always",
+        "newlines-between": "always"
       }],
 
       // TODO 处理特殊报错
@@ -87,7 +84,9 @@ export default [
       "import/no-duplicates": "off",
       "import/no-self-import": "off",
       "import/no-named-as-default": "off",
-      "import/no-named-as-default-member": "off"
+      "import/no-named-as-default-member": "off",
+      "import/named": "off",
+      "import/no-useless-path-segments": "off"
     }
   }
 ];
