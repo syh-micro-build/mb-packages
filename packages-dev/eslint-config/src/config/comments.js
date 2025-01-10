@@ -1,3 +1,8 @@
+/**
+ * 介绍
+ *
+ * https://github.com/mysticatea/eslint-plugin-eslint-comments
+ */
 import eslintComments from "eslint-plugin-eslint-comments";
 
 export default {
