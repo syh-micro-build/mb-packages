@@ -1,3 +1,8 @@
-import EsLint from "./src/index.js";
+import EsLint, {
+  vue
+} from "./src/index.js";
 
-export default EsLint;
+export default [
+  ...EsLint,
+  vue
+];

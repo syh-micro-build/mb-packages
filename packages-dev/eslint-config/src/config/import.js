@@ -2,6 +2,8 @@
  * 介绍
  *
  * https://www.npmjs.com/package/eslint-plugin-import
+ *
+ * eslint-plugin-import-x 后期考虑使用它
  */
 
 import js from "@eslint/js";
