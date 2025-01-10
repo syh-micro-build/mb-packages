@@ -1,13 +1,15 @@
 import {
   javascript,
   typescript,
-  ignores
+  ignores,
+  command
 } from "./config/index.js";
 
 const DEFAULT = [
   javascript,
   typescript,
-  ignores
+  ignores,
+  command
 ];
 
 export default DEFAULT;
