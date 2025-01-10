@@ -43,18 +43,12 @@ export default {
         selector: "function"
       },
       {
-        filter: {
-          match: false,
-          regex: "[A-Z\\d]__[A-Z\\d]"
-        },
-
-        // filter: {
-        //   match: true,
-        //   regex: "_[A-Z\\d]"
-        // },
-
+        selector: "variable",
         format: ["strictCamelCase", "StrictPascalCase", "UPPER_CASE"],
-        selector: "variable"
+        filter: {
+          regex: "[A-Z\\d]__[A-Z\\d]",
+          match: false
+        }
       },
       {
         format: ["strictCamelCase"],

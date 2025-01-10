@@ -1,11 +1,13 @@
 import {
   javascript,
-  typescript
+  typescript,
+  ignores
 } from "./config/index.js";
 
-const _default = [
+const DEFAULT = [
   javascript,
-  typescript
+  typescript,
+  ignores
 ];
 
-export default _default;
+export default DEFAULT;
