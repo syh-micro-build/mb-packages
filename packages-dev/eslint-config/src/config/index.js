@@ -7,3 +7,4 @@ export { default as jsdoc } from "./jsdoc.js";
 export { default as jsonc } from "./jsonc.js";
 export { default as regexp } from "./regexp.js";
 export { default as perfectionist } from "./perfectionist.js";
+export { default as import } from "./import.js";

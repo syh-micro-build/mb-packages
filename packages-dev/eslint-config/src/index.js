@@ -7,7 +7,8 @@ import {
   jsdoc,
   jsonc,
   regexp,
-  perfectionist
+  perfectionist,
+  import as _import
 } from "./config/index.js";
 
 const DEFAULT = [
@@ -19,7 +20,8 @@ const DEFAULT = [
   jsdoc,
   ...jsonc,
   regexp,
-  perfectionist
+  perfectionist,
+  ..._import
 ];
 
 export default DEFAULT;
