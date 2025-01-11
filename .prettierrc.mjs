@@ -1,1 +1,1 @@
-export { default } from 'micro-prettier-config';
+export { default } from "mb-prettier-config";
