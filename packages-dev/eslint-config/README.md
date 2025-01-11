@@ -12,10 +12,25 @@ npm install -D eslint mb-eslint-config
 
 新建 `eslint.config.js`
 
+`基础`
+
 ```js
 import EsLint from "mb-eslint-config";
 
 export default EsLint;
+```
+
+`vue`
+
+```js
+import EsLint, {
+  vue
+} from "mb-eslint-config";
+
+export default [
+  ...EsLint,
+  vue
+];
 ```
 
 ## 插件
