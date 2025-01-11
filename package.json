@@ -16,10 +16,14 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
+  "workspaces": [
+    "packages*/**"
+  ],
   "devDependencies": {
     "@commitlint/cli": "catalog:",
     "depcheck": "^1.4.7",
     "husky": "catalog:",
+    "lerna": "^8.1.9",
     "mb-commitlint-config": "workspace:^"
   }
 }
