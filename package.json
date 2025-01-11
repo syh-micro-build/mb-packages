@@ -24,6 +24,9 @@
     "depcheck": "^1.4.7",
     "husky": "catalog:",
     "lerna": "^8.1.9",
-    "mb-commitlint-config": "workspace:^"
+    "mb-commitlint-config": "workspace:^",
+    "npm-package-json-lint": "^8.0.0",
+    "npm-package-json-lint-config-default": "^7.0.1",
+    "only-allow": "^1.2.1"
   }
 }
