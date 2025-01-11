@@ -50,7 +50,7 @@
     "depcheck": "catalog:",
     "eslint": "catalog:",
     "husky": "catalog:",
-    "lerna": "^8.1.9",
+    "lerna": "catalog:",
     "lint-staged": "catalog:",
     "markdownlint-cli2": "catalog:",
     "mb-commitlint-config": "workspace:^",

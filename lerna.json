@@ -1,16 +1,9 @@
 {
-  "npmClient": "pnpm",
-  "useWorkspaces": true,
   "version": "independent",
-  "command": {
-    "publish": {
-      "npmClient": "npm",
-      "allowBranch": [
-        "lerna/pub",
-        "lerna/pub-*"
-      ],
-      "ignoreChanges": ["stories/**", "tests/**", "*.md"],
-      "message": "build: lerna publish"
-    }
-  }
+  "npmClient": "pnpm",
+  "packages": [
+    "packages/*"
+  ],
+  "gitRemote": "origin",
+  "gitTagVersion": false
 }
