@@ -3,12 +3,12 @@
   "version": "1.0.1",
   "description": "",
   "type": "module",
-  "main": "./index.mjs",
-  "module": "./index.mjs",
+  "main": "./index.js",
+  "module": "./index.js",
   "exports": {
     ".": {
-      "import": "./index.mjs",
-      "default": "./index.mjs"
+      "import": "./index.js",
+      "default": "./index.js"
     }
   },
   "scripts": {
