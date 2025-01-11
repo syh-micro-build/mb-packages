@@ -1,5 +1,16 @@
 {
-  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
+  "npmClient": "pnpm",
+  "useWorkspaces": true,
   "version": "independent",
-  "npmClient": "pnpm"
+  "command": {
+    "publish": {
+      "npmClient": "npm",
+      "allowBranch": [
+        "lerna/pub",
+        "lerna/pub-*"
+      ],
+      "ignoreChanges": ["stories/**", "tests/**", "*.md"],
+      "message": "build: lerna publish"
+    }
+  }
 }
