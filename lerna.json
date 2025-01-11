@@ -18,7 +18,8 @@
         ".storybook",
         "stories",
         ".npmignore",
-        "**/node_modules/**"
+        "**/node_modules/**",
+        "pnpm-lock.yaml"
       ],
       "registry": "https://registry.npmjs.org/"
     }
