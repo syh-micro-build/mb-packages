@@ -20,6 +20,9 @@
   "scripts": {
     "clear": "rm -fr node_modules"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   "devDependencies": {
     "typescript": "catalog:"
   }
