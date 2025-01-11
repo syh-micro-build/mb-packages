@@ -18,7 +18,7 @@ import EsLint from "mb-eslint-config";
 export default EsLint;
 ```
 
-## Install 插件作用
+## 插件
 
 | 插件名 | 作用 |
 | :--- | :--- |

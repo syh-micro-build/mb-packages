@@ -2,7 +2,7 @@
   "version": "independent",
   "npmClient": "pnpm",
   "packages": [
-    "packages/*"
+    "packages*/*"
   ],
   "gitRemote": "origin",
   "gitTagVersion": false
