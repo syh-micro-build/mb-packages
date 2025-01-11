@@ -2,25 +2,19 @@
   "name": "mb-packages",
   "version": "1.0.0",
   "description": "micro-build-packages",
+  "license": "ISC",
+  "author": "LiYong",
+  "type": "module",
+
   "scripts": {
     "prepare": "husky",
     "clear": "pnpm --filter \"./packages-**\" clear && pnpm --filter \"./packages-**/**\" clear && rm -fr node_modules && pnpm run clear:store && pnpm run clear:lock",
     "clear:lock": "rm -fr pnpm-lock.yaml && rm -fr package-lock.json && rm -fr lerna-debug.log",
     "clear:store": "rm -fr .pnpm-store"
   },
-  "author": "LiYong",
-  "license": "ISC",
-  "type": "module",
-  "engines": {
-    "node": ">=22.0.0",
-    "pnpm": ">=9.15.0"
-  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
-  "workspaces": [
-    "packages*/**"
-  ],
   "devDependencies": {
     "@commitlint/cli": "catalog:",
     "depcheck": "catalog:",
@@ -37,5 +31,12 @@
     "only-allow": "catalog:",
     "prettier": "catalog:",
     "stylelint": "catalog:"
-  }
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=9.15.0"
+  },
+  "workspaces": [
+    "packages*/**"
+  ]
 }

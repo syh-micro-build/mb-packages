@@ -2,7 +2,18 @@
   "name": "mb-stylelint-config",
   "version": "1.0.1",
   "description": "",
+  "keywords": [
+    "stylelint",
+    "stylelint-config",
+    "mb-stylelint-config"
+  ],
+  "license": "ISC",
+  "author": "LiYong",
   "type": "module",
+  "scripts": {
+    "clear": "rm -fr node_modules",
+    "lint": "stylelint '**/*.css'"
+  },
   "main": "./index.js",
   "module": "./index.js",
   "exports": {
@@ -11,16 +22,9 @@
       "default": "./index.js"
     }
   },
-  "scripts": {
-    "clear": "rm -fr node_modules",
-    "lint": "stylelint '**/*.css'"
-  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
-  "keywords": [],
-  "author": "LiYong",
-  "license": "ISC",
   "devDependencies": {
     "@stylistic/stylelint-plugin": "catalog:",
     "postcss": "catalog:",

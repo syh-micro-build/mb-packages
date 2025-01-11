@@ -2,14 +2,15 @@
   "name": "mb-commitlint-config",
   "version": "1.0.1",
   "description": "Git lint",
-  "scripts": {
-    "clear": "rm -fr node_modules"
-  },
   "keywords": [
     "commitlint"
   ],
+  "license": "ISC",
   "author": "LiYong",
   "type": "module",
+  "scripts": {
+    "clear": "rm -fr node_modules"
+  },
   "main": "./index.mjs",
   "module": "./index.mjs",
   "exports": {
@@ -18,7 +19,6 @@
       "default": "./index.mjs"
     }
   },
-  "license": "ISC",
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },

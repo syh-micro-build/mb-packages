@@ -2,6 +2,18 @@
   "name": "mb-prettier-config",
   "version": "1.0.2",
   "description": "",
+  "keywords": [
+    "prettier",
+    "mb-prettier-config",
+    "mb-prettier"
+  ],
+  "license": "ISC",
+  "author": "LiYong",
+  "type": "module",
+  "scripts": {
+    "clear": "rm -fr node_modules",
+    "lint": "prettier . --write"
+  },
   "main": "./index.mjs",
   "module": "./index.mjs",
   "exports": {
@@ -10,21 +22,9 @@
       "default": "./index.mjs"
     }
   },
-  "scripts": {
-    "clear": "rm -fr node_modules",
-    "lint": "prettier . --write"
-  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
-  "keywords": [
-    "prettier",
-    "mb-prettier-config",
-    "mb-prettier"
-  ],
-  "type": "module",
-  "author": "LiYong",
-  "license": "ISC",
   "devDependencies": {
     "prettier": "catalog:"
   }

@@ -27,8 +27,9 @@ module.exports = {
     "require-keywords": "error",
     "require-license": "error",
     "require-repository": "error",
-    "version-format": "error",
-    
+    "version-format": "error"
+
+    /*
     'prefer-property-order': ['error', [
       // basic info
       'name',
@@ -84,5 +85,6 @@ module.exports = {
       'config',
       'scripts'
     ]]
+    */
   }
 };
