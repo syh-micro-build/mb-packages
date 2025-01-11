@@ -1,11 +1,36 @@
 {
   "name": "mb-packages",
   "version": "1.0.0",
-  "description": "micro-build-packages",
+  "description": "Micro build packages.",
+  "private": true,
+  "keywords": [
+    "Vue hooks",
+    "Vue Ui",
+    "Vue Components",
+    "Vue hooks",
+    "Vue config",
+    "Vue directives",
+    "Vue echarts",
+    "Element-plus extra",
+    "React hooks",
+    "React Ui",
+    "Storybook vue demo",
+    "Micro rc container",
+    "eslint-conf",
+    "stylelint-conf"
+  ],
+  "homepage": "https://github.com/syh-micro-build/mb-packages",
+  "bugs": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syh-micro-build/mb-packages"
+  },
   "license": "ISC",
-  "author": "LiYong",
+  "author": {
+    "email": "2236472089@qq.com",
+    "name": "Li Yong"
+  },
   "type": "module",
-
   "scripts": {
     "prepare": "husky",
     "clear": "pnpm --filter \"./packages-**\" clear && pnpm --filter \"./packages-**/**\" clear && rm -fr node_modules && pnpm run clear:store && pnpm run clear:lock",
@@ -21,6 +46,7 @@
     "eslint": "catalog:",
     "husky": "catalog:",
     "lerna": "catalog:",
+    "lint-staged": "^15.3.0",
     "markdownlint-cli2": "catalog:",
     "mb-commitlint-config": "workspace:^",
     "mb-eslint-config": "workspace:^",
@@ -38,5 +64,11 @@
   },
   "workspaces": [
     "packages*/**"
-  ]
+  ],
+  "lint-staged": {
+    "package.json": "npmPkgJsonLint",
+    "*.{js,ts,vue,tsx,jsx}": "eslint",
+    "*.{js,ts,tsx,css,vue}": "stylelint --fix --allow-empty-input",
+    "*.md": "markdownlint-cli2"
+  }
 }
