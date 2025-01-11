@@ -1,3 +1,3 @@
-import EsLint from "./src/index.js";
+import EsLint from "mb-eslint-config";
 
 export default EsLint;

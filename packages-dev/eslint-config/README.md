@@ -13,7 +13,7 @@ npm install -D eslint mb-eslint-config
 新建 `eslint.config.js`
 
 ```js
-import EsLint from "./src/index.js";
+import EsLint from "mb-eslint-config";
 
 export default EsLint;
 ```

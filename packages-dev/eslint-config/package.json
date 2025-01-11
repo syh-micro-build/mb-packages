@@ -1,6 +1,6 @@
 {
   "name": "mb-eslint-config",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Eslint 的规则配置",
   "keywords": [
     "eslint",
@@ -16,11 +16,11 @@
     "test": "eslint \"./test/**/*.{css,tsx,vue,ts,js,html}\" --fix"
   },
   "main": "./src/index.js",
-  "module": "./index.mjs",
+  "module": "./src/index.js",
   "exports": {
     ".": {
-      "import": "./index.mjs",
-      "default": "./index.mjs"
+      "import": "./src/index.js",
+      "default": "./src/index.js"
     }
   },
   "publishConfig": {

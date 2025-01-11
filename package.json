@@ -2,7 +2,6 @@
   "name": "mb-packages",
   "version": "1.0.0",
   "description": "micro-build-packages",
-  "main": "index.js",
   "scripts": {
     "prepare": "husky"
   },
