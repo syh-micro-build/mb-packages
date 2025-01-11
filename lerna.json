@@ -1,27 +1,5 @@
 {
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "version": "independent",
-  "npmClient": "pnpm",
-  "packages": [
-    "packages*/**"
-  ],
-  "command": {
-    "bootstrap": {
-      "npmClientArgs": [
-        "--no-package-lock"
-      ]
-    },
-    "publish": {
-      "conventionalCommits": false,
-      "message": "[skip ci] chore: release",
-      "ignoreChanges": [
-        "*.md",
-        ".storybook",
-        "stories",
-        ".npmignore",
-        "**/node_modules/**",
-        "pnpm-lock.yaml"
-      ],
-      "registry": "https://registry.npmjs.org/"
-    }
-  }
+  "npmClient": "pnpm"
 }

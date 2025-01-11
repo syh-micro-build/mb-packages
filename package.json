@@ -50,7 +50,7 @@
     "depcheck": "catalog:",
     "eslint": "catalog:",
     "husky": "catalog:",
-    "lerna": "catalog:",
+    "lerna": "^8.1.9",
     "lint-staged": "catalog:",
     "markdownlint-cli2": "catalog:",
     "mb-commitlint-config": "workspace:^",
@@ -67,9 +67,6 @@
     "node": ">=22.0.0",
     "pnpm": ">=9.15.0"
   },
-  "workspaces": [
-    "packages*/**"
-  ],
   "lint-staged": {
     "package.json": "npmPkgJsonLint",
     "*.{js,ts,vue,tsx,jsx}": "eslint",
