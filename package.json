@@ -52,7 +52,7 @@
     "eslint": "catalog:",
     "husky": "catalog:",
     "lerna": "catalog:",
-    "lint-staged": "^15.3.0",
+    "lint-staged": "catalog:",
     "markdownlint-cli2": "catalog:",
     "mb-commitlint-config": "workspace:^",
     "mb-eslint-config": "workspace:^",
