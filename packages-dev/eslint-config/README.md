@@ -29,7 +29,3 @@ export default EsLint;
 | @typescript-eslint/parser | 为 TypeScript 项目提供 ESLint 解析器，确保 ESLint 能够理解和解析 TypeScript 代码 |
 | eslint-plugin-unused-imports | 用于查找并删除未使用的导入语句，保持代码整洁 |
 | globals | 定义全局变量，避免在 ESLint 检查时误报未定义的全局变量 |
-
-
-    "eslint-plugin-command": "^2.1.0",
-    "eslint-plugin-eslint-comments": "^3.2.0",

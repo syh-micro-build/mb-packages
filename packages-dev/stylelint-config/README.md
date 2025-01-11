@@ -12,10 +12,25 @@ npm install -D stylelint mb-stylelint-config
 
 ## 使用
 
-新建 `stylelint.config.mjs`
+### 1、普通项目新建 `stylelint.config.mjs`
 
 ```js
 
+export default {
+  extends: [
+    "mb-stylelint-config"
+  ]
+};
+```
+
+### 2、vue 项目新建 `stylelint.config.mjs`
+
+```js
+export default {
+  extends: [
+    "mb-stylelint-config/vue"
+  ]
+};
 ```
 
 ## 忽略
@@ -27,3 +42,17 @@ dist
 public
 node_modules
 ```
+
+## 插件作用
+
+| 插件 | 作用 |
+| :--- | :--- |
+| stylelint | CSS 静态代码分析工具 |
+| @stylistic/stylelint-plugin | 自定义 Stylelint 规则扩展 |
+| postcss | CSS 预处理工具 |
+| postcss-html | HTML 预处理工具 |
+| stylelint-config-recess-order | 样式属性排序规则 |
+| stylelint-config-recommended | 推荐的 Stylelint 配置 |
+| stylelint-config-standard | 标准规则配置，提供更严格风格约束 |
+| stylelint-order | 样式属性排序规则 |
+| stylelint-prettier | 结合 Prettier 格式化工具 |
