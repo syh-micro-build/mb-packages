@@ -17,8 +17,8 @@
     "registry": "https://registry.npmjs.org"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.6.1",
-    "husky": "^9.1.7",
+    "@commitlint/cli": "catalog:",
+    "husky": "catalog:",
     "mb-commitlint-config": "workspace:^"
   }
 }

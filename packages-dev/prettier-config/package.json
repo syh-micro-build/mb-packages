@@ -26,6 +26,6 @@
   "author": "LiYong",
   "license": "ISC",
   "devDependencies": {
-    "prettier": "^3.4.2"
+    "prettier": "catalog:"
   }
 }
