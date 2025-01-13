@@ -4,5 +4,5 @@ import EsLint, {
 
 export default [
   ...EsLint,
-  vue
+  ...vue
 ];

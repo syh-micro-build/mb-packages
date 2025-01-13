@@ -29,7 +29,7 @@ import EsLint, {
 
 export default [
   ...EsLint,
-  vue
+  ...vue
 ];
 ```
 
@@ -55,6 +55,9 @@ export default [
 | eslint-plugin-unused-imports | 用于检测未使用的导入语句 |
 |  |  |
 | eslint-plugin-vue | 专为 Vue.js 提供的 ESLint 插件，支持模板和脚本的规则分析 |
+| @vue/eslint-config-typescript | Vue 官方的 TypeScript 配置，为 TypeScript 项目和 Vue 代码提供支持 |
+| <del> @vue/eslint-config-prettier/skip-formatting</del> | 禁用 ESLint 和 Prettier 冲突的格式化规则 |
+| eslint-plugin-oxlint | Oxlint 提供的一组代码风格和质量保证的规则 |
 
 ## TODO List
 

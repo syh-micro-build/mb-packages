@@ -1,6 +1,6 @@
 {
   "name": "mb-eslint-config",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Eslint 的规则配置",
   "keywords": [
     "eslint",
@@ -37,12 +37,14 @@
     "@types/eslint": "catalog:",
     "@typescript-eslint/eslint-plugin": "catalog:",
     "@typescript-eslint/parser": "catalog:",
+    "@vue/eslint-config-typescript": "catalog:",
     "eslint": "catalog:",
     "eslint-plugin-command": "catalog:",
     "eslint-plugin-eslint-comments": "catalog:",
     "eslint-plugin-import": "catalog:",
     "eslint-plugin-jsdoc": "catalog:",
     "eslint-plugin-jsonc": "catalog:",
+    "eslint-plugin-oxlint": "catalog:",
     "eslint-plugin-perfectionist": "catalog:",
     "eslint-plugin-prettier": "catalog:",
     "eslint-plugin-regexp": "catalog:",
