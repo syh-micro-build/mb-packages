@@ -6,6 +6,7 @@ import parserTs from "@typescript-eslint/parser";
 import oxlint from "eslint-plugin-oxlint";
 
 export default [
+  ...pluginVue.configs["flat/essential"],
 
   // TODO 打开这个会影响 package.json，暂时关闭
   // ...vueTsEslintConfig(),
@@ -36,7 +37,6 @@ export default [
       ...pluginVue.configs["vue3-essential"].rules,
       ...pluginVue.configs["vue3-strongly-recommended"].rules,
       ...pluginVue.configs["vue3-recommended"].rules,
-      ...pluginVue.configs["flat/essential"].rules,
 
       /**
        * 覆盖 js 部分规则
