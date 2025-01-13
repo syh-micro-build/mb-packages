@@ -33,6 +33,8 @@ export default [
 ];
 ```
 
+注：推荐配合 [mb-prettier-config](https://www.npmjs.com/package/mb-prettier-config) 一块使用。
+
 ## 插件
 
 | 插件名 | 作用 |
@@ -53,3 +55,49 @@ export default [
 | eslint-plugin-unused-imports | 用于检测未使用的导入语句 |
 |  |  |
 | eslint-plugin-vue | 专为 Vue.js 提供的 ESLint 插件，支持模板和脚本的规则分析 |
+
+## TODO List
+
+### 1）事件方法名
+
+- 当文件中只有一个 `click`、`change` 等事件时，方法名为：`handleClick`、`handleChange`
+
+  格式为：`handle事件名`
+
+- 当文件中有多个 `click`、`change` 等事件时，方法名为：`handleXxxClick`、`handleXxxChange`
+
+  格式为：`handle作用事件名`，例如：`handleCreateClick`、`handleEditClick`、`handle DeleteClick`
+
+### 2）变量方法名
+
+- 读取变量，使用 `get` 开头
+
+  格式：get变量名
+
+  例：getLoading
+
+- 设置变量，使用 `set` 开头
+
+  格式：set变量名
+
+  例：setLoading
+
+- 处理变量，使用 `transform` 开头
+
+  格式：transform变量名
+
+  例： transformtLoading
+
+- <del> 其他使用 `other` 开头 </del>
+
+  格式：other变量名
+
+  例：otherLoading
+
+### 3）处理接口返回数据
+
+- 使用 `fixData` 开头
+
+  格式：fixData 接口定义的方法名
+
+  例：fixDataList
