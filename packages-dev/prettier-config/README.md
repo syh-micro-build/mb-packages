@@ -16,6 +16,8 @@ npm i prettier mb-prettier-config -D
 export { default } from 'mb-prettier-config';
 ```
 
+注：：推荐配合 [mb-eslint-config](https://www.npmjs.com/package/mb-eslint-config) 一块使用。
+
 ## 忽略文件
 
 新建 `.prettierignore` 文件
