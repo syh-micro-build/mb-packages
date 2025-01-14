@@ -1,6 +1,6 @@
 {
   "name": "mb-stylelint-config",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "",
   "keywords": [
     "stylelint",
@@ -31,7 +31,7 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
-  "devDependencies": {
+  "dependencies": {
     "@stylistic/stylelint-plugin": "catalog:",
     "postcss": "catalog:",
     "postcss-html": "catalog:",

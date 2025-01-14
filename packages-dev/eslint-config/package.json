@@ -1,6 +1,6 @@
 {
   "name": "mb-eslint-config",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "Eslint 的规则配置",
   "keywords": [
     "eslint",
@@ -32,7 +32,7 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
-  "devDependencies": {
+  "dependencies": {
     "@eslint/js": "catalog:",
     "@types/eslint": "catalog:",
     "@typescript-eslint/eslint-plugin": "catalog:",

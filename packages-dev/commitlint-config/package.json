@@ -1,6 +1,6 @@
 {
   "name": "mb-commitlint-config",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Git lint",
   "keywords": [
     "commitlint"
@@ -29,7 +29,7 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
-  "devDependencies": {
+  "dependencies": {
     "@commitlint/cli": "catalog:",
     "@commitlint/config-conventional": "catalog:",
     "commitlint-plugin-function-rules": "catalog:",
