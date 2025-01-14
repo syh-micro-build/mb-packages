@@ -47,6 +47,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "catalog:",
+    "cspell": "^8.17.2",
     "depcheck": "catalog:",
     "eslint": "catalog:",
     "husky": "catalog:",
