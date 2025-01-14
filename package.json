@@ -40,14 +40,15 @@
     "clear:store": "rm -fr .pnpm-store",
     "lint:eslint": "eslint \"./packages-**/**/*.{tsx,vue,ts,js}\" --fix",
     "lint:style": "stylelint \"./packages-**/**/*.{tsx,css,vue,ts}\" --fix --allow-empty-input --version",
-    "lint:md": "markdownlint-cli2 ./packages-**/**/*.md"
+    "lint:md": "markdownlint-cli2 ./packages-**/**/*.md",
+    "lint:cspell": "cspell lint **/*.ts **/README.md .changeset/*.md **/*.tsx **/*.vue --no-progress"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
   "devDependencies": {
     "@commitlint/cli": "catalog:",
-    "cspell": "^8.17.2",
+    "cspell": "catalog:",
     "depcheck": "catalog:",
     "eslint": "catalog:",
     "husky": "catalog:",

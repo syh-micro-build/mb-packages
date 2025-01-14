@@ -10,6 +10,7 @@ catalog:
   "@typescript-eslint/parser": ^8.19.1
   "@vue/eslint-config-typescript": ^14.2.0
   commitlint-plugin-function-rules: ^4.0.1
+  cspell: ^8.17.2
   cz-git: ^1.11.0
   czg: ^1.11.0
   depcheck: ^1.4.7
