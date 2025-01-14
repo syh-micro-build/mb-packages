@@ -73,6 +73,7 @@
     "package.json": "npmPkgJsonLint",
     "*.{js,ts,vue,tsx,jsx}": "eslint",
     "*.{js,ts,tsx,css,vue}": "stylelint --fix --allow-empty-input",
-    "*.md": "markdownlint-cli2"
+    "*.md": "markdownlint-cli2",
+    "*.{js,ts,vue,tsx,jsx,md}": "cspell --no-summary"
   }
 }
