@@ -9,7 +9,8 @@ import {
   regexp,
   perfectionist,
   import as _import,
-  vue
+  vue,
+  prettier
 } from "./config/index.js";
 
 const DEFAULT = [
@@ -22,7 +23,8 @@ const DEFAULT = [
   ...jsonc,
   regexp,
   perfectionist,
-  ..._import
+  ..._import,
+  prettier
 ];
 
 export default DEFAULT;
