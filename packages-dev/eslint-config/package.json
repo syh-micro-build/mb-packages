@@ -53,5 +53,8 @@
     "globals": "catalog:",
     "jsonc-eslint-parser": "catalog:",
     "vue-eslint-parser": "catalog:"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
   }
 }

@@ -23,6 +23,7 @@ export default {
   rules: {
     ...pluginTs.configs["eslint-recommended"].overrides?.[0].rules,
     ...pluginTs.configs.strict.rules,
+    ...pluginTs.configs.recommended.rules,
     "@typescript-eslint/ban-ts-comment": [
       "error",
       {
