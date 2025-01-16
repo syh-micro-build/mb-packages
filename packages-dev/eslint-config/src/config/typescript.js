@@ -16,7 +16,9 @@ export default {
       ecmaVersion: "latest",
       extraFileExtensions: [".vue"],
       jsxPragma: "React",
-      project: "**/tsconfig.*?.json",
+
+      // TODO Parsing error: ESLint was configured to run on `<tsconfigRootDir>/eslint.config.js` using `parserOptions.project`:
+      // project: "**/tsconfig.*?.json",
       sourceType: "module"
     }
   },
