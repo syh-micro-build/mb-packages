@@ -10,7 +10,8 @@ import {
   perfectionist,
   import as _import,
   vue,
-  prettier
+  prettier,
+  stylistic
 } from "./config/index.js";
 
 const DEFAULT = [
@@ -24,7 +25,8 @@ const DEFAULT = [
   regexp,
   perfectionist,
   ..._import,
-  prettier
+  prettier,
+  ...stylistic
 ];
 
 export default DEFAULT;

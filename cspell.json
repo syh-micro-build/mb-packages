@@ -15,5 +15,10 @@
     "**/*.spec.ts",
     "**/__tests__/**",
     "**/test/**"
+  ],
+  "ignoreWords": [
+    "oxlint",
+    "Oxlint",
+    "transformt"
   ]
 }

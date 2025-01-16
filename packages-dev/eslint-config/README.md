@@ -2,6 +2,8 @@
 
 [docs](https://eslint.nodejs.cn/)
 
+[ESLint Stylistic](https://eslint.style/)
+
 ## 安装
 
 ```bash
@@ -53,6 +55,8 @@ export default [
 | eslint-plugin-prettier | 结合 Prettier 代码格式化工具，确保代码风格的一致性 |
 | eslint-plugin-regexp | 针对正则表达式的优化和错误检测 |
 | eslint-plugin-unused-imports | 用于检测未使用的导入语句 |
+| @stylistic/eslint-plugin | 主要用于配置 JavaScript 代码风格 |
+| @stylistic/eslint-plugin-ts | 针对 TypeScript 项目，提供更精细的风格规则，用于控制 TypeScript 特有的语法 |
 |  |  |
 | eslint-plugin-vue | 专为 Vue.js 提供的 ESLint 插件，支持模板和脚本的规则分析 |
 | @vue/eslint-config-typescript | Vue 官方的 TypeScript 配置，为 TypeScript 项目和 Vue 代码提供支持 |

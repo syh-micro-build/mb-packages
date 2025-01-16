@@ -1,6 +1,9 @@
 import pluginTs from "@typescript-eslint/eslint-plugin";
 import parserTs from "@typescript-eslint/parser";
 
+/**
+ * TODO 后面改为 typescript-eslint
+ */
 export default {
   files: ["**/*.?([cm])[jt]s?(x)"],
   languageOptions: {

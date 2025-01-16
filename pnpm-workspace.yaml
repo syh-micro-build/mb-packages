@@ -4,6 +4,8 @@ catalog:
   "@commitlint/cli": ^19.6.1
   "@commitlint/config-conventional": ^19.6.0
   "@eslint/js": ^9.17.0
+  "@stylistic/eslint-plugin": ^2.13.0
+  "@stylistic/eslint-plugin-ts": ^2.13.0
   "@stylistic/stylelint-plugin": ^3.1.1
   "@types/eslint": ^9.6.1
   "@typescript-eslint/eslint-plugin": ^8.19.1
@@ -45,4 +47,5 @@ catalog:
   stylelint-order: ^6.0.4
   stylelint-prettier: ^5.0.2
   typescript: ^5.7.3
+  typescript-eslint: ^8.20.0
   vue-eslint-parser: ^9.4.3
