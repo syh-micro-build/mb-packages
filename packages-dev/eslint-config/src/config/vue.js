@@ -227,7 +227,7 @@ export default [
         }
       ],
       "vue/script-indent": [
-        "error",
+        "off",
         2,
         {
           baseIndent: 0,
