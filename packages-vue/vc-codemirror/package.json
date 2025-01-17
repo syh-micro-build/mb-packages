@@ -32,6 +32,7 @@
     "@storybook/addon-interactions": "catalog:",
     "@storybook/addon-onboarding": "catalog:",
     "@storybook/blocks": "catalog:",
+    "@storybook/manager-api": "catalog:",
     "@storybook/test": "catalog:",
     "@storybook/vue3": "catalog:",
     "@storybook/vue3-vite": "catalog:",

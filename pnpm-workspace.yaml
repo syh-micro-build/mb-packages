@@ -9,6 +9,7 @@ catalog:
   "@storybook/addon-interactions": ^8.5.0
   "@storybook/addon-onboarding": ^8.5.0
   "@storybook/blocks": ^8.5.0
+  "@storybook/manager-api": ^8.5.0
   "@storybook/test": ^8.5.0
   "@storybook/vue3": ^8.5.0
   "@storybook/vue3-vite": ^8.5.0
