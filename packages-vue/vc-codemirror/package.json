@@ -23,6 +23,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@vitejs/plugin-vue-jsx": "^4.1.1",
     "vue": "catalog:"
   },
   "devDependencies": {
