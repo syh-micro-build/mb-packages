@@ -86,5 +86,15 @@ module.exports = {
       'scripts'
     ]]
     */
-  }
+  },
+  ignore: [
+
+    // 这里列出需要忽略的文件或目录
+    "node_modules/**", // 忽略 node_modules 目录
+    "dist/**",          // 忽略 dist 目录
+    "*.md",             // 忽略所有 markdown 文件
+    "**/*.test.js",      // 忽略所有测试文件
+    "packages-demo-vue/**"
+  ],
+  debug: true
 };
