@@ -16,6 +16,7 @@
   },
   "type": "module",
   "scripts": {
+    "clear": "rm -fr node_modules",
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
