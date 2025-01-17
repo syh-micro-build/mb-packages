@@ -1,36 +1,44 @@
 {
-  "compilerOptions": {
+    "compilerOptions": {
       "composite": true,
       "target": "ESNext",
       "jsx": "preserve",
       "jsxImportSource": "vue",
       "lib": [
-          "ES2020",
-          "DOM",
-          "DOM.Iterable"
+        "ES2020",
+        "DOM",
+        "DOM.Iterable"
       ],
       "useDefineForClassFields": true,
+      "experimentalDecorators": true,
       "baseUrl": ".",
       "module": "ESNext",
       "moduleResolution": "Node",
       "resolveJsonModule": true,
       "allowJs": false,
       "strict": true,
+      "strictFunctionTypes": false,
+      "noImplicitAny": false,
       "noImplicitThis": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
       "declaration": true,
       "sourceMap": true,
       "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
       "forceConsistentCasingInFileNames": true,
-      "verbatimModuleSyntax": true,
+      "verbatimModuleSyntax": false,
       "skipLibCheck": true
-  },
-  "files": [
+    },
+    "files": [
       "package.json"
-  ],
-  "include": [
+    ],
+    "include": [
       "src/**/*.ts",
-  ],
-  "exclude": [
+      "src/**/*.tsx",
+      "src/**/*.vue"
+    ],
+    "exclude": [
       "node_modules"
-  ]
-}
+    ]
+  }

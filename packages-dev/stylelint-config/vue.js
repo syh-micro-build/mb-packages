@@ -1,4 +1,4 @@
-import index from './index.js';
+import index from "./index.js";
 
 export default {
   extends: [
@@ -6,25 +6,26 @@ export default {
   ],
   overrides: [
     {
-      customSyntax: 'postcss-html',
-      files: ['*.(html|vue)', '**/*.(html|vue)'],
+      customSyntax: "postcss-html",
+      files: ["*.(html|vue)", "**/*.(html|vue)"],
       rules: {
-        'selector-pseudo-class-no-unknown': [
+        "selector-pseudo-class-no-unknown": [
           true,
           {
-            ignorePseudoClasses: ['global', 'deep'],
-          },
+            ignorePseudoClasses: ["global", "deep"]
+          }
         ],
-        'selector-pseudo-element-no-unknown': [
+        "selector-pseudo-element-no-unknown": [
           true,
           {
-            ignorePseudoElements: ['v-deep', 'v-global', 'v-slotted'],
-          },
-        ],
-      },
+            ignorePseudoElements: ["v-deep", "v-global", "v-slotted"]
+          }
+        ]
+      }
     }
   ],
   rules: {
+
     // 禁止使用未知的伪类，但允许使用 Vue 和其他框架常用的 `global` 和 `deep` 伪类
     "selector-pseudo-class-no-unknown": [
       true, // 开启规则

@@ -6,7 +6,9 @@
 
 ## 📝
 
-- monaco-editor 的使用
+### monaco-editor 的使用
+
+<details>
 
   ```js
   <script lang="tsx" setup>
@@ -18,12 +20,12 @@
   import * as monaco from "monaco-editor/esm/vs/editor/editor.api";
   
   /**
-   * TODO
-   *
-   * TypeError: Cannot read properties of undefined (reading 'scheme')
-   *
-   * https://github.com/microsoft/monaco-editor/issues/4739
-   */
+    * TODO
+  *
+  * TypeError: Cannot read properties of undefined (reading 'scheme')
+  *
+  * https://github.com/microsoft/monaco-editor/issues/4739
+  */
   import "monaco-editor/esm/vs/basic-languages/javascript/javascript.contribution";
   import "monaco-editor/esm/vs/basic-languages/html/html.contribution";
   import "monaco-editor/esm/vs/basic-languages/css/css.contribution";
@@ -81,3 +83,5 @@
   }
   </style>
   ```
+
+</details>
