@@ -7,10 +7,16 @@ catalog:
   "@stylistic/eslint-plugin": ^2.13.0
   "@stylistic/eslint-plugin-ts": ^2.13.0
   "@stylistic/stylelint-plugin": ^3.1.1
+  "@tsconfig/node22": ^22.0.0
   "@types/eslint": ^9.6.1
+  "@types/node": ^22.10.2
   "@typescript-eslint/eslint-plugin": ^8.19.1
   "@typescript-eslint/parser": ^8.19.1
+  "@vitejs/plugin-vue": ^5.2.1
+  "@vitejs/plugin-vue-jsx": ^4.1.1
   "@vue/eslint-config-typescript": ^14.2.0
+  "@vue/tsconfig": ^0.7.0
+  codemirror: ^6.0.1
   commitlint-plugin-function-rules: ^4.0.1
   cspell: ^8.17.2
   cz-git: ^1.11.0
@@ -36,7 +42,9 @@ catalog:
   markdownlint-cli2: ^0.17.1
   npm-package-json-lint: ^8.0.0
   npm-package-json-lint-config-default: ^7.0.1
+  npm-run-all2: ^7.0.2
   only-allow: ^1.2.1
+  pinia: ^2.3.0
   postcss: ^8.4.49
   postcss-html: ^1.7.0
   prettier: ^3.4.2
@@ -48,4 +56,9 @@ catalog:
   stylelint-prettier: ^5.0.2
   typescript: ^5.7.3
   typescript-eslint: ^8.20.0
+  vite: ^6.0.5
+  vite-plugin-vue-devtools: ^7.6.8
+  vue: ^3.5.13
   vue-eslint-parser: ^9.4.3
+  vue-router: ^4.5.0
+  vue-tsc: ^2.1.10
