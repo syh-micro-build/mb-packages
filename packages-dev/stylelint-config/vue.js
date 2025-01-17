@@ -1,9 +1,4 @@
-import index from "./index.js";
-
-export default {
-  extends: [
-    index
-  ],
+module.exports = {
   overrides: [
     {
       customSyntax: "postcss-html",
