@@ -18,11 +18,3 @@
 ## 2、vue 中使用
 
 [Storybook - vue](https://storybook.js.org/docs/vue/get-started/install)
-
-```bash
-# 创建 vue + ts 的 storybook
-npm i vue typescript
-
-# 生成 tsconfig.json 文件
-tsc --init
-```

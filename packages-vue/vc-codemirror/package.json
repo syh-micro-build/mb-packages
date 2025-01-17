@@ -1,22 +1,45 @@
 {
-  "name": "vc-codemirror",
-  "version": "1.0.0",
-  "description": "",
+  "name": "mb-vc-codemirror",
+  "version": "0.0.0",
+  "description": "Micro build mb-vc-codemirror.",
+  "private": true,
   "keywords": [],
+  "homepage": "https://github.com/syh-micro-build/mb-packages",
   "bugs": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/syh-micro-build/mb-packages"
   },
   "license": "ISC",
-  "author": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "author": {
+    "email": "2236472089@qq.com",
+    "name": "Li Yong"
   },
-  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
   "dependencies": {
-    "codemirror": "catalog:",
-    "typescript": "catalog:",
     "vue": "catalog:"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "catalog:",
+    "@storybook/addon-essentials": "catalog:",
+    "@storybook/addon-interactions": "catalog:",
+    "@storybook/addon-onboarding": "catalog:",
+    "@storybook/blocks": "catalog:",
+    "@storybook/test": "catalog:",
+    "@storybook/vue3": "catalog:",
+    "@storybook/vue3-vite": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vue/tsconfig": "catalog:",
+    "storybook": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vue-tsc": "catalog:"
   }
 }

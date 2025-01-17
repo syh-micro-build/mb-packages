@@ -46,3 +46,4 @@ lerna-debug.log*
 .pnpm-store
 **/lib/
 pnpm-lock.yaml
+*storybook.log
