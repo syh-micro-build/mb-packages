@@ -118,3 +118,7 @@ export default [
 - The language client requires VS Code version ^1.89.0 but received version 1.
 
   ![The language client requires VS Code version ^1.89.0 but received version 1.](https://img.picgo.net/2025/01/17/20250117-1451467ce2ddb34bf262d3.jpeg)
+
+- vsc 保存时，自动删除尾部空行处理
+
+  [docs](https://blog.csdn.net/HackerTom/article/details/126288345)
