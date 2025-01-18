@@ -12,18 +12,26 @@ npm install -D stylelint mb-stylelint-config
 
 ## 使用
 
-### 1、普通项目新建 `stylelint.config.mjs`
+### 1、普通项目新建 `stylelint.config.js`
 
 ```js
-
-export default {
+module.exports = {
+  root: true,
   extends: [
     "mb-stylelint-config"
-  ]
+  ].map(require.resolve)
 };
 ```
 
-### 2、vue 项目新建 `stylelint.config.mjs`
+`.stylelintrc`
+
+```json
+{
+  "extends": ["mb-stylelint-config"]
+}
+```
+
+### 2、vue 项目新建 `stylelint.config.js`
 
 ```js
 export default {

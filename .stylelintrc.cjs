@@ -2,7 +2,7 @@ module.exports = {
   root: true,
   extends: [
     "mb-stylelint-config"
-  ],
+  ].map(require.resolve),
   overrides: [
     {
       files: ["packages-vue/**/*.{js,vue,ts,tsx}", "packages-demo/demo-vue/**/*.{js,vue,ts,tsx}"],
