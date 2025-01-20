@@ -12,40 +12,29 @@ export default defineConfig({
     vue(),
     vueJsx(),
     dts({
-
-      // 指定输出目录
-      outDir: "./dist/types",
-
-      // 开启tsconfig搜索
-      tsconfigPath: "./tsconfig.json",
-
-      // 设置生成的声明文件目录结构 (为 true 声明到一个文件中)
-      rollupTypes: true
+      outDir: "./dist/types",              // 输出声明文件的目录
+      tsconfigPath: "./tsconfig.json",     // TypeScript 配置文件
+      rollupTypes: true                   // 合并所有类型声明文件
     })
   ],
   build: {
-    target: "modules",
-
-    // 压缩
-    minify: true,
+    target: "esnext",  // 使用现代 JavaScript 作为目标，提高构建效率 modules
+    minify: true,      // 压缩代码，减少文件体积
+    sourcemap: false,  // 开发时可以开启，生产环境可关闭，减少文件体积
     rollupOptions: {
-
-      // 忽略打包vue文件
-      external: ["vue"],
-      input: ["./src/index.ts"],
+      external: ["vue"],  // 外部化 vue，避免重复打包
+      input: "./src/index.ts",  // 入口文件
       output: [
         {
           format: "es",
           entryFileNames: "[name].js",
-          preserveModules: true,
-
-          // 配置打包根目录
-          dir: "dist/es",
+          preserveModules: true,  // 保持模块结构
+          dir: "dist/es",         // 输出 ES 模块到 dist/es
           preserveModulesRoot: "src"
         },
         {
           format: "umd",
-          name: "microVueHooks",
+          name: "microVueHooks",  // UMD 模式全局变量名
           entryFileNames: "index.js",
           dir: "dist/umd",
           globals: {
@@ -55,8 +44,8 @@ export default defineConfig({
       ]
     },
     lib: {
-      entry: "./src/index.ts",
-      formats: ["es", "umd"]
+      entry: "./src/index.ts",  // 库入口文件
+      formats: ["es", "umd"]    // 支持 ES 和 UMD 格式
     }
   }
 });
