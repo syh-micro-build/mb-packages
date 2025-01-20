@@ -34,6 +34,7 @@ catalog:
   cz-git: ^1.11.0
   czg: ^1.11.0
   depcheck: ^1.4.7
+  element-plus: ^2.9.3
   eslint: ^9.18.0
   eslint-plugin-command: ^2.1.0
   eslint-plugin-eslint-comments: ^3.2.0

@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@vitejs/plugin-vue-jsx": "catalog:",
-    "element-plus": "^2.9.3",
+    "element-plus": "catalog:",
     "vue": "catalog:"
   },
   "devDependencies": {
