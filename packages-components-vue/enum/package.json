@@ -25,25 +25,9 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
-    "@vitejs/plugin-vue-jsx": "catalog:",
     "vue": "catalog:"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "catalog:",
-    "@storybook/addon-essentials": "catalog:",
-    "@storybook/addon-interactions": "catalog:",
-    "@storybook/addon-onboarding": "catalog:",
-    "@storybook/blocks": "catalog:",
-    "@storybook/manager-api": "catalog:",
-    "@storybook/test": "catalog:",
-    "@storybook/vue3": "catalog:",
-    "@storybook/vue3-vite": "catalog:",
-    "@vitejs/plugin-vue": "catalog:",
-    "@vue/tsconfig": "catalog:",
-    "storybook": "catalog:",
-    "typescript": "catalog:",
-    "vite": "catalog:",
-    "vite-plugin-dts": "^4.5.0",
-    "vue-tsc": "catalog:"
+    "typescript": "catalog:"
   }
 }
