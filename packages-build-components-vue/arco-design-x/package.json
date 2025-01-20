@@ -22,11 +22,11 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@arco-design/web-vue": "^2.56.3",
-    "@codemirror/lang-json": "^6.0.1",
-    "@codemirror/lang-vue": "^0.1.3",
+    "@arco-design/web-vue": "catalog:",
+    "@codemirror/lang-json": "catalog:",
+    "@codemirror/lang-vue": "catalog:",
     "@vitejs/plugin-vue-jsx": "catalog:",
-    "codemirror": "^6.0.1",
+    "codemirror": "catalog:",
     "vue": "catalog:"
   },
   "devDependencies": {

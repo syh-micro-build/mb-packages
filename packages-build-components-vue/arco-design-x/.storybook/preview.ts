@@ -1,3 +1,4 @@
+import "@arco-design/web-vue/dist/arco.css";
 import type {
   Preview
 } from "@storybook/vue3";
