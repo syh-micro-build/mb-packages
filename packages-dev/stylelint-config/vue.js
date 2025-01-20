@@ -2,6 +2,12 @@ export default {
   extends: [
     "./index.js"
   ],
+  ignoreFiles: [
+    "**/*.ts",
+    "**/*.tsx", // 忽略所有 tsx 文件
+    "node_modules/**", // 忽略 node_modules
+    "dist/**" // 忽略打包输出文件
+  ],
   overrides: [
     {
       customSyntax: "postcss-html",
