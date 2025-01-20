@@ -1,5 +1,5 @@
 {
-  "name": "mb-arco-design-x",
+  "name": "mb-element-x",
   "version": "0.0.0",
   "description": "Micro build mb-vc-codemirror.",
   "keywords": [],
@@ -22,8 +22,8 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@arco-design/web-vue": "catalog:",
     "@vitejs/plugin-vue-jsx": "catalog:",
+    "element-plus": "^2.9.3",
     "vue": "catalog:"
   },
   "devDependencies": {
