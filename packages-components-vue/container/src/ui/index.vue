@@ -1,14 +1,9 @@
 <script setup lang="tsx">
-import {
-  COMPONENT_MAP as ArcoComponentMap
-} from "mb-components-vue-arco-design-x";
+
 import {
   EUiType,
   getConfigProviderProps
 } from "mb-components-vue-config-provider";
-import {
-  COMPONENT_MAP as ElementComponentMap
-} from "mb-components-vue-element-x";
 import {
   defineProps,
   computed,
@@ -19,6 +14,10 @@ import {
 import {
   Loading
 } from "../components";
+import {
+  ElementComponentMap,
+  ArcoComponentMap
+} from "../const";
 import {
   TProps
 } from "../types";
@@ -34,12 +33,19 @@ const componentMap = computed(() => (configProps.type === EUiType.ARCO_DESIGN
   : ElementComponentMap));
 
 onMounted(() => {
+  if (configProps.type === EUiType.ARCO_DESIGN) {
 
-  // if (configProps.type === EUiType.ARCO_DESIGN) {
+    // @ts-ignore
+    import("@arco-design/web-vue/dist/arco.css").then(() => {
+      cssLoaded.value = true;
+    });
+  } else {
 
-  // } else {
-
-  // }
+    // @ts-ignore
+    import("element-plus/dist/index.css").then(() => {
+      cssLoaded.value = true;
+    });
+  }
 });
 
 const DOM = () => {

@@ -1,5 +1,5 @@
 import {
   PropsCheckJsonSchema
-} from "@/components/check-json-schema";
+} from "mb-components-vue-check-json-schema";
 
 export type TProps = PropsCheckJsonSchema;
