@@ -1,7 +1,7 @@
 {
-  "name": "mb-components-vue-config-provider",
-  "version": "1.0.0",
-  "description": "Micro build mb-config-provider.",
+  "name": "mb-components-vue-check-json-schema",
+  "version": "0.0.0",
+  "description": "Micro build components vue check json schema.",
   "keywords": [],
   "homepage": "https://github.com/syh-micro-build/mb-packages",
   "bugs": {},
@@ -37,7 +37,8 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
-    "@vitejs/plugin-vue-jsx": "catalog:",
+    "ajv": "catalog:",
+    "mb-components-vue-enum": "workspace:^",
     "vue": "catalog:"
   },
   "devDependencies": {
@@ -51,6 +52,7 @@
     "@storybook/vue3": "catalog:",
     "@storybook/vue3-vite": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
     "@vue/tsconfig": "catalog:",
     "storybook": "catalog:",
     "typescript": "catalog:",
