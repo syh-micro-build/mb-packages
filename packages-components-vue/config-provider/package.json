@@ -17,9 +17,21 @@
   "type": "module",
   "scripts": {
     "clear": "rm -fr node_modules",
-    "build": "vue-tsc -b && vite build",
+    "clear:build": "rm -fr dist",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build": "pnpm run clear:build && vite build",
+    "prepublishOnly": "pnpm run clear:build && npm run build"
+  },
+  "main": "./dist/umd/index.js",
+  "module": "./dist/es/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/es/index.js",
+      "require": "./dist/umd/index.js"
+    }
   },
   "dependencies": {
     "@vitejs/plugin-vue-jsx": "catalog:",
@@ -40,6 +52,7 @@
     "storybook": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
+    "vite-plugin-dts": "^4.5.0",
     "vue-tsc": "catalog:"
   }
 }
