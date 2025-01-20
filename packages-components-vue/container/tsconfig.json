@@ -15,7 +15,6 @@
       "module": "ESNext",
       "moduleResolution": "Node",
       "resolveJsonModule": true,
-      "allowImportingTsExtensions": false,
       "allowJs": false,
       "strict": true,
       "strictFunctionTypes": false,
