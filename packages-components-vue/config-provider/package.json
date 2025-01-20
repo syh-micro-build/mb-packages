@@ -1,7 +1,7 @@
 {
   "name": "mb-components-vue-config-provider",
   "version": "1.0.0",
-  "description": "Micro build mb-config-provider.",
+  "description": "Micro build config provider.",
   "keywords": [],
   "homepage": "https://github.com/syh-micro-build/mb-packages",
   "bugs": {},

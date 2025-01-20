@@ -1,7 +1,7 @@
 {
   "name": "mb-components-vue-arco-design-x",
   "version": "0.0.0",
-  "description": "Micro build mb-vc-codemirror.",
+  "description": "Micro build components vue arcoDesign x.",
   "keywords": [],
   "homepage": "https://github.com/syh-micro-build/mb-packages",
   "bugs": {},
@@ -21,6 +21,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
+  "main": "./src/index.ts",
   "dependencies": {
     "@arco-design/web-vue": "catalog:",
     "@vitejs/plugin-vue-jsx": "catalog:",
