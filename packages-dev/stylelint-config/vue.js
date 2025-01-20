@@ -1,7 +1,7 @@
-module.exports = {
+export default {
   extends: [
     "./index.js"
-  ].map(require.resolve),
+  ],
   overrides: [
     {
       customSyntax: "postcss-html",
