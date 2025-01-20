@@ -34,7 +34,7 @@ export default defineConfig({
         },
         {
           format: "umd",
-          name: "microVueHooks",  // UMD 模式全局变量名
+          name: "ComponentsVueConfigProvider",  // UMD 模式全局变量名
           entryFileNames: "index.js",
           dir: "dist/umd",
           globals: {

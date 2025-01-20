@@ -17,7 +17,6 @@
   "type": "module",
   "scripts": {
     "clear": "rm -fr node_modules",
-    "build": "vue-tsc -b && vite build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },

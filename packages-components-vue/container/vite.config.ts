@@ -34,7 +34,7 @@ export default defineConfig({
         },
         {
           format: "umd",
-          name: "microVueHooks",
+          name: "ComponentsVueContainer",
           entryFileNames: "index.js",
           dir: "dist/umd",
           globals: {
