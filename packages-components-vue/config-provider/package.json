@@ -1,6 +1,6 @@
 {
   "name": "mb-components-vue-config-provider",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Micro build mb-config-provider.",
   "keywords": [],
   "homepage": "https://github.com/syh-micro-build/mb-packages",
@@ -32,6 +32,9 @@
       "import": "./dist/es/index.js",
       "require": "./dist/umd/index.js"
     }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
     "@vitejs/plugin-vue-jsx": "catalog:",
