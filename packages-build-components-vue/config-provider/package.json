@@ -1,0 +1,45 @@
+{
+  "name": "mb-components-vue-config-provider",
+  "version": "0.0.0",
+  "description": "Micro build mb-config-provider.",
+  "keywords": [],
+  "homepage": "https://github.com/syh-micro-build/mb-packages",
+  "bugs": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syh-micro-build/mb-packages"
+  },
+  "license": "ISC",
+  "author": {
+    "email": "2236472089@qq.com",
+    "name": "Li Yong"
+  },
+  "type": "module",
+  "scripts": {
+    "clear": "rm -fr node_modules",
+    "build": "vue-tsc -b && vite build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "vue": "catalog:"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "catalog:",
+    "@storybook/addon-essentials": "catalog:",
+    "@storybook/addon-interactions": "catalog:",
+    "@storybook/addon-onboarding": "catalog:",
+    "@storybook/blocks": "catalog:",
+    "@storybook/manager-api": "catalog:",
+    "@storybook/test": "catalog:",
+    "@storybook/vue3": "catalog:",
+    "@storybook/vue3-vite": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vue/tsconfig": "catalog:",
+    "storybook": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vue-tsc": "catalog:"
+  }
+}
