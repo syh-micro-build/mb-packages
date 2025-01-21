@@ -25,20 +25,35 @@ import {
 const props = defineProps<TValue>();
 
 const emits = defineEmits<{
-  (e: "change", value: string): void;
+  (e: "change", value: Object): void;
 }>();
 
 const editorContainer = ref<HTMLElement>();
 
 let _view: EditorView | null = null;
 
+function fixJsonString(str) {
+
+  // 为键添加双引号
+  let fixedStr = str.replace(/([{,])(\s*)(\w+)(\s*):/g, "$1\"$3\":");
+
+  // 移除最后的多余逗号
+  fixedStr = fixedStr.replace(/,(\s*)\}/g, "$1}");
+
+  return fixedStr;
+}
+
 const handleChange = () => {
-  const content: string = _view?.state.doc.toString() || "{}";
+  const str: string = _view?.state.doc.toString() || "{}";
 
   try {
-    emits("change", JSON.parse(content));
+    const fixedStr = fixJsonString(str);
+
+    const jsonObj = JSON.parse(fixedStr);
+
+    emits("change", jsonObj);
   } catch (error) {
-    console.error("JSON 解析错误:", error);
+    console.error("Invalid JSON string:", error);
   }
 };
 
@@ -70,6 +85,6 @@ onUnmounted(() => {
 
 <style scoped>
 div {
-  height: 100%;
+  max-height: 200px;
 }
 </style>

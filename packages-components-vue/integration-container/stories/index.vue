@@ -1,25 +1,70 @@
 <script lang="tsx" setup>
-import ConfigProvider, {
-  EUiType
-} from "mb-components-vue-config-provider";
 import {
   EUiEleType
 } from "mb-components-vue-enum";
+import {
+  computed,
+  reactive
+} from "vue";
 
-import IntegrationContainer from "../src";
+import Codemirror, {
+  CodeMirrorType
+} from "mb-vc-codemirror";
 
-const data = {
+import IntegrationContainer, {
+  EUiType,
+  ConfigProvider
+} from "../src";
+
+const data = reactive({
   label: "John Doe",
   "type": EUiEleType.BUTTON,
   "options": {
     "street": "123 Main St",
     "city": "Somewhere"
   }
+});
+
+function convertOptionsToString(obj) {
+  const parts: string[] = [];
+
+  for (const [key, value] of Object.entries(obj)) {
+
+    // 将键值对以 key="value" 的形式添加到 parts 数组中
+    parts.push(`${key}="${value}"`);
+  }
+
+  // 使用空格将 parts 数组中的元素连接成一个字符串
+  return parts.join(" ");
+}
+
+const handleChange = value => {
+  Object.assign(data, value);
 };
+
+const templateValue = computed(() => {
+  const str = convertOptionsToString(data?.options);
+
+  return `<${data.type} ${str}>
+  ${data.label}
+</${data.type}>`;
+});
 </script>
 
 <template>
   <ConfigProvider :type="EUiType.ARCO_DESIGN">
+    <Codemirror
+      :type="CodeMirrorType.JSON"
+      :value="JSON.stringify(data, null, 2)"
+      @change="handleChange"
+    />
+
+    <Codemirror
+      :type="CodeMirrorType.VUE"
+      :value="templateValue"
+      :read-only="true"
+    />
+
     <IntegrationContainer v-bind="data" />
   </ConfigProvider>
 </template>

@@ -20,6 +20,7 @@ const str2 = "<Button>你好</Button>";
   />
   <Codemirror
     :value="str2"
+    :read-only="true"
     :type="CodeMirrorType.VUE"
   />
 </template>

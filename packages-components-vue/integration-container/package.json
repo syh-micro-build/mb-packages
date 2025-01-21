@@ -56,6 +56,7 @@
     "@storybook/vue3-vite": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
     "@vue/tsconfig": "catalog:",
+    "mb-vc-codemirror": "workspace:^",
     "storybook": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",

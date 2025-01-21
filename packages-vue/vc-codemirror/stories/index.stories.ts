@@ -8,7 +8,8 @@ const meta = {
   title: "Demo"
 } satisfies Meta<typeof Index>;
 
-export default meta;
 type TStory = StoryObj<typeof meta>;
 
 export const Demo: TStory = {};
+
+export default meta;

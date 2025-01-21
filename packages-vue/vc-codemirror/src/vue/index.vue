@@ -5,7 +5,10 @@ import {
 import {
   ref,
   onMounted,
-  onUnmounted
+  onUnmounted,
+  defineProps,
+  defineEmits,
+  watchEffect
 } from "vue";
 
 import {
@@ -31,14 +34,27 @@ const editorContainer = ref<HTMLElement>();
 let _view: EditorView | null = null;
 
 const handleChange = () => {
-  const content: string = _view?.state.doc.toString() || "{}";
+  const str: string = _view?.state.doc.toString() || "{}";
 
   try {
-    emits("change", JSON.parse(content));
+    emits("change", str);
   } catch (error) {
     console.error("JSON 解析错误:", error);
   }
 };
+
+// TODO 处理视图，不更新问题
+watchEffect(() => {
+  const str = props.value;
+
+  _view?.dispatch({
+    changes: {
+      from: 0,
+      to: _view?.state.doc.length,
+      insert: str
+    }
+  });
+});
 
 onMounted(() => {
   _view = new EditorView({
@@ -68,6 +84,6 @@ onUnmounted(() => {
 
 <style scoped>
 div {
-  height: 100%;
+  max-height: 200px;
 }
 </style>
