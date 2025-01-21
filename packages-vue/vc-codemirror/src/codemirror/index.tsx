@@ -13,11 +13,13 @@ import {
 
 import "../style/index.css";
 
-export default function(props: IProps): VNode {
-
-  if(props.type === ECodeMirrorType.VUE) {
-    return <Vue value={props.value} />;
+export default function({
+  type,
+  ...rest
+}: IProps): VNode {
+  if(type === ECodeMirrorType.VUE) {
+    return <Vue {...rest} />;
   }
 
-  return <Json value={props.value} />;
+  return <Json {...rest} />;
 }

@@ -9,6 +9,9 @@ import {
 } from "vue";
 
 import {
+  EditorState
+} from "@codemirror/state";
+import {
   EditorView,
   basicSetup
 } from "codemirror";
@@ -19,9 +22,23 @@ import {
 
 const props = defineProps<TValue>();
 
+const emits = defineEmits<{
+  (e: "change", value: string): void;
+}>();
+
 const editorContainer = ref<HTMLElement>();
 
 let _view: EditorView | null = null;
+
+const handleChange = () => {
+  const content: string = _view?.state.doc.toString() || "{}";
+
+  try {
+    emits("change", JSON.parse(content));
+  } catch (error) {
+    console.error("JSON 解析错误:", error);
+  }
+};
 
 onMounted(() => {
   _view = new EditorView({
@@ -29,7 +46,13 @@ onMounted(() => {
     doc: props.value,
     extensions: [
       basicSetup,
-      vue()
+      vue(),
+      EditorState.readOnly.of(props.readOnly),
+      EditorView.updateListener.of(update => {
+        if (update.docChanged) {
+          handleChange();
+        }
+      })
     ]
   });
 });
@@ -47,5 +70,4 @@ onUnmounted(() => {
 div {
   height: 100%;
 }
-
 </style>

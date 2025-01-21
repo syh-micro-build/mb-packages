@@ -5,6 +5,7 @@ import {
 export interface IProps {
   value: string;
   type: ECodeMirrorType;
+  readOnly?: boolean;
 }
 
-export type TValue = Pick<IProps, "value">;
+export type TValue = Omit<IProps, "type">;

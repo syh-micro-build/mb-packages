@@ -11,6 +11,9 @@ import {
   json
 } from "@codemirror/lang-json";
 import {
+  EditorState
+} from "@codemirror/state";
+import {
   EditorView,
   basicSetup
 } from "codemirror";
@@ -22,7 +25,7 @@ import {
 const props = defineProps<TValue>();
 
 const emits = defineEmits<{
-  (e: "change", value: object): void;
+  (e: "change", value: string): void;
 }>();
 
 const editorContainer = ref<HTMLElement>();
@@ -46,6 +49,7 @@ onMounted(() => {
     extensions: [
       basicSetup,
       json(),
+      EditorState.readOnly.of(props.readOnly),
       EditorView.updateListener.of(update => {
         if (update.docChanged) {
           handleChange();
@@ -68,5 +72,4 @@ onUnmounted(() => {
 div {
   height: 100%;
 }
-
 </style>

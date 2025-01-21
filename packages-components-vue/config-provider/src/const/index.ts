@@ -1,1 +1,1 @@
-export const CONFIG_PROVIDER = Symbol("config_provider");
+export const CONFIG_PROVIDER = "config_provider";

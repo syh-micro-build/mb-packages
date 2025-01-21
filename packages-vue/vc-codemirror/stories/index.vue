@@ -22,7 +22,6 @@ const str2 = "<Button>你好</Button>";
     :value="str2"
     :type="CodeMirrorType.VUE"
   />
-  <Button>你好</Button>
 </template>
 
 <style scoped>
