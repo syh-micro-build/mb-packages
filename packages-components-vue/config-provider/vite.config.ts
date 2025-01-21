@@ -29,23 +29,14 @@ export default defineConfig({
           format: "es",
           entryFileNames: "[name].js",
           preserveModules: true,  // 保持模块结构
-          dir: "dist/es",         // 输出 ES 模块到 dist/es
+          dir: "dist",         // 输出 ES 模块到 dist/es
           preserveModulesRoot: "src"
-        },
-        {
-          format: "umd",
-          name: "ComponentsVueConfigProvider",  // UMD 模式全局变量名
-          entryFileNames: "index.js",
-          dir: "dist/umd",
-          globals: {
-            vue: "Vue"  // 为外部依赖 vue 提供全局变量名
-          }
         }
       ]
     },
     lib: {
       entry: "./src/index.ts",  // 库入口文件
-      formats: ["es", "umd"]    // 支持 ES 和 UMD 格式
+      formats: ["es"]    // 支持 ES 和 UMD 格式
     }
   }
 });

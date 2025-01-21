@@ -23,18 +23,15 @@
     "build": "pnpm run clear:build && vite build",
     "prepublishOnly": "pnpm run clear:build && npm run build"
   },
-  "main": "./dist/umd/index.js",
-  "module": "./dist/es/index.js",
+  "module": "./dist/index.js",
   "types": "./dist/types/index.d.ts",
   "style": {
-    "umd": "dist/umd/index.css",
-    "es": "dist/es/index.css"
+    "es": "dist/index.css"
   },
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",
-      "import": "./dist/es/index.js",
-      "require": "./dist/umd/index.js"
+      "import": "./dist/index.js"
     },
     "./*": "./*"
   },
