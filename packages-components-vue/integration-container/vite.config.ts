@@ -30,7 +30,8 @@ export default defineConfig({
           entryFileNames: "[name].js",
           preserveModules: true,
           dir: "dist/es",
-          preserveModulesRoot: "src"
+          preserveModulesRoot: "src",
+          assetFileNames: "index.css"
         },
         {
           format: "umd",
@@ -39,7 +40,8 @@ export default defineConfig({
           dir: "dist/umd",
           globals: {
             vue: "Vue"
-          }
+          },
+          assetFileNames: "index.css"
         }
       ]
     },

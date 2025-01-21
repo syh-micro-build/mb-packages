@@ -23,7 +23,21 @@
     "build": "pnpm run clear:build && vite build",
     "prepublishOnly": "pnpm run clear:build && npm run build"
   },
-  "main": "./src/index.ts",
+  "main": "./dist/umd/index.js",
+  "module": "./dist/es/index.js",
+  "types": "./dist/types/index.d.ts",
+  "style": {
+    "umd": "dist/umd/index.css",
+    "es": "dist/es/index.css"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/es/index.js",
+      "require": "./dist/umd/index.js"
+    },
+    "./*": "./*"
+  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
