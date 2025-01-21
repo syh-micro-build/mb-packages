@@ -1,9 +1,14 @@
 <script lang="tsx" setup>
-
+import {
+  ConfigProvider,
+  EUiType
+} from "mb-components-vue-container";
 </script>
 
 <template>
-  <Button>你好</Button>
+  <ConfigProvider :type="EUiType.ELEMENT">
+    nihao
+  </ConfigProvider>
 </template>
 
 <style scoped>

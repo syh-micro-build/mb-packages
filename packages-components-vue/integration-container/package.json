@@ -39,6 +39,7 @@
   "dependencies": {
     "@vitejs/plugin-vue-jsx": "catalog:",
     "mb-components-vue-check-json-schema": "workspace:^",
+    "mb-components-vue-config-provider": "workspace:^",
     "mb-components-vue-container": "workspace:^",
     "vue": "catalog:"
   },
