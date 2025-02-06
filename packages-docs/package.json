@@ -1,0 +1,25 @@
+{
+  "name": "packages-docs",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/syh-micro-build/mb-packages",
+  "bugs": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syh-micro-build/mb-packages"
+  },
+  "license": "ISC",
+  "author": "LiYong",
+  "scripts": {
+    "clear": "rm -fr node_modules",
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "main": "index.js",
+  "devDependencies": {
+    "vitepress": "^1.6.3",
+    "vue": "^3.5.13"
+  }
+}
