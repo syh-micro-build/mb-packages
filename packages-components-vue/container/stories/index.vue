@@ -9,8 +9,7 @@ import {
 import Container from "../src";
 
 const data = {
-  label: "John Doe",
-  "type": EUiEleType.BUTTON,
+  "type": EUiEleType.Select,
   "options": {
     "street": "123 Main St",
     "city": "Somewhere"

@@ -1,9 +1,11 @@
 import {
-  ElButton
+  ElButton,
+  ElSelect
 } from "element-plus";
 
 const COMPONENT_MAP = {
-  Button: ElButton
+  Button: ElButton,
+  Select: ElSelect
 };
 
 export default COMPONENT_MAP;

@@ -3,14 +3,11 @@ import {
 } from "mb-components-vue-enum";
 
 import {
-  JTDSchemaType
-} from "ajv/dist/jtd";
-
-import {
-  IProps
+  IProps,
+  TSchemaTypeWithLabel
 } from "../types";
 
-const JSON_SCHEMA: JTDSchemaType<IProps> = {
+const JSON_SCHEMA: TSchemaTypeWithLabel<IProps> = {
   type: "object",
   properties: {
     type: {
@@ -19,6 +16,7 @@ const JSON_SCHEMA: JTDSchemaType<IProps> = {
     label: {
       type: "string"
     },
+
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     options: {
@@ -34,7 +32,7 @@ const JSON_SCHEMA: JTDSchemaType<IProps> = {
       additionalProperties: true
     }
   },
-  required: ["type", "label"],
+  required: ["type"],
   additionalProperties: false
 };
 

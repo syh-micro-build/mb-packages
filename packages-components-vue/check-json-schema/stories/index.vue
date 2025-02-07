@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div>11</div>
+  <div>mb-components-vue-check-json-schem</div>
 </template>
 
 <style scoped>
