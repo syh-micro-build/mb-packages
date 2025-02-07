@@ -13,12 +13,13 @@
   "author": "LiYong",
   "scripts": {
     "clear": "rm -fr node_modules",
-    "docs:dev": "vitepress dev",
+    "docs": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
   },
   "main": "index.js",
   "devDependencies": {
+    "markdown-it-container": "^4.0.0",
     "vitepress": "catalog:",
     "vue": "catalog:"
   }

@@ -2,6 +2,10 @@ import {
   defineConfig
 } from "vitepress";
 
+import {
+  mdPlugin
+} from "../.vitepress/config/plugins";
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Docs",
@@ -36,5 +40,8 @@ export default defineConfig({
         link: "https://github.com/syh-micro-build/mb-packages/"
       }
     ]
+  },
+  markdown: {
+    config: md => mdPlugin(md)
   }
 });

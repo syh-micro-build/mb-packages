@@ -13,12 +13,8 @@ import "./style.css";
 
 export default {
   extends: DefaultTheme,
-  // eslint-disable-next-line object-curly-newline
-  Layout: () => h(DefaultTheme.Layout, null, {
 
-    // https://vitepress.dev/guide/extending-default-theme#layout-slots
-  // eslint-disable-next-line object-curly-newline
-  }),
+  Layout: () => h(DefaultTheme.Layout, null),
   enhanceApp({
     // eslint-disable-next-line unused-imports/no-unused-vars
     app,
