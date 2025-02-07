@@ -11,35 +11,29 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       {
-        text: "Home",
-        link: "/"
-      },
-      {
-        text: "Examples",
-        link: "/markdown-examples"
+        text: "组件",
+        link: "/src/components/index",
+        activeMatch: "/src/components/"
       }
     ],
 
-    sidebar: [
-      {
-        text: "Examples",
-        items: [
-          {
-            text: "Markdown Examples",
-            link: "/markdown-examples"
-          },
-          {
-            text: "Runtime API Examples",
-            link: "/api-examples"
-          }
-        ]
-      }
-    ],
+    sidebar: {
+      "/src/": [
+        {
+          text: "按钮",
+          link: "/src/components/button"
+        },
+        {
+          text: "下拉框",
+          link: "/src/components/select"
+        }
+      ]
+    },
 
     socialLinks: [
       {
         icon: "github",
-        link: "https://github.com/vuejs/vitepress"
+        link: "https://github.com/syh-micro-build/mb-packages/"
       }
     ]
   }
