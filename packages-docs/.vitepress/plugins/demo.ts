@@ -49,10 +49,10 @@ function createDemoContainer(md: MarkdownRenderer): IContainerOpts {
 
         return `<Demo source="${encodeURIComponent(md.render(`\`\`\` vue\n${source}\`\`\``))}" path="${sourceFile}" raw-source="${encodeURIComponent(source)}" description="${encodeURIComponent(md.render(description))}">
   <template #source><ep-${sourceFile.replaceAll("/", "-")}/></template>`;
-      // eslint-disable-next-line no-else-return
-      }else {
-        return "</Demo>\n";
       }
+
+      return "</Demo>\n";
+
     }
   };
 }

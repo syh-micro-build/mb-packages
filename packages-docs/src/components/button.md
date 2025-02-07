@@ -2,7 +2,7 @@
 
 ## Basic usage11122
 
-:::demo 使用基础
+:::demo 你好
 
 button/basic
 
