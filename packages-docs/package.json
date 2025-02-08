@@ -21,6 +21,7 @@
   "devDependencies": {
     "glob": "catalog:",
     "markdown-it-container": "catalog:",
+    "mb-components-vue-config-provider": "workspace:^",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vitepress": "catalog:",

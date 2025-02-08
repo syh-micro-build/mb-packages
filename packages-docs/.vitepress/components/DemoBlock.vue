@@ -1,6 +1,12 @@
 <script setup lang="ts" name="demo-block">
 import {
-  computed
+  CONFIG_PROVIDER,
+  ConfigProviderProps
+} from "mb-components-vue-config-provider";
+import {
+  computed,
+  Ref,
+  inject
 } from "vue";
 
 const props = defineProps<{
@@ -13,9 +19,13 @@ const props = defineProps<{
 const decodedSource = computed(() => decodeURIComponent(props.source));
 
 const decodedDescription = computed(() => (props.description ? decodeURIComponent(props.description) : ""));
+
+const idState = inject<Ref<ConfigProviderProps>>(CONFIG_PROVIDER)!;
+
 </script>
 
 <template>
+  {{ idState.type }}
   <div class="demo-block">
     <div class="demo-content">
       <slot name="source"></slot>

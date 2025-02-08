@@ -1,20 +1,28 @@
 <script setup lang="ts">
 import {
-  ref
+  EUiType,
+  CONFIG_PROVIDER,
+  ConfigProviderProps
+} from "mb-components-vue-config-provider";
+import {
+  Ref,
+  ref,
+  inject
 } from "vue";
 
 const showDrawer = ref(false);
 
-const selectedOption = ref("option1");
+const idState = inject<Ref<ConfigProviderProps>>(CONFIG_PROVIDER)!;
+
+const selectedOption = ref(idState.value.type);
+
+const handleChange = e => {
+  idState.value.type = e.target.value;
+};
 
 const selectedColor = ref("#409EFF");
 
-// interface IdState {
-//   prefix: number;
-//   current: number;
-// }
-
-// const idState = inject<Ref<IdState>>("ID_INJECTION_KEY")!;
+const UiType = Object.values(EUiType);
 
 const handleColorChange = (e: Event) => {
   const input = e.target as HTMLInputElement;
@@ -71,7 +79,7 @@ const handleColorChange = (e: Event) => {
             </div>
             <div class="drawer-content">
               <!--
- <div class="setting-item">
+              <div class="setting-item">
                 <label>Prefix:</label>
                 <input
                   v-model="idState.prefix"
@@ -85,21 +93,20 @@ const handleColorChange = (e: Event) => {
                   type="number"
                 />
               </div>
--->
+              -->
               <div class="setting-item">
                 <label>框架：</label>
                 <select
                   v-model="selectedOption"
                   class="select-input"
+                  @change="handleChange"
                 >
-                  <option value="option1">
-                    选项一
-                  </option>
-                  <option value="option2">
-                    选项二
-                  </option>
-                  <option value="option3">
-                    选项三
+                  <option
+                    v-for="item in UiType"
+                    :key="item"
+                    :value="item"
+                  >
+                    {{ item }}
                   </option>
                 </select>
               </div>

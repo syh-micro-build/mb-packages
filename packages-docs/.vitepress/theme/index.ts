@@ -3,6 +3,11 @@ import type {
 } from "vitepress";
 
 import {
+  CONFIG_PROVIDER,
+  ConfigProviderProps,
+  EUiType
+} from "mb-components-vue-config-provider";
+import {
   DefineComponent,
   h,
   ref
@@ -22,9 +27,8 @@ const modules = import.meta.glob<{ default: unknown }>("../../examples/**/*.vue"
   eager: true
 });
 
-const idState = ref({
-  prefix: 1024,
-  current: 0
+const state = ref<ConfigProviderProps>({
+  type: EUiType.ELEMENT
 });
 
 export default {
@@ -37,7 +41,7 @@ export default {
     app
   }) {
 
-    app.provide("ID_INJECTION_KEY", idState);
+    app.provide(CONFIG_PROVIDER, state);
 
     // 注册 Demo 容器组件
     app.component("demo-block", DemoBlock);
