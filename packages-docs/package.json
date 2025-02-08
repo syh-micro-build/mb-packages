@@ -18,6 +18,9 @@
     "docs:preview": "vitepress preview"
   },
   "main": "index.js",
+  "dependencies": {
+    "mb-vc-icon": "workspace:^"
+  },
   "devDependencies": {
     "glob": "catalog:",
     "markdown-it-container": "catalog:",

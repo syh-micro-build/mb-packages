@@ -114,18 +114,7 @@ export default [
       "vue/html-indent": ["error", 2], // 设置 HTML 缩进为 2 个空格
       // 'vue/html-indent': ['error', 2],
       "vue/html-quotes": ["error", "double"],
-      "vue/html-self-closing": [
-        "error",
-        {
-          html: {
-            component: "always",
-            normal: "never",
-            void: "always"
-          },
-          math: "always",
-          svg: "always"
-        }
-      ],
+
       "vue/key-spacing": "error",
 
       "vue/max-attributes-per-line": [
@@ -170,17 +159,19 @@ export default [
       "vue/no-unused-emit-declarations": "error",
       "vue/no-unused-refs": "error",
 
-      // "vue/html-self-closing": [ // 规定 HTML 元素自闭合标签的规则
-      //   "error",
-      //   {
-      //     html: {
-      //       void: "always", // 要求空元素始终自闭合
-      //       normal: "never", // 要求普通元素不自闭合
-      //       component: "always" // 要求组件元素始终自闭合
-      //     },
-      //     svg: "always", // 要求 SVG 元素始终自闭合
-      //     math: "always" // 要求 MathML 元素始终自闭合
-      //   }
+      "vue/html-self-closing": [ // 规定 HTML 元素自闭合标签的规则
+        "error",
+        {
+          html: {
+            void: "always", // 要求空元素始终自闭合
+            normal: "never", // 要求普通元素不自闭合
+            component: "always" // 要求组件元素始终自闭合
+          },
+          svg: "always", // 要求 SVG 元素始终自闭合
+          math: "always" // 要求 MathML 元素始终自闭合
+        }
+      ],
+
       "vue/no-unused-vars": [
         "error",
         {

@@ -9,6 +9,10 @@ import {
   inject
 } from "vue";
 
+import {
+  Code
+} from "mb-vc-icon";
+
 const props = defineProps<{
   source: string;
   description?: string;
@@ -20,13 +24,36 @@ const decodedSource = computed(() => decodeURIComponent(props.source));
 
 const decodedDescription = computed(() => (props.description ? decodeURIComponent(props.description) : ""));
 
+// eslint-disable-next-line unused-imports/no-unused-vars
 const idState = inject<Ref<ConfigProviderProps>>(CONFIG_PROVIDER)!;
 
 </script>
 
 <template>
-  {{ idState.type }}
-  <div class="demo-block">
+  <div class="demo">
+    <div
+      v-if="decodedDescription"
+      class="description"
+      v-html="decodedDescription"
+    ></div>
+    <div class="container">
+      <div class="code-show">
+        <slot name="source"></slot>
+      </div>
+      <div class="icon">
+        <Code />
+      </div>
+      <div
+        v-if="decodedSource"
+        class="code"
+        v-html="decodedSource"
+      >
+      </div>
+    </div>
+  </div>
+
+  <!--
+ <div class="demo-block">
     <div class="demo-content">
       <slot name="source"></slot>
     </div>
@@ -41,10 +68,20 @@ const idState = inject<Ref<ConfigProviderProps>>(CONFIG_PROVIDER)!;
       v-html="decodedSource"
     ></div>
   </div>
+-->
 </template>
 
-<style>
-.demo-block {
+<style scoped>
+div {
+  font-size: 16px;
+}
+
+.container {
+  border: 1px solid #DCDFE7;
+  border-radius: 4px;
+}
+
+/* .demo-block {
   margin: 1rem 0;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -63,5 +100,5 @@ const idState = inject<Ref<ConfigProviderProps>>(CONFIG_PROVIDER)!;
 .demo-source {
   padding: 1rem;
   border-top: 1px solid #ddd;
-}
+} */
 </style>
