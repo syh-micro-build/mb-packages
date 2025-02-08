@@ -2,13 +2,18 @@ import type {
   Theme
 } from "vitepress";
 
-import DemoBlock from "../components/DemoBlock.vue";
 import {
   DefineComponent,
-  h
+  h,
+  ref
 } from "vue";
 
 import DefaultTheme from "vitepress/theme";
+
+import {
+  DemoBlock,
+  SettingsPanel
+} from "../components";
 
 import "./style.css";
 
@@ -17,12 +22,22 @@ const modules = import.meta.glob<{ default: unknown }>("../../examples/**/*.vue"
   eager: true
 });
 
+const idState = ref({
+  prefix: 1024,
+  current: 0
+});
+
 export default {
   extends: DefaultTheme,
-  Layout: () => h(DefaultTheme.Layout, null),
+  Layout: () => h("div", [
+    h(DefaultTheme.Layout, null),
+    h(SettingsPanel)
+  ]),
   enhanceApp({
     app
   }) {
+
+    app.provide("ID_INJECTION_KEY", idState);
 
     // 注册 Demo 容器组件
     app.component("demo-block", DemoBlock);

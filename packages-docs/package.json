@@ -19,8 +19,10 @@
   },
   "main": "index.js",
   "devDependencies": {
-    "markdown-it-container": "^4.0.0",
-    "vite": "^6.1.0",
+    "glob": "catalog:",
+    "markdown-it-container": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
     "vitepress": "catalog:",
     "vue": "catalog:"
   }
