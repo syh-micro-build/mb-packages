@@ -6,6 +6,7 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
+    "types": ["vite/client"],
     "strict": true,
     "noImplicitAny": false,
     "allowSyntheticDefaultImports": true,

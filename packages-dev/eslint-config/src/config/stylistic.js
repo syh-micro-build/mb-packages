@@ -13,7 +13,9 @@ export default [
       "@stylistic/ts": stylisticTs
     },
     rules: {
-      "@stylistic/indent": ["error", 2],
+
+      // TODO 与 indent 冲突
+      "@stylistic/indent": "off",
       "@stylistic/ts/member-delimiter-style": [
         "error",
         {

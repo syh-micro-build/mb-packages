@@ -1,6 +1,6 @@
 # 按钮
 
-## Basic usage11122
+## Basic
 
 :::demo 你好
 

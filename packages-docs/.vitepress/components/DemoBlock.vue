@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="ts" name="demo-block">
 import {
   computed
 } from "vue";
