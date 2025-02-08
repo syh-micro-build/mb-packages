@@ -16,8 +16,8 @@ import {
 import DefaultTheme from "vitepress/theme";
 
 import {
-  DemoBlock,
-  SettingsPanel
+  Demo,
+  Setting
 } from "../components";
 
 import "./style.css";
@@ -35,7 +35,7 @@ export default {
   extends: DefaultTheme,
   Layout: () => h("div", [
     h(DefaultTheme.Layout, null),
-    h(SettingsPanel)
+    h(Setting)
   ]),
   enhanceApp({
     app
@@ -44,7 +44,7 @@ export default {
     app.provide(CONFIG_PROVIDER, state);
 
     // 注册 Demo 容器组件
-    app.component("demo-block", DemoBlock);
+    app.component("Demo", Demo);
 
     // 注册所有示例组件
     Object.entries(modules).forEach(([path, module]) => {

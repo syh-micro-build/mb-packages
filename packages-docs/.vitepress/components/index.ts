@@ -1,2 +1,2 @@
-export { default as DemoBlock } from "./DemoBlock.vue";
-export { default as SettingsPanel } from "./SettingsPanel.vue";
+export { default as Demo } from "./demo.vue";
+export { default as Setting } from "./setting.vue";

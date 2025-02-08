@@ -4,5 +4,10 @@ import EsLint, {
 
 export default [
   ...EsLint,
-  ...vue
+  ...vue,
+  {
+    rules: {
+      "vue/multi-word-component-names": "off"
+    }
+  }
 ];
