@@ -5,8 +5,8 @@ import {
   ConfigProviderProps
 } from "mb-components-vue-config-provider";
 import ContainerRender, {
-  ConfigProvider,
-  PropsContainerRender
+  PropsContainerRender,
+  getConfigProviderProps
 } from "mb-components-vue-container-render";
 import "mb-components-vue-container-render/dist/index.css";
 import {
@@ -70,9 +70,13 @@ const data = {
     <div class="container">
       <div class="code-show">
         {{ idState }}
-        <ConfigProvider :type="idState.type">
+        {{ getConfigProviderProps() }}
+        <!--
+ <ConfigProvider :type="idState.type">
           <ContainerRender :value="data" />
         </ConfigProvider>
+-->
+        <ContainerRender :value="data" />
       </div>
       <div class="show-icon">
         <Code

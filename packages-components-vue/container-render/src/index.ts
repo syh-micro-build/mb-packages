@@ -9,5 +9,6 @@ export type {
 
 export {
   default as ConfigProvider,
-  EUiType
+  EUiType,
+  getConfigProviderProps
 }from "mb-components-vue-config-provider";
