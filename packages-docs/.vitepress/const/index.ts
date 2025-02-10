@@ -1,10 +1,14 @@
+import {
+  EValueType
+} from "../enum";
+
 export const TABS = [
   {
-    value: "html",
-    label: "HTML"
+    value: EValueType.JSON,
+    label: "JSON"
   },
   {
-    value: "json",
-    label: "JSON"
+    value: EValueType.HTML,
+    label: "HTML"
   }
 ];

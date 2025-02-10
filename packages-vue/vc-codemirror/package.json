@@ -23,19 +23,15 @@
     "build": "pnpm run clear:build && vite build",
     "prepublishOnly": "pnpm run clear:build && npm run build"
   },
-  "main": "./dist/umd/index.js",
-  "module": "./dist/es/index.js",
+  "module": "./dist/index.js",
   "types": "./dist/types/index.d.ts",
-  "style": {
-    "umd": "dist/umd/index.css",
-    "es": "dist/es/index.css"
-  },
+  "style": "./dist/index.css",
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",
-      "import": "./dist/es/index.js",
-      "require": "./dist/umd/index.js"
-    }
+      "import": "./dist/index.js"
+    },
+    "./*": "./*"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -44,6 +40,7 @@
     "@codemirror/lang-json": "catalog:",
     "@codemirror/lang-vue": "catalog:",
     "@codemirror/state": "catalog:",
+    "@codemirror/view": "^6.36.2",
     "@vitejs/plugin-vue-jsx": "catalog:",
     "codemirror": "catalog:",
     "vue": "catalog:"

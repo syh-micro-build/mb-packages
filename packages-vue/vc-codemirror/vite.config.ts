@@ -29,25 +29,14 @@ export default defineConfig({
           format: "es",
           entryFileNames: "[name].js",
           preserveModules: true,
-          dir: "dist/es",
           preserveModulesRoot: "src",
-          assetFileNames: "index.css"
-        },
-        {
-          format: "umd",
-          name: "microVueHooks",
-          entryFileNames: "index.js",
-          dir: "dist/umd",
-          globals: {
-            vue: "Vue"
-          },
           assetFileNames: "index.css"
         }
       ]
     },
     lib: {
       entry: "./src/index.ts",
-      formats: ["es", "umd"]
+      formats: ["es"]
     }
   }
 });

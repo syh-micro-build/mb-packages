@@ -18,13 +18,12 @@
     "docs:preview": "vitepress preview"
   },
   "main": "index.js",
-  "dependencies": {
-    "mb-vc-icon": "workspace:^"
-  },
   "devDependencies": {
     "glob": "catalog:",
     "markdown-it-container": "catalog:",
     "mb-components-vue-config-provider": "workspace:^",
+    "mb-vc-codemirror": "workspace:^",
+    "mb-vc-icon": "workspace:^",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vitepress": "catalog:",

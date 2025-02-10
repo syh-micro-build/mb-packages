@@ -38,6 +38,6 @@ const DOM = () => {
 <template>
   <DOM />
 </template>
-<style scoped>
+<style>
 @import "../style/index.css";
 </style>

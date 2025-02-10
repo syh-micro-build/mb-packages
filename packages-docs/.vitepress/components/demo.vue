@@ -11,6 +11,9 @@ import {
   inject
 } from "vue";
 
+import Codemirror, {
+  CodeMirrorType
+} from "mb-vc-codemirror";
 import {
   Code,
   CaretTop
@@ -19,15 +22,21 @@ import {
 import {
   TABS
 } from "../const";
+import {
+  EValueType
+} from "../enum";
 
 const props = defineProps<{
   source: string;
   description?: string;
   rawSource: string;
   path: string;
+  json: string;
 }>();
 
 const decodedSource = computed(() => decodeURIComponent(props.source));
+
+const deJsonSource = computed(() => decodeURIComponent(props.json));
 
 const decodedDescription = computed(() => (props.description ? decodeURIComponent(props.description) : ""));
 
@@ -38,6 +47,12 @@ const isExpanded = ref(false); // 控制展开状态
 
 const handleClick = () => {
   isExpanded.value = !isExpanded.value;
+};
+
+const select = ref(EValueType.JSON);
+
+const handleChange = value => {
+  select.value = value;
 };
 
 </script>
@@ -61,11 +76,21 @@ const handleClick = () => {
       </div>
       <transition name="expand">
         <div v-if="decodedSource && isExpanded">
-          <Tabs :tabs="TABS" />
+          <Tabs
+            :tabs="TABS"
+            @change="handleChange"
+          />
           <div
+            v-if="EValueType.HTML === select"
             class="code"
             v-html="decodedSource"
           ></div>
+          <Codemirror
+            v-else
+            :read-only="true"
+            :value="deJsonSource"
+            :type="CodeMirrorType.JSON"
+          />
         </div>
       </transition>
       <div

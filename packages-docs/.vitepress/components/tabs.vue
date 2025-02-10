@@ -12,15 +12,25 @@ const props = defineProps({
   tabs: {
     type: Array as PropType<IItem[]>,
     required: true
+  },
+  defaultValue: {
+    type: String as PropType<string | number>,
+    default: () => ""
   }
 });
 
 type TabValue = typeof props.tabs[number]["value"];
 
-const select = ref<TabValue>("html");
+// eslint-disable-next-line vue/define-macros-order
+const emits = defineEmits<{
+  (e: "change", value: TabValue): void;
+}>();
+
+const select = ref<TabValue>(props.defaultValue || props.tabs[0].value);
 
 const handleClick = (value: TabValue) => {
   select.value = value;
+  emits("change", value);
 };
 
 </script>
@@ -45,9 +55,15 @@ const handleClick = (value: TabValue) => {
 
 .item {
   padding: 0 8px;
+  cursor: pointer;
+}
+
+.item:hover {
+  color: var(--vp-c-brand-1);
 }
 
 .item-select {
+  color: var(--vp-c-brand-1);
   border-bottom:2px solid var(--vp-c-brand-1);
 }
 </style>
