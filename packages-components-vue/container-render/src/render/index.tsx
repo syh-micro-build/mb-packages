@@ -7,7 +7,7 @@ import {
   VNode
 } from "vue";
 
-export default function Integration(props: PropsCheckJsonSchema): VNode {
+export default function(props: PropsCheckJsonSchema): VNode {
 
   const obj = checkJsonSchema(props);
 

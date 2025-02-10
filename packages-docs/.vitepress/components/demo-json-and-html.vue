@@ -4,6 +4,7 @@ import {
   CONFIG_PROVIDER,
   ConfigProviderProps
 } from "mb-components-vue-config-provider";
+import "mb-components-vue-render-check/dist/index.css";
 import {
   ref,
   computed,
@@ -34,7 +35,6 @@ const decodedSource = computed(() => decodeURIComponent(props.source));
 
 const decodedDescription = computed(() => (props.description ? decodeURIComponent(props.description) : ""));
 
-// eslint-disable-next-line unused-imports/no-unused-vars
 const idState = inject<Ref<ConfigProviderProps>>(CONFIG_PROVIDER)!;
 
 const isExpanded = ref(false); // 控制展开状态
@@ -49,6 +49,11 @@ const handleChange = value => {
   select.value = value;
 };
 
+// const data = {
+//   label: "John Doe",
+//   "type": "Button"
+// };
+
 </script>
 
 <template>
@@ -60,7 +65,7 @@ const handleChange = value => {
     ></div>
     <div class="container">
       <div class="code-show">
-        22222
+        {{ idState }}
       </div>
       <div class="show-icon">
         <Code

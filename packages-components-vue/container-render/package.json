@@ -1,5 +1,5 @@
 {
-  "name": "mb-components-vue-render-check",
+  "name": "mb-components-vue-container-render",
   "version": "1.0.0",
   "description": "Micro build components vue integration container.",
   "keywords": [],
@@ -29,7 +29,8 @@
     ".": {
       "types": "./dist/types/index.d.ts",
       "import": "./dist/index.js"
-    }
+    },
+    "./*": "./*"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
