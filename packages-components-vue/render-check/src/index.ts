@@ -1,7 +1,7 @@
 /**
- * IntegrationContainer
+ * RenderCheck
  */
-export { default } from "./integration";
+export { default } from "./render";
 
 export {
   default as ConfigProvider,

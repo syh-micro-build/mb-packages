@@ -17,7 +17,8 @@ import DefaultTheme from "vitepress/theme";
 
 import {
   Demo,
-  Setting
+  Setting,
+  DemoJsonAndHtml
 } from "../components";
 
 import "./style.css";
@@ -45,6 +46,7 @@ export default {
 
     // 注册 Demo 容器组件
     app.component("Demo", Demo);
+    app.component("DemoJsonAndHtml", DemoJsonAndHtml);
 
     // 注册所有示例组件
     Object.entries(modules).forEach(([path, module]) => {

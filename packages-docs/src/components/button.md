@@ -2,7 +2,7 @@
 
 ## Basic
 
-:::demo 你好 `nisdisjdksdj`
+:::json
 
 button/basic
 

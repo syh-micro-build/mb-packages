@@ -11,7 +11,7 @@ import Codemirror, {
   CodeMirrorType
 } from "mb-vc-codemirror";
 
-import IntegrationContainer, {
+import RenderCheck, {
   EUiType,
   ConfigProvider
 } from "../src";
@@ -65,7 +65,7 @@ const templateValue = computed(() => {
       :read-only="true"
     />
 
-    <IntegrationContainer v-bind="data" />
+    <RenderCheck v-bind="data" />
   </ConfigProvider>
 </template>
 
