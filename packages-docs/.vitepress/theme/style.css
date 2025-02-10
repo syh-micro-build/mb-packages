@@ -1,0 +1,5 @@
+.vp-doc div[class*="language-"],
+.vp-block {
+  margin: 0;
+  border-radius: 8px;
+}

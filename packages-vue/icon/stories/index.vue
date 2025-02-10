@@ -1,18 +1,21 @@
 <script lang="tsx" setup>
+
 import {
   Code,
-  Setting
+  Setting,
+  CaretTop
 } from "../src";
+
 </script>
 
 <template>
   <Code />
   <Setting color="red" />
+  <CaretTop />
+
+  <hr />
 </template>
 
 <style scoped>
-div {
-  height: 200px;
-}
 
 </style>

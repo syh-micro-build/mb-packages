@@ -15,13 +15,13 @@ const props = withDefaults(defineProps<IProps>(), {
 </script>
 <template>
   <svg
-    viewBox="0 0 24 24"
+    viewBox="0 0 1024 1024"
     :width="props.width"
     :height="props.height"
     :style="{ cursor: props.cursorShape }"
   >
     <path
       :fill="props.color"
-      d="m23 12l-7.071 7.071l-1.414-1.414L20.172 12l-5.657-5.657l1.414-1.414L23 12zM3.828 12l5.657 5.657l-1.414 1.414L1 12l7.071-7.071l1.414 1.414L3.828 12z"
+      d="M512 320 192 704h639.936z"
     /></svg>
 </template>

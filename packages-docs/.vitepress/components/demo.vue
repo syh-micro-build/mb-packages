@@ -1,17 +1,24 @@
 <script setup lang="ts" name="demo-block">
+import Tabs from "./tabs.vue";
 import {
   CONFIG_PROVIDER,
   ConfigProviderProps
 } from "mb-components-vue-config-provider";
 import {
+  ref,
   computed,
   Ref,
   inject
 } from "vue";
 
 import {
-  Code
+  Code,
+  CaretTop
 } from "mb-vc-icon";
+
+import {
+  TABS
+} from "../const";
 
 const props = defineProps<{
   source: string;
@@ -27,6 +34,12 @@ const decodedDescription = computed(() => (props.description ? decodeURIComponen
 // eslint-disable-next-line unused-imports/no-unused-vars
 const idState = inject<Ref<ConfigProviderProps>>(CONFIG_PROVIDER)!;
 
+const isExpanded = ref(false); // 控制展开状态
+
+const handleClick = () => {
+  isExpanded.value = !isExpanded.value;
+};
+
 </script>
 
 <template>
@@ -40,26 +53,75 @@ const idState = inject<Ref<ConfigProviderProps>>(CONFIG_PROVIDER)!;
       <div class="code-show">
         <slot name="source"></slot>
       </div>
-      <div class="icon">
-        <Code />
+      <div class="show-icon">
+        <Code
+          cursor-shape="pointer"
+          @click="handleClick"
+        />
       </div>
+      <transition name="expand">
+        <div v-if="decodedSource && isExpanded">
+          <Tabs :tabs="TABS" />
+          <div
+            class="code"
+            v-html="decodedSource"
+          ></div>
+        </div>
+      </transition>
       <div
-        v-if="decodedSource"
-        class="code"
-        v-html="decodedSource"
+        v-if="isExpanded"
+        class="hide-code"
+        @click="handleClick"
       >
+        <CaretTop
+          color="#DCDFE7"
+          cursor-shape="pointer"
+        />
+        隐藏源代码
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-div {
+.demo {
   font-size: 16px;
 }
 
 .container {
   border: 1px solid #DCDFE7;
   border-radius: 4px;
+}
+
+.code-show {
+  padding: 1.5rem;
+  border-bottom: 1px solid #DCDFE7;
+}
+
+.show-icon {
+  display: flex;
+  justify-content: flex-end;
+  padding: .5rem;
+}
+
+.hide-code {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  color: #DCDFE7;
+  border-top: 1px solid #DCDFE7;
+}
+
+.expand-enter-active,
+.expand-leave-active {
+  transition: all 0.5s ease;
+}
+
+.expand-enter-from,
+.expand-leave-to {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
 }
 </style>
