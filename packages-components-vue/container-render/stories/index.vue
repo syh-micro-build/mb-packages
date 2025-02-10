@@ -65,7 +65,7 @@ const templateValue = computed(() => {
       :read-only="true"
     />
 
-    <RenderCheck v-bind="data" />
+    <RenderCheck :value="data" />
   </ConfigProvider>
 </template>
 

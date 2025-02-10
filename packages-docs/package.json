@@ -19,7 +19,7 @@
   },
   "main": "index.js",
   "dependencies": {
-    "mb-components-vue-render-check": "workspace:^"
+    "mb-components-vue-container-render": "workspace:^"
   },
   "devDependencies": {
     "glob": "catalog:",

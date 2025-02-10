@@ -4,7 +4,11 @@ import {
   CONFIG_PROVIDER,
   ConfigProviderProps
 } from "mb-components-vue-config-provider";
-import "mb-components-vue-render-check/dist/index.css";
+import ContainerRender, {
+  ConfigProvider,
+  PropsContainerRender
+} from "mb-components-vue-container-render";
+import "mb-components-vue-container-render/dist/index.css";
 import {
   ref,
   computed,
@@ -49,10 +53,10 @@ const handleChange = value => {
   select.value = value;
 };
 
-// const data = {
-//   label: "John Doe",
-//   "type": "Button"
-// };
+const data = {
+  label: "John Doe",
+  "type": "Button"
+} as PropsContainerRender;
 
 </script>
 
@@ -66,6 +70,9 @@ const handleChange = value => {
     <div class="container">
       <div class="code-show">
         {{ idState }}
+        <ConfigProvider :type="idState.type">
+          <ContainerRender :value="data" />
+        </ConfigProvider>
       </div>
       <div class="show-icon">
         <Code

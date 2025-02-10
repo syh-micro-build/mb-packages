@@ -29,7 +29,7 @@ const modules = import.meta.glob<{ default: unknown }>("../../examples/**/*.vue"
 });
 
 const state = ref<ConfigProviderProps>({
-  type: EUiType.ELEMENT
+  type: EUiType.ARCO_DESIGN
 });
 
 export default {
