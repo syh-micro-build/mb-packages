@@ -1,9 +1,5 @@
 <script setup lang="ts" name="demo-block">
 import Tabs from "./tabs.vue";
-import {
-  CONFIG_PROVIDER,
-  ConfigProviderProps
-} from "mb-components-vue-config-provider";
 import ContainerRender, {
   PropsContainerRender,
   getConfigProviderProps
@@ -11,11 +7,13 @@ import ContainerRender, {
 import "mb-components-vue-container-render/dist/index.css";
 import {
   ref,
-  computed,
-  Ref,
-  inject
+  computed
 } from "vue";
 
+// import {
+//   CONFIG_PROVIDER,
+//   ConfigProviderProps
+// } from "mb-components-vue-config-provider";
 import {
   Code,
   CaretTop
@@ -39,7 +37,7 @@ const decodedSource = computed(() => decodeURIComponent(props.source));
 
 const decodedDescription = computed(() => (props.description ? decodeURIComponent(props.description) : ""));
 
-const idState = inject<Ref<ConfigProviderProps>>(CONFIG_PROVIDER)!;
+// const idState = inject<Ref<ConfigProviderProps>>(CONFIG_PROVIDER)!;
 
 const isExpanded = ref(false); // 控制展开状态
 
@@ -69,7 +67,6 @@ const data = {
     ></div>
     <div class="container">
       <div class="code-show">
-        {{ idState }}
         {{ getConfigProviderProps() }}
         <!--
  <ConfigProvider :type="idState.type">

@@ -42,7 +42,7 @@ export default {
     app
   }) {
 
-    app.provide(CONFIG_PROVIDER, state);
+    app.provide(CONFIG_PROVIDER, state.value);
 
     // 注册 Demo 容器组件
     app.component("Demo", Demo);

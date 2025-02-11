@@ -5,7 +5,6 @@ import {
   ConfigProviderProps
 } from "mb-components-vue-config-provider";
 import {
-  Ref,
   ref,
   inject
 } from "vue";
@@ -16,12 +15,12 @@ import {
 
 const showDrawer = ref(false);
 
-const idState = inject<Ref<ConfigProviderProps>>(CONFIG_PROVIDER)!;
+const idState = inject<ConfigProviderProps>(CONFIG_PROVIDER)!;
 
-const selectedOption = ref(idState.value.type);
+const selectedOption = ref(idState.type);
 
 const handleChange = e => {
-  idState.value.type = e.target.value;
+  idState.type = e.target.value;
 };
 
 const selectedColor = ref("#409EFF");
