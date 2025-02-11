@@ -6,6 +6,10 @@ import {
   MarkdownRenderer
 } from "vitepress";
 
+import {
+  jsonToHtml
+}from "../utils";
+
 const projRoot = resolve(__dirname, "..", "..", "..");
 
 // Docs
@@ -47,13 +51,13 @@ function createJsonContainer(md: MarkdownRenderer): IContainerOpts {
           throw new Error(`Incorrect source file: ${sourceFile}`);
         }
 
-        const code = `<template>
-  <div>基础</div>
-</template>`;
+        const code = jsonToHtml(source);
 
         return `<DemoJsonAndHtml source="${encodeURIComponent(md.render(`\`\`\` json\n${source}\`\`\``))}" 
-        path="${sourceFile}" description="${encodeURIComponent(md.render(description))}" 
-        code="${encodeURIComponent(md.render(`\`\`\` vue\n${code}\`\`\``))}" >`;
+        path="${sourceFile}"
+        description="${encodeURIComponent(md.render(description))}"
+        sourceData="${encodeURIComponent(source)}"
+        code="${encodeURIComponent(md.render(`\`\`\` vue\n${code}\n \`\`\``))}" >`;
       }
 
       return "</DemoJsonAndHtml>\n";

@@ -1,4 +1,4 @@
-<script setup lang="ts" name="demo-block">
+<script setup lang="ts">
 import Tabs from "./tabs.vue";
 import ContainerRender, {
   PropsContainerRender
@@ -6,7 +6,8 @@ import ContainerRender, {
 import "mb-components-vue-container-render/dist/index.css";
 import {
   ref,
-  computed
+  computed,
+  ComputedRef
 } from "vue";
 
 import {
@@ -22,6 +23,7 @@ import {
 } from "../enum";
 
 const props = defineProps<{
+  sourceData: string;
   source: string;
   description?: string;
   code: string;
@@ -32,7 +34,9 @@ const decodedSource = computed(() => decodeURIComponent(props.source));
 
 const decodedDescription = computed(() => (props.description ? decodeURIComponent(props.description) : ""));
 
-const decodedCode = computed(() => (props.code ? decodeURIComponent(props.code) : ""));
+const decodedCode = computed(() => (decodeURIComponent(props.code)));
+
+const decodedSourceData:ComputedRef<PropsContainerRender> = computed(() => JSON.parse(decodeURIComponent(props.sourceData)));
 
 const isExpanded = ref(false); // 控制展开状态
 
@@ -46,11 +50,6 @@ const handleChange = value => {
   select.value = value;
 };
 
-const data = {
-  label: "John Doe",
-  "type": "Button"
-} as PropsContainerRender;
-
 </script>
 
 <template>
@@ -62,7 +61,7 @@ const data = {
     ></div>
     <div class="container">
       <div class="code-show">
-        <ContainerRender :value="data" />
+        <ContainerRender :value="decodedSourceData" />
       </div>
       <div class="show-icon">
         <Code
