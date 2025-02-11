@@ -68,6 +68,5 @@ const DOM = () => {
 
 </script>
 <template>
-  {{ configProps.type }}
   <DOM />
 </template>

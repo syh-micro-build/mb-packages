@@ -7,3 +7,9 @@
 button/basic
 
 :::
+
+:::demo
+
+button/basic
+
+:::

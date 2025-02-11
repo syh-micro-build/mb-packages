@@ -1,8 +1,7 @@
 <script setup lang="ts" name="demo-block">
 import Tabs from "./tabs.vue";
 import ContainerRender, {
-  PropsContainerRender,
-  getConfigProviderProps
+  PropsContainerRender
 } from "mb-components-vue-container-render";
 import "mb-components-vue-container-render/dist/index.css";
 import {
@@ -10,10 +9,6 @@ import {
   computed
 } from "vue";
 
-// import {
-//   CONFIG_PROVIDER,
-//   ConfigProviderProps
-// } from "mb-components-vue-config-provider";
 import {
   Code,
   CaretTop
@@ -37,7 +32,7 @@ const decodedSource = computed(() => decodeURIComponent(props.source));
 
 const decodedDescription = computed(() => (props.description ? decodeURIComponent(props.description) : ""));
 
-// const idState = inject<Ref<ConfigProviderProps>>(CONFIG_PROVIDER)!;
+const decodedCode = computed(() => (props.code ? decodeURIComponent(props.code) : ""));
 
 const isExpanded = ref(false); // 控制展开状态
 
@@ -67,12 +62,6 @@ const data = {
     ></div>
     <div class="container">
       <div class="code-show">
-        {{ getConfigProviderProps() }}
-        <!--
- <ConfigProvider :type="idState.type">
-          <ContainerRender :value="data" />
-        </ConfigProvider>
--->
         <ContainerRender :value="data" />
       </div>
       <div class="show-icon">
@@ -88,14 +77,14 @@ const data = {
             @change="handleChange"
           />
           <div
-            v-if="EValueType.HTML === select"
+            v-if="EValueType.JSON === select"
             class="code"
             v-html="decodedSource"
           ></div>
           <div
             v-else
             class="code"
-            v-html="decodedSource"
+            v-html="decodedCode"
           ></div>
         </div>
       </transition>

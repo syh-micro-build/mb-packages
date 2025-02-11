@@ -1,58 +1,30 @@
 <script setup lang="ts" name="demo-block">
-import Tabs from "./tabs.vue";
-import {
-  CONFIG_PROVIDER,
-  ConfigProviderProps
-} from "mb-components-vue-config-provider";
+
 import {
   ref,
-  computed,
-  Ref,
-  inject
+  computed
 } from "vue";
 
-import Codemirror, {
-  CodeMirrorType
-} from "mb-vc-codemirror";
 import {
   Code,
   CaretTop
 } from "mb-vc-icon";
-
-import {
-  TABS
-} from "../const";
-import {
-  EValueType
-} from "../enum";
 
 const props = defineProps<{
   source: string;
   description?: string;
   rawSource: string;
   path: string;
-  json: string;
 }>();
 
 const decodedSource = computed(() => decodeURIComponent(props.source));
 
-const deJsonSource = computed(() => decodeURIComponent(props.json));
-
 const decodedDescription = computed(() => (props.description ? decodeURIComponent(props.description) : ""));
-
-// eslint-disable-next-line unused-imports/no-unused-vars
-const idState = inject<Ref<ConfigProviderProps>>(CONFIG_PROVIDER)!;
 
 const isExpanded = ref(false); // 控制展开状态
 
 const handleClick = () => {
   isExpanded.value = !isExpanded.value;
-};
-
-const select = ref(EValueType.JSON);
-
-const handleChange = value => {
-  select.value = value;
 };
 
 </script>
@@ -75,22 +47,11 @@ const handleChange = value => {
         />
       </div>
       <transition name="expand">
-        <div v-if="decodedSource && isExpanded">
-          <Tabs
-            :tabs="TABS"
-            @change="handleChange"
-          />
-          <div
-            v-if="EValueType.HTML === select"
-            class="code"
-            v-html="decodedSource"
-          ></div>
-          <Codemirror
-            v-else
-            :read-only="true"
-            :value="deJsonSource"
-            :type="CodeMirrorType.JSON"
-          />
+        <div
+          v-if="decodedSource && isExpanded"
+          class="code"
+          v-html="decodedSource"
+        >
         </div>
       </transition>
       <div

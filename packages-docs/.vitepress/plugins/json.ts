@@ -47,11 +47,16 @@ function createJsonContainer(md: MarkdownRenderer): IContainerOpts {
           throw new Error(`Incorrect source file: ${sourceFile}`);
         }
 
-        return `<DemoJsonAndHtml source="${encodeURIComponent(md.render(`\`\`\` json\n${source}\`\`\``))}" path="${sourceFile}" description="${encodeURIComponent(md.render(description))}" code="${encodeURIComponent(source)}">`;
+        const code = `<template>
+  <div>基础</div>
+</template>`;
+
+        return `<DemoJsonAndHtml source="${encodeURIComponent(md.render(`\`\`\` json\n${source}\`\`\``))}" 
+        path="${sourceFile}" description="${encodeURIComponent(md.render(description))}" 
+        code="${encodeURIComponent(md.render(`\`\`\` vue\n${code}\`\`\``))}" >`;
       }
 
       return "</DemoJsonAndHtml>\n";
-
     }
   };
 }
