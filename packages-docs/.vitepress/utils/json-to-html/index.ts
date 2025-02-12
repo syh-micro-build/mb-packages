@@ -10,10 +10,10 @@ export default function jsonToHtml(value: string): string {
 
   const str = convertOptionsToString(data?.options || {});
 
-  const script = `<script setup lang="tsx">
-  
-</script>
-`;
+  //   const script = `<script setup lang="tsx">
+
+  // </script>
+  // `;
 
   const template = data.label ? `<template>
   <${data.type} ${str}>
@@ -25,13 +25,11 @@ export default function jsonToHtml(value: string): string {
 </template>
 `;
 
-  const style = `<style scoped>
-  
-</style>`;
+  //   const style = `<style scoped>
+
+  // </style>`;
 
   return `
-${script}
 ${template}
-${style}
 `;
 }
