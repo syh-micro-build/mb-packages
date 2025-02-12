@@ -13,9 +13,9 @@
   "author": "LiYong",
   "scripts": {
     "clear": "rm -fr node_modules",
-    "docs": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "dev": "vitepress dev .",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
   },
   "main": "index.js",
   "dependencies": {
