@@ -1,6 +1,4 @@
-# mb-packages
-
-micro-build-packages
+# micro-build-packages
 
 ## 安装依赖
 
@@ -15,3 +13,7 @@ pnpm run boot
 ## 技术选型
 
 [docs](./docs/selection.md)
+
+## 目录说明
+
+[docs](./docs/结构说明.md)
