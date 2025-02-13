@@ -15,6 +15,11 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       {
+        text: "规则",
+        link: "/src/rules/index",
+        activeMatch: "/src/rules/"
+      },
+      {
         text: "组件",
         link: "/src/components/index",
         activeMatch: "/src/components/"
@@ -22,7 +27,7 @@ export default defineConfig({
     ],
 
     sidebar: {
-      "/src/": [
+      "/src/components/": [
         {
           text: "按钮",
           link: "/src/components/button"

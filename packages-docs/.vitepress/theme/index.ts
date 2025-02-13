@@ -18,7 +18,8 @@ import DefaultTheme from "vitepress/theme";
 import {
   Demo,
   Setting,
-  DemoJsonAndHtml
+  DemoJsonAndHtml,
+  Card
 } from "../components";
 
 import "./style.css";
@@ -56,5 +57,6 @@ export default {
 
       app.component(`ep-${name}`, module.default as DefineComponent);
     });
+    app.component("Card", Card);
   }
 } satisfies Theme;

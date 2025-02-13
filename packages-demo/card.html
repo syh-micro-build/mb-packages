@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh - CN">
+
+<head>
+  <meta charset="UTF - 8">
+  <meta name="viewport" content="width=device-width, initial - scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* 整体容器样式 */
+    .card-container {
+      display: flex;
+      gap: 20px;
+    }
+
+    /* card 样式 */
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 300px;
+    }
+
+    .card:hover {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* card 标题样式 */
+    .card h2 {
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      border-radius: 5px 5px 0 0;
+    }
+
+    /* card 内容区域样式 */
+    .content {
+      padding: 20px;
+    }
+
+    /* 边框部分样式 */
+    .border-section input {
+      padding: 8px;
+      margin-right: 10px;
+      border: 1px solid #007bff;
+      border-radius: 3px;
+    }
+
+    .border-section input:nth-of-type(2) {
+      border-style: dashed;
+    }
+
+    /* 颜色部分样式 */
+    .color-section {
+      display: flex;
+      gap: 10px;
+    }
+
+    .color-block {
+      width: 50px;
+      height: 30px;
+    }
+
+    .light-blue {
+      background-color: #e0f2ff;
+    }
+
+    .blue {
+      background-color: #007bff;
+    }
+
+    .dark-blue {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card-container">
+    <div class="card">
+      <h2>222</h2>
+      <div class="content border-section">
+        <input type="text" placeholder="Input 1">
+        <input type="text" placeholder="Input 2">
+      </div>
+    </div>
+    <div class="card">
+      <h2>222</h2>
+      <div class="content color-section">
+        <div class="color-block light-blue"></div>
+        <div class="color-block blue"></div>
+        <div class="color-block dark-blue"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
