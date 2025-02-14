@@ -55,7 +55,18 @@ export default async () => {
           icon: "github",
           link: "https://github.com/syh-micro-build/mb-packages/"
         }
-      ]
+      ],
+      footer: {
+        message: "基于 MIT 许可发布",
+        copyright: `© 2024-${new Date().getFullYear()}`
+      },
+      docFooter: {
+        prev: "上一页",
+        next: "下一页"
+      },
+      outline: {
+        label: "页面导航"
+      }
     },
     markdown: {
       config: md => mdPlugin(md)
