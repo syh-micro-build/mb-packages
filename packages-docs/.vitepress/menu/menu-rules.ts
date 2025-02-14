@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-export default async function rulesMenu() {
+export default async function menuRules() {
   const packagesDir = path.resolve(__dirname, "../../src/_generate-md");  // 根据需要设置路径
 
   if (fs.existsSync(packagesDir)) {

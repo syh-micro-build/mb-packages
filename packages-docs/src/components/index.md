@@ -2,4 +2,4 @@
 
 ## Basic 基础组件
 
-<Card title="按钮" />
+<Card title="按钮" link="/components/button/" />

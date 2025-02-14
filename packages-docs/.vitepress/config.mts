@@ -9,13 +9,11 @@ import {
   generateMdFromDev
 } from "./_plugins";
 import {
-  rulesMenu
+  menuRules
 } from "./menu";
 
 // https://vitepress.dev/reference/site-config
 export default async () => {
-  const rules = await rulesMenu();
-
   const nav = [
     {
       text: "组件",
@@ -36,6 +34,8 @@ export default async () => {
       }
     ]
   };
+
+  const rules = await menuRules();
 
   if(rules) {
     nav.unshift(rules?.nav);
