@@ -4,10 +4,14 @@ import type {
 
 import mdContainer from "markdown-it-container";
 
-import createDemoContainer from "../plugins/demo";
-import createJsonContainer from "../plugins/json";
+import {
+  createDemoContainer,
+  createJsonContainer
+} from "../_plugins";
 
-export const mdPlugin = (md: MarkdownRenderer) => {
+const mdPlugin = (md: MarkdownRenderer) => {
   md.use(mdContainer, "demo", createDemoContainer(md));
   md.use(mdContainer, "json", createJsonContainer(md));
 };
+
+export default mdPlugin;
