@@ -1,39 +1,15 @@
 import {
-  EUiEleType
-} from "mb-components-vue-enum";
+  SCHEMA
+} from "../const";
+import BUTTON from "./button";
+import SELECT from "./select";
 
-import {
-  IProps,
-  TSchemaTypeWithLabel
-} from "../types";
-
-const JSON_SCHEMA: TSchemaTypeWithLabel<IProps> = {
-  type: "object",
-  properties: {
-    type: {
-      enum: Object.values(EUiEleType)
-    },
-    label: {
-      type: "string"
-    },
-
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    options: {
-      type: "object",
-      properties: {
-        style: {
-          type: "object"
-        },
-        class: {
-          type: "string"
-        }
-      },
-      additionalProperties: true
-    }
-  },
-  required: ["type"],
-  additionalProperties: false
+const JSON_SCHEMA = {
+  "$schema": SCHEMA,
+  "oneOf": [
+    BUTTON,
+    SELECT
+  ]
 };
 
 export default JSON_SCHEMA;

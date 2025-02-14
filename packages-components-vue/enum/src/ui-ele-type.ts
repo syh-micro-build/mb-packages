@@ -1,6 +1,6 @@
 enum EUiEleType {
   BUTTON = "Button",
-  Select = "Select"
+  SELECT = "Select"
 }
 
 export default EUiEleType;

@@ -1,2 +1,3 @@
 export { default } from "./check";
-export type { IProps as PropsCheckJsonSchema } from "./types";
+export { EUiEleType } from "./enum";
+export type { TProps as PropsCheckJsonSchema } from "./types";

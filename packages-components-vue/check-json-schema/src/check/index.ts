@@ -2,7 +2,7 @@ import Ajv from "ajv";
 
 import JSON_SCHEMA from "../json-schema";
 import {
-  IProps
+  TProps
 } from "../types";
 
 const ajv = new Ajv({
@@ -12,7 +12,7 @@ const ajv = new Ajv({
 /**
  * checkJsonSchema
  */
-export default function check(props: IProps): IProps | undefined {
+export default function check(props: TProps): TProps | undefined {
 
   const validate = ajv.compile(JSON_SCHEMA);
 
@@ -20,5 +20,5 @@ export default function check(props: IProps): IProps | undefined {
     return props;
   }
 
-  console.error(validate.errors);
+  console.error("JSON Error: ", validate.errors);
 }
