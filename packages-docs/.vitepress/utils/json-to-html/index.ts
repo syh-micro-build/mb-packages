@@ -29,7 +29,6 @@ export default function jsonToHtml(value: string): string {
 
   // </style>`;
 
-  return `
-${template}
+  return `${template}
 `;
 }
