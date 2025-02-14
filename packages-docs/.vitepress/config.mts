@@ -38,7 +38,7 @@ export default async () => {
   };
 
   if(rules) {
-    nav.push(rules?.nav);
+    nav.unshift(rules?.nav);
     sidebar[rules.nav.activeMatch] = rules?.menu;
   }
 
