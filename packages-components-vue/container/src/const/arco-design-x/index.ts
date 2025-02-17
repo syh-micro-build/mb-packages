@@ -1,11 +1,9 @@
 import {
-  Button,
-  Select
-} from "@arco-design/web-vue";
+  Button
+} from "../../components/arco-design-x";
 
 const COMPONENT_MAP = {
-  Button,
-  Select
+  Button
 };
 
 export default COMPONENT_MAP;

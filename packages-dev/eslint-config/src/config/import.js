@@ -3,6 +3,8 @@
  *
  * https://www.npmjs.com/package/eslint-plugin-import
  *
+ * https://www.npmjs.com/package/eslint-import-resolver-typescript
+ *
  * eslint-plugin-import-x 后期考虑使用它
  */
 

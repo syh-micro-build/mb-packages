@@ -1,6 +1,9 @@
 <script setup lang="tsx">
 
 import {
+  PropsCheckJsonSchema
+} from "mb-components-vue-check-json-schema";
+import {
   EUiType,
   getConfigProviderProps
 } from "mb-components-vue-config-provider";
@@ -18,11 +21,8 @@ import {
   ElementComponentMap,
   ArcoComponentMap
 } from "../const";
-import {
-  TProps
-} from "../types";
 
-const props = defineProps<TProps>();
+const props = defineProps<PropsCheckJsonSchema>();
 
 const configProps = getConfigProviderProps();
 
@@ -61,9 +61,8 @@ const DOM = () => {
     return <div>组件 {props.type} 未找到</div>;
   }
 
-  return <Component {...props.options}>
-    {props.label}
-  </Component>;
+  // TODO
+  return <Component {...props.options as any} />;
 };
 
 </script>

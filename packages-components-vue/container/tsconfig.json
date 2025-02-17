@@ -13,12 +13,15 @@
       "experimentalDecorators": true,
       "baseUrl": ".",
       "module": "ESNext",
-      "moduleResolution": "Node",
+      "moduleResolution": "node",
+      "paths": {
+        "*": ["node_modules/*", "src/*"]
+      },
       "resolveJsonModule": true,
       "allowJs": false,
       "strict": true,
       "strictFunctionTypes": false,
-      "noImplicitAny": false,
+      "noImplicitAny": true,
       "noImplicitThis": true,
       "noUnusedLocals": true,
       "noUnusedParameters": true,
@@ -30,9 +33,6 @@
       "verbatimModuleSyntax": false,
       "skipLibCheck": true
     },
-    "files": [
-      "package.json"
-    ],
     "include": [
       "src/**/*.ts",
       "src/**/*.tsx",

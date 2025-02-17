@@ -48,3 +48,4 @@ lerna-debug.log*
 pnpm-lock.yaml
 *storybook.log
 **/_generate-md
+**/storybook-static

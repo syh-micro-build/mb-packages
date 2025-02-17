@@ -1,4 +1,7 @@
 <script lang="tsx" setup>
+import {
+  PropsCheckJsonSchema
+} from "mb-components-vue-check-json-schema";
 import ConfigProvider, {
   EUiType
 } from "mb-components-vue-config-provider";
@@ -8,17 +11,16 @@ import {
 
 import Container from "../src";
 
-const data = {
-  "type": EUiEleType.Select,
-  "options": {
-    "street": "123 Main St",
-    "city": "Somewhere"
+const data: PropsCheckJsonSchema = {
+  type: EUiEleType.BUTTON,
+  options: {
+    label: "123 Main St"
   }
 };
 </script>
 
 <template>
-  <ConfigProvider :type="EUiType.ARCO_DESIGN">
+  <ConfigProvider :type="EUiType.ELEMENT">
     <Container v-bind="data" />
   </ConfigProvider>
 </template>

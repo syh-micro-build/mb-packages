@@ -5,16 +5,16 @@ import {
   EThemeButton
 } from "../enum";
 
-interface IButton {
-  type: EUiEleType.BUTTON;
-  options: {
-    label: string | Element | unknown;
-    style?: string;
-    class?: string;
-    type?: ETypeButton;
-    shape?: EShapeButton;
-    theme?: EThemeButton;
-  };
+export interface IPropsButton {
+  label: string | HTMLElement | unknown;
+  style?: string;
+  class?: string;
+  type?: ETypeButton;
+  shape?: EShapeButton;
+  theme?: EThemeButton;
 }
 
-export default IButton;
+export interface IButton {
+  type: EUiEleType.BUTTON;
+  options: IPropsButton;
+}

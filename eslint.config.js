@@ -7,7 +7,8 @@ export default [
   ...vue,
   {
     rules: {
-      "vue/multi-word-component-names": "off"
+      "vue/multi-word-component-names": "off",
+      "import/export": "warn"
     }
   }
 ];
