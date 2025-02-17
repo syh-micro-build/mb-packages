@@ -8,7 +8,8 @@ export enum EShapeButton {
   DEFAULT = "default",
   PLAIN = "plain",
   ROUND = "round",
-  CIRCLE = "circle"
+  CIRCLE = "circle",
+  SECONDARY = "secondary"
 }
 
 export enum EThemeButton {

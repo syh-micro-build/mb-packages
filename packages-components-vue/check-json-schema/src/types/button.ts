@@ -11,7 +11,7 @@ export interface IPropsButton {
   class?: string;
   type?: ETypeButton;
   shape?: EShapeButton;
-  theme?: EThemeButton;
+  theme?: EThemeButton | string;
 }
 
 export interface IButton {

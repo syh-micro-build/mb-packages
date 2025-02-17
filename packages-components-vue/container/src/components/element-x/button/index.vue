@@ -6,7 +6,8 @@ import {
   PropsButton
 } from "mb-components-vue-check-json-schema";
 import {
-  withDefaults
+  withDefaults,
+  computed
 } from "vue";
 
 import {
@@ -18,12 +19,19 @@ const props = withDefaults(defineProps<PropsButton>(), {
   shape: EShapeButton.DEFAULT,
   theme: EThemeButton.DEFAULT
 });
+
+const isInvalidTheme = computed(() => Object.values(EThemeButton).includes(props.theme as EThemeButton));
+
 </script>
 <template>
   <div>
     <ElButton
       :class="props.class"
       :style="props.style"
+      :type="(isInvalidTheme ? props.theme : EThemeButton.DEFAULT) as EThemeButton"
+      :link="props.type === ETypeButton.LINK"
+      :text="props.type === ETypeButton.TEXT"
+      :color="!isInvalidTheme ? props.theme : undefined"
     >
       <slot>
         {{ props.label }}
