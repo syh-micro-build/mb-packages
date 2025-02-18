@@ -1,5 +1,8 @@
 <script lang="tsx" setup>
 import {
+  PropsCheckJsonSchema
+} from "mb-components-vue-check-json-schema";
+import {
   EUiEleType
 } from "mb-components-vue-enum";
 import {
@@ -16,12 +19,10 @@ import RenderCheck, {
   ConfigProvider
 } from "../src";
 
-const data = reactive({
-  label: "John Doe",
+const data: PropsCheckJsonSchema = reactive({
   "type": EUiEleType.BUTTON,
   "options": {
-    "street": "123 Main St",
-    "city": "Somewhere"
+    "label": "123 Main St"
   }
 });
 
@@ -46,7 +47,7 @@ const templateValue = computed(() => {
   const str = convertOptionsToString(data?.options);
 
   return `<${data.type} ${str}>
-  ${data.label}
+  ${data?.options.label}
 </${data.type}>`;
 });
 </script>
