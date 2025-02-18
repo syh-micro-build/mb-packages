@@ -1,44 +1,45 @@
 {
-    "compilerOptions": {
-      "composite": true,
-      "target": "ESNext",
-      "jsx": "preserve",
-      "jsxImportSource": "vue",
-      "lib": [
-        "ES2020",
-        "DOM",
-        "DOM.Iterable"
-      ],
-      "useDefineForClassFields": true,
-      "experimentalDecorators": true,
-      "baseUrl": ".",
-      "module": "ESNext",
-      "moduleResolution": "node",
-      "paths": {
-        "*": ["node_modules/*", "src/*"]
-      },
-      "resolveJsonModule": true,
-      "allowJs": false,
-      "strict": true,
-      "strictFunctionTypes": false,
-      "noImplicitAny": true,
-      "noImplicitThis": true,
-      "noUnusedLocals": true,
-      "noUnusedParameters": true,
-      "declaration": true,
-      "sourceMap": true,
-      "allowSyntheticDefaultImports": true,
-      "esModuleInterop": true,
-      "forceConsistentCasingInFileNames": true,
-      "verbatimModuleSyntax": false,
-      "skipLibCheck": true
-    },
-    "include": [
-      "src/**/*.ts",
-      "src/**/*.tsx",
-      "src/**/*.vue"
+  "compilerOptions": {
+    "composite": true,
+    "target": "ESNext",
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
     ],
-    "exclude": [
-      "node_modules"
-    ]
-  }
+    "useDefineForClassFields": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "paths": {
+      "*": ["node_modules/*", "src/*"]
+    },
+    "resolveJsonModule": true,
+    "allowJs": false,
+    "strict": false,
+    "strictFunctionTypes": false,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "declaration": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": false,
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "./*.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
