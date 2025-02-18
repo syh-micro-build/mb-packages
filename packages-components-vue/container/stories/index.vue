@@ -11,12 +11,16 @@ import {
   EUiEleType
 } from "mb-components-vue-enum";
 
+import {
+  Button
+} from "virtual:component-map-plugin";
+
 import Container from "../src";
 
 const data: PropsCheckJsonSchema = {
   type: EUiEleType.BUTTON,
   options: {
-    label: "123 Main St",
+    label: "123 Main Str",
     type: ETypeButton.TEXT,
     theme: EThemeButton.SUCCESS
   }
@@ -27,6 +31,7 @@ const data: PropsCheckJsonSchema = {
   <ConfigProvider :type="EUiType.ARCO_DESIGN">
     <Container v-bind="data" />
   </ConfigProvider>
+  <Button>2222</Button>
 </template>
 
 <style scoped>

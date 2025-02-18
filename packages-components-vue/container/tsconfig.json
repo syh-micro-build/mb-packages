@@ -15,9 +15,13 @@
     "module": "ESNext",
     "moduleResolution": "node",
     "paths": {
-      "*": ["node_modules/*", "src/*"]
+      "*": ["node_modules/*", "src/*", "types/*"]
     },
     "resolveJsonModule": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ],
     "allowJs": false,
     "strict": false,
     "strictFunctionTypes": false,
@@ -37,7 +41,11 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "./*.d.ts"
+    "stories/**/*.ts",
+    "stories/**/*.tsx",
+    "stories/**/*.vue",
+    "./**/*.d.ts",
+    "types/**/*.d.ts",
   ],
   "exclude": [
     "node_modules"

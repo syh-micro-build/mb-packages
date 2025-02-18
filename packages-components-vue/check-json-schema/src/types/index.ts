@@ -1,15 +1,13 @@
 import {
-  IPropsButton,
-  IButton
+  IPropsButton
 } from "./button";
+import TProps from "./props";
 import {
-  IPropsSelect,
-  ISelect
+  IPropsSelect
 } from "./select";
-
-export type TProps = IButton | ISelect;
 
 export {
   IPropsButton as PropsButton,
-  IPropsSelect as PropsSelect
+  IPropsSelect as PropsSelect,
+  TProps
 };

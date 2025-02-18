@@ -15,6 +15,10 @@ import {
 } from "vue";
 
 import {
+  cssLoad
+} from "virtual:css-load-plugin";
+
+import {
   Loading
 } from "../components";
 import {
@@ -33,19 +37,9 @@ const componentMap = computed(() => (configProps.type === EUiType.ARCO_DESIGN
   : ElementComponentMap));
 
 onMounted(() => {
-  if (configProps.type === EUiType.ARCO_DESIGN) {
-
-    // @ts-ignore
-    import("@arco-design/web-vue/dist/arco.css").then(() => {
-      cssLoaded.value = true;
-    });
-  } else {
-
-    // @ts-ignore
-    import("element-plus/dist/index.css").then(() => {
-      cssLoaded.value = true;
-    });
-  }
+  cssLoad(configProps.type === EUiType.ARCO_DESIGN).then(() => {
+    cssLoaded.value = true;
+  });
 });
 
 const DOM = () => {
