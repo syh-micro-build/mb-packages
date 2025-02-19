@@ -25,12 +25,22 @@ export default async () => {
   const sidebar = {
     "/src/components/": [
       {
-        text: "按钮",
-        link: "/src/components/button"
+        text: "Overview 组件总览",
+        link: "/src/components/"
       },
       {
-        text: "下拉框",
-        link: "/src/components/select"
+        text: "前端基础",
+        collapsed: false,
+        items: [
+          {
+            text: "按钮",
+            link: "/src/components/button"
+          },
+          {
+            text: "下拉框",
+            link: "/src/components/select"
+          }
+        ]
       }
     ]
   };

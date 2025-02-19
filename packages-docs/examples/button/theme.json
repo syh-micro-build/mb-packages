@@ -1,0 +1,7 @@
+{
+  "type": "Button",
+  "options": {
+    "label": "按钮",
+    "theme": "success"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "type": "Button",
   "options": {
-    "label": "你好"
+    "label": "按钮"
   }
 }

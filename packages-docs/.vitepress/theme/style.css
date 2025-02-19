@@ -29,3 +29,21 @@
 .demo {
   margin-top: 16px;
 }
+
+/* 修改侧边栏样式 */
+.items .VPSidebarItem .item {
+  margin-left: 20px;
+}
+
+.Layout .VPSidebar {
+  background-color: transparent;
+}
+
+.Layout .VPSidebar .curtain {
+  background-color: transparent;
+}
+
+.is-active {
+  background-color: color-mix(in srgb, var(--vp-c-brand-1) 10%, transparent);
+  border-radius: 4px;
+}
