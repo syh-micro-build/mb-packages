@@ -75,7 +75,8 @@ export default async () => {
         next: "下一页"
       },
       outline: {
-        label: "页面导航"
+        label: "页面导航",
+        level: [2, 3]
       }
     },
     markdown: {
