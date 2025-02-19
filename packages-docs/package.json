@@ -14,7 +14,7 @@
   "scripts": {
     "clear": "rm -fr node_modules",
     "dev": "vitepress dev .",
-    "build": "vitepress build",
+    "build:docs": "vitepress build",
     "preview": "vitepress preview"
   },
   "main": "index.js",
