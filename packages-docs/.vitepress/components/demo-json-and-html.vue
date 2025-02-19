@@ -2,8 +2,8 @@
 import Tabs from "./tabs.vue";
 import ContainerRender, {
   PropsContainerRender
-} from "mb-components-vue-container-render";
-import "mb-components-vue-container-render/dist/index.css";
+} from "mb-vue-components-container-render";
+import "mb-vue-components-container-render/dist/index.css";
 import {
   ref,
   computed,

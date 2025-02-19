@@ -19,14 +19,14 @@
   },
   "main": "index.js",
   "dependencies": {
-    "mb-components-vue-container-render": "workspace:^"
+    "mb-vue-components-container-render": "workspace:^"
   },
   "devDependencies": {
     "glob": "catalog:",
     "markdown-it-container": "catalog:",
-    "mb-components-vue-config-provider": "workspace:^",
     "mb-vc-codemirror": "workspace:^",
     "mb-vc-icon": "workspace:^",
+    "mb-vue-components-config-provider": "workspace:^",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vitepress": "catalog:",
