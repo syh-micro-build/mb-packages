@@ -47,3 +47,11 @@
   background-color: color-mix(in srgb, var(--vp-c-brand-1) 10%, transparent);
   border-radius: 4px;
 }
+
+.VPSidebarItem.collapsible > .item {
+  pointer-events: none;
+}
+
+.VPSidebarItem .item .caret {
+  display: none;
+}
