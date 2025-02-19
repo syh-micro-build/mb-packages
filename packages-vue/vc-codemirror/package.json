@@ -40,7 +40,7 @@
     "@codemirror/lang-json": "catalog:",
     "@codemirror/lang-vue": "catalog:",
     "@codemirror/state": "catalog:",
-    "@codemirror/view": "^6.36.2",
+    "@codemirror/view": "catalog:",
     "@vitejs/plugin-vue-jsx": "catalog:",
     "codemirror": "catalog:",
     "vue": "catalog:"

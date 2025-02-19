@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "@vitejs/plugin-vue-jsx": "catalog:",
+    "element-plus": "catalog:",
     "vue": "catalog:"
   },
   "devDependencies": {
