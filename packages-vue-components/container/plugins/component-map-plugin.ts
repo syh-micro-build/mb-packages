@@ -1,6 +1,12 @@
 import {
+  EUiType
+} from "mb-vue-components-config-provider";
+
+import {
   Plugin
 } from "vite";
+
+let uiType: EUiType = EUiType.ELEMENT;
 
 export default function componentMapPlugin(): Plugin {
   const virtualModuleId = "virtual:component-map-plugin";
@@ -9,6 +15,34 @@ export default function componentMapPlugin(): Plugin {
 
   return {
     name: "component-map-plugin",
+    transform(src, id) {
+
+      // 只处理 .vue 文件
+      if (id.endsWith(".vue")) {
+        const configProviderRegex = /\$setup\["ConfigProvider"\],\s*\{\s*type:\s*(\$setup\.EUiType\.[A-Z_]+)/g;
+
+        // 获取所有匹配项
+        const matches = Array.from(src.matchAll(configProviderRegex));
+
+        if (matches.length > 0) {
+          const [selectedMatch] = matches;
+
+          if (selectedMatch) {
+            const typeValue = selectedMatch[1];
+
+            const enumValue = typeValue.split(".").pop();
+
+            console.warn("Enum value:", enumValue);
+
+            if (enumValue && enumValue in EUiType) {
+              uiType = EUiType[enumValue as keyof typeof EUiType];
+            }
+          }
+        }
+      }
+
+      return null;
+    },
     resolveId(id) {
       if (id === virtualModuleId) {
         return resolvedVirtualModuleId;
@@ -17,9 +51,7 @@ export default function componentMapPlugin(): Plugin {
     load(id) {
       if (id === resolvedVirtualModuleId) {
 
-        const importPath = true
-          ? "@/components/element-x"
-          : "@/components/arco-design-x";
+        const importPath = uiType === EUiType.ELEMENT ? "@/components/element-x" : "@/components/arco-design-x";
 
         const components = [
           "Button"
@@ -35,16 +67,6 @@ export default function componentMapPlugin(): Plugin {
           ${exportStatement}
         `;
       }
-    },
-
-    /**
-     * 在热更新时，生成一个配置文件，然后读取配置文件
-     *
-     * 在 provide 处生成配置文件，在这进行读取，然后把 load 里面的内容，想办法，迁移过来
-     */
-    handleHotUpdate() {
-
-      // console.log(222);
     }
   };
 }

@@ -9,6 +9,7 @@ export default function cssLoadPlugin(): Plugin {
 
   return {
     name: "css-load-plugin", // 插件名称，Vite 在输出警告或错误信息时会显示这个名称
+
     resolveId(id) {
       if (id === virtualModuleId) {
         return resolvedVirtualModuleId;  // 如果请求的是 'virtual:my-module'，则返回解析后的虚拟模块 ID

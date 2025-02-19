@@ -46,6 +46,7 @@
     "stories/**/*.vue",
     "./**/*.d.ts",
     "types/**/*.d.ts",
+    "plugins/**.ts"
   ],
   "exclude": [
     "node_modules"
