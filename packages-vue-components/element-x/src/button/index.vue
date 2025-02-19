@@ -1,8 +1,12 @@
+<script setup lang="tsx">
+import {
+  ElButton
+} from "element-plus";
+
+</script>
 <template>
-  <div>aaa</div>
+  <ElButton>aaa</ElButton>
 </template>
 <style scoped>
-div {
-  color: red;
-}
+
 </style>
