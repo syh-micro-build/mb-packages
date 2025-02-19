@@ -16,7 +16,7 @@ export default defineConfig({
     dts({
       outDir: "./dist/types",
       tsconfigPath: "./tsconfig.json",
-      rollupTypes: true
+      rollupTypes: false
     })
   ],
   build: {
@@ -30,9 +30,10 @@ export default defineConfig({
       output: [
         {
           format: "es",  // 使用 ES 模块格式
-          entryFileNames: "index.js",  // 输出的主文件名称
-          dir: "dist",  // 输出目录
-          preserveModulesRoot: "src"  // 保持模块结构
+          entryFileNames: "[name].js",
+          preserveModules: true,
+          dir: "dist",
+          preserveModulesRoot: "src"
         }
       ]
     },
