@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "mb-vue-components-container-render": "workspace:^",
+    "mb-vue-element-x": "workspace:^",
     "pinia": "catalog:",
     "vue": "catalog:",
     "vue-router": "catalog:"
