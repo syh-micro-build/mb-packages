@@ -6,10 +6,6 @@ import {
 } from "vite";
 import dts from "vite-plugin-dts";
 
-import {
-  componentMapPlugin
-} from "./plugins";
-
 export default defineConfig({
   plugins: [
     vue(),
@@ -18,8 +14,7 @@ export default defineConfig({
       outDir: "./dist/types",
       tsconfigPath: "./tsconfig.json",
       rollupTypes: true
-    }),
-    componentMapPlugin()
+    })
   ],
   build: {
     target: "esnext",
