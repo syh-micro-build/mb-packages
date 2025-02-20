@@ -38,7 +38,7 @@
   "dependencies": {
     "@vitejs/plugin-vue-jsx": "catalog:",
     "element-plus": "catalog:",
-    "vite-plugin-css-injected-by-js": "^3.5.2",
+    "vite-plugin-css-injected-by-js": "catalog:",
     "vue": "catalog:"
   },
   "devDependencies": {
@@ -53,7 +53,6 @@
     "@storybook/vue3-vite": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
     "@vue/tsconfig": "catalog:",
-    "rollup-plugin-css-only": "^4.5.2",
     "storybook": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
