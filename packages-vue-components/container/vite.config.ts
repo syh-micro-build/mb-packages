@@ -6,7 +6,13 @@ import {
 } from "vite";
 import dts from "vite-plugin-dts";
 
-// https://vitejs.dev/config/
+import {
+  componentMapPlugin
+} from "./plugins";
+import {
+  test01
+} from "./stories/__test__/plugins";
+
 export default defineConfig({
   plugins: [
     vue(),
@@ -15,20 +21,21 @@ export default defineConfig({
       outDir: "./dist/types",
       tsconfigPath: "./tsconfig.json",
       rollupTypes: true
-    })
+    }),
+    test01(),
+    componentMapPlugin()
   ],
-
-  // resolve: {
-  //   alias: {
-  //     "@": path.resolve(__dirname, "src")
-  //   }
-  // },
+  optimizeDeps: {
+    include: ["mb-vue-arco-design-x", "mb-vue-element-x"]
+  },
   build: {
     target: "esnext",
     minify: true,
     sourcemap: false,
     rollupOptions: {
-      external: ["vue"],
+      external: [
+        "vue"
+      ],
       input: "./src/index.ts",
       output: [
         {

@@ -51,7 +51,7 @@ export default function componentMapPlugin(): Plugin {
     load(id) {
       if (id === resolvedVirtualModuleId) {
 
-        const importPath = uiType === EUiType.ELEMENT ? "@/components/element-x" : "@/components/arco-design-x";
+        const importPath = uiType === EUiType.ELEMENT ? "mb-vue-element-x" : "mb-vue-arco-design-x";
 
         const components = [
           "Button"

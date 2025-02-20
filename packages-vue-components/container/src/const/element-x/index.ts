@@ -1,6 +1,6 @@
 import {
   Button
-} from "../../components/element-x";
+} from "mb-vue-element-x";
 
 const COMPONENT_MAP = {
   Button

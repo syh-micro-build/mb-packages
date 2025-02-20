@@ -40,9 +40,11 @@
     "@arco-design/web-vue": "catalog:",
     "@vitejs/plugin-vue-jsx": "catalog:",
     "element-plus": "catalog:",
+    "mb-vue-arco-design-x": "workspace:^",
     "mb-vue-components-check-json-schema": "workspace:^",
     "mb-vue-components-config-provider": "workspace:^",
     "mb-vue-components-enum": "workspace:^",
+    "mb-vue-element-x": "workspace:^",
     "vue": "catalog:"
   },
   "devDependencies": {

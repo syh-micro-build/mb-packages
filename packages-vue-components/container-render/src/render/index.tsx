@@ -2,7 +2,6 @@ import checkJsonSchema, {
   PropsCheckJsonSchema
 } from "mb-vue-components-check-json-schema";
 import Container from "mb-vue-components-container";
-import "mb-vue-components-container/dist/index.css";
 import {
   VNode
 } from "vue";

@@ -1,6 +1,10 @@
 <script setup lang="ts">
+import ConfigProvider, {
+  EUiType
+} from "mb-vue-components-config-provider";
 import {
-  RouterLink, RouterView
+  RouterLink,
+  RouterView
 } from "vue-router";
 </script>
 
@@ -17,8 +21,9 @@ import {
       </nav>
     </div>
   </header>
-
-  <RouterView />
+  <ConfigProvider :type="EUiType.ELEMENT">
+    <RouterView />
+  </ConfigProvider>
 </template>
 
 <style scoped>

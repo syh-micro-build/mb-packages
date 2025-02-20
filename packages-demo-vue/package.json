@@ -24,8 +24,8 @@
     "type-check": "vue-tsc --build"
   },
   "dependencies": {
-    "mb-vue-components-container-render": "workspace:^",
-    "mb-vue-element-x": "workspace:^",
+    "mb-vue-components-config-provider": "workspace:^",
+    "mb-vue-components-container": "workspace:^",
     "pinia": "catalog:",
     "vue": "catalog:",
     "vue-router": "catalog:"

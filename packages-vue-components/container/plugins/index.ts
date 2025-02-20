@@ -1,3 +1,4 @@
+/*
 import {
   EUiType
 } from "mb-vue-components-config-provider";
@@ -84,3 +85,5 @@ export default function uiTypeContainerPlugins(): Plugin[] {
 
   return [componentMapPlugin, cssLoadPlugin];
 }
+*/
+export { default as componentMapPlugin } from "./component-map-plugin";

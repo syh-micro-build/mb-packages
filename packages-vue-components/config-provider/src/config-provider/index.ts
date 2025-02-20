@@ -4,7 +4,6 @@ import {
   renderSlot,
   provide,
   App,
-  getCurrentInstance,
   VNode
 } from "vue";
 
@@ -18,15 +17,13 @@ import {
 const ConfigProvider = defineComponent({
   name: "ConfigProvider",
   props: {
+
+    /**
+     * 不能给默认值
+     */
     app: {
       type: Object as PropType<App>,
-      default: () => {
-        const instance = getCurrentInstance();
-
-        if (instance) {
-          return instance.appContext.app;
-        }
-      }
+      default: undefined
     },
     type: {
       type: String as PropType<IProps["type"]>
@@ -40,7 +37,7 @@ const ConfigProvider = defineComponent({
 
     return (): VNode => renderSlot(slots, "default", {
       config: props
-    }); // 加载完成后渲染内容
+    });
   }
 });
 

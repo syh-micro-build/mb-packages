@@ -1,9 +1,16 @@
 <script lang="tsx" setup>
-
+import ConfigProvider, {
+  EUiType
+} from "../src";
+import {
+  Test01
+} from "./components";
 </script>
 
 <template>
-  <COMPONENT_MAP.Button>222</COMPONENT_MAP.Button>
+  <ConfigProvider :type="EUiType.ELEMENT">
+    <Test01 />
+  </ConfigProvider>
 </template>
 
 <style scoped>
