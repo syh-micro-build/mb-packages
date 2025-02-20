@@ -3,6 +3,9 @@ import {
 } from "mb-vue-components-config-provider";
 
 import {
+  execSync
+} from "child_process";
+import {
   Plugin
 } from "vite";
 
@@ -11,7 +14,7 @@ export default function componentMapPlugin(): Plugin {
 
   return {
     name: "component-map-plugin",
-    async transform(code, id) {
+    transform(code, id) {
       if (id.endsWith(".vue") || id.endsWith(".tsx") || id.endsWith(".ts") || id.endsWith(".js")) {
         const configProviderRegex = /\$setup\["ConfigProvider"\],\s*\{\s*type:\s*(\$setup\.EUiType\.[A-Z_]+)/g;
 
@@ -41,6 +44,14 @@ export default function componentMapPlugin(): Plugin {
     },
 
     configResolved(config) {
+      try {
+        execSync("rm -rf node_modules/.vite", {
+          stdio: "inherit"
+        });
+      } catch (error) {
+        console.error("Error deleting node_modules/.vite folder", error);
+      }
+
       if (uiType) {
         config.define["import.meta.env.VITE_UI_TYPY"] = JSON.stringify(uiType);
       }

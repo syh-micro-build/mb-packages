@@ -1,3 +1,6 @@
+import {
+  componentMapPlugin
+} from "../packages-vue-components/container/src/plugins";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import vueDevTools from "vite-plugin-vue-devtools";
@@ -15,7 +18,8 @@ export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
-    vueDevTools()
+    vueDevTools(),
+    componentMapPlugin()
   ],
   resolve: {
     alias: {
