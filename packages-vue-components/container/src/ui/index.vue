@@ -25,6 +25,7 @@ const props = defineProps<PropsCheckJsonSchema>();
 const configProps = getConfigProviderProps();
 
 const componentMap = computed(() => {
+
   if(!import.meta.env.VITE_UI_TYPY) {
     return configProps.type === EUiType.ARCO_DESIGN ? ArcoComponentMap : ElementComponentMap;
   }

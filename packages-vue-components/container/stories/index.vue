@@ -1,8 +1,6 @@
 <script lang="tsx" setup>
 import {
-  PropsCheckJsonSchema,
-  ETypeButton,
-  EThemeButton
+  PropsCheckJsonSchema
 } from "mb-vue-components-check-json-schema";
 import ConfigProvider, {
   EUiType
@@ -19,15 +17,13 @@ console.log(import.meta.env.VITE_UI_TYPY);
 const data: PropsCheckJsonSchema = {
   type: EUiEleType.BUTTON,
   options: {
-    label: "Main Str",
-    type: ETypeButton.TEXT,
-    theme: EThemeButton.SUCCESS
+    label: "Main Str"
   }
 };
 </script>
 
 <template>
-  <ConfigProvider :type="EUiType.ARCO_DESIGN">
+  <ConfigProvider :type="EUiType.ELEMENT">
     <Container v-bind="data" />
   </ConfigProvider>
 </template>
