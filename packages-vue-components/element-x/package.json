@@ -38,6 +38,7 @@
   "dependencies": {
     "@vitejs/plugin-vue-jsx": "catalog:",
     "element-plus": "catalog:",
+    "mb-vue-components-check-json-schema": "workspace:^",
     "vite-plugin-css-injected-by-js": "catalog:",
     "vue": "catalog:"
   },

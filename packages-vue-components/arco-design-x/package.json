@@ -37,7 +37,9 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
+    "@arco-design/web-vue": "catalog:",
     "@vitejs/plugin-vue-jsx": "catalog:",
+    "mb-vue-components-check-json-schema": "workspace:^",
     "vue": "catalog:"
   },
   "devDependencies": {
