@@ -55,6 +55,7 @@
     "storybook": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
     "vite-plugin-dts": "catalog:",
     "vue-tsc": "catalog:"
   }
