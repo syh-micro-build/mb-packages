@@ -6,23 +6,16 @@ import {
   Plugin
 } from "vite";
 
-let uiType: EUiType = EUiType.ELEMENT;
-
 export default function componentMapPlugin(): Plugin {
-  const virtualModuleId = "virtual:component-map-plugin";
-
-  const resolvedVirtualModuleId = `\0${virtualModuleId}`;
+  let uiType: EUiType;
 
   return {
     name: "component-map-plugin",
-    transform(src, id) {
-
-      // 只处理 .vue 文件
-      if (id.endsWith(".vue")) {
+    async transform(code, id) {
+      if (id.endsWith(".vue") || id.endsWith(".tsx") || id.endsWith(".ts") || id.endsWith(".js")) {
         const configProviderRegex = /\$setup\["ConfigProvider"\],\s*\{\s*type:\s*(\$setup\.EUiType\.[A-Z_]+)/g;
 
-        // 获取所有匹配项
-        const matches = Array.from(src.matchAll(configProviderRegex));
+        const matches = Array.from(code.matchAll(configProviderRegex));
 
         if (matches.length > 0) {
           const [selectedMatch] = matches;
@@ -32,8 +25,6 @@ export default function componentMapPlugin(): Plugin {
 
             const enumValue = typeValue.split(".").pop();
 
-            console.warn("Enum value:", enumValue);
-
             if (enumValue && enumValue in EUiType) {
               uiType = EUiType[enumValue as keyof typeof EUiType];
             }
@@ -41,31 +32,17 @@ export default function componentMapPlugin(): Plugin {
         }
       }
 
-      return null;
-    },
-    resolveId(id) {
-      if (id === virtualModuleId) {
-        return resolvedVirtualModuleId;
+      // 只有在 uiType 被赋值后才执行替换
+      if (uiType) {
+        code = code.replace(/import\.meta\.env\.VITE_UI_TYPY/g, JSON.stringify(uiType));
       }
+
+      return code;
     },
-    load(id) {
-      if (id === resolvedVirtualModuleId) {
 
-        const importPath = uiType === EUiType.ELEMENT ? "mb-vue-element-x" : "mb-vue-arco-design-x";
-
-        const components = [
-          "Button"
-        ];
-
-        const importStatement = `import {\n  ${components.join(",\n  ")}\n} from "${importPath}";`;
-
-        const exportStatement = `export {\n  ${components.join(",\n  ")}\n};`;
-
-        return `
-          ${importStatement}
-          
-          ${exportStatement}
-        `;
+    configResolved(config) {
+      if (uiType) {
+        config.define["import.meta.env.VITE_UI_TYPY"] = JSON.stringify(uiType);
       }
     }
   };

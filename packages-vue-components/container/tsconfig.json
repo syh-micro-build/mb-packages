@@ -45,7 +45,7 @@
     "stories/**/*.tsx",
     "stories/**/*.vue",
     "./**/*.d.ts",
-    "types/**/*.d.ts",
+    "./env.d.ts",
     "plugins/**.ts"
   ],
   "exclude": [

@@ -16,15 +16,21 @@ import {
   ElementComponentMap,
   ArcoComponentMap
 } from "../const";
+import {
+  loadFrameType
+} from "../utils";
 
 const props = defineProps<PropsCheckJsonSchema>();
 
 const configProps = getConfigProviderProps();
 
-// TODO 导入这块优化 ！！！
-const componentMap = computed(() => (configProps.type === EUiType.ARCO_DESIGN
-  ? ArcoComponentMap
-  : ElementComponentMap));
+const componentMap = computed(() => {
+  if(!import.meta.env.VITE_UI_TYPY) {
+    return configProps.type === EUiType.ARCO_DESIGN ? ArcoComponentMap : ElementComponentMap;
+  }
+
+  return loadFrameType;
+});
 
 const DOM = () => {
   const Component = componentMap.value[props.type as keyof typeof componentMap.value];
@@ -35,7 +41,6 @@ const DOM = () => {
     return <div>组件 {props.type} 未找到</div>;
   }
 
-  // TODO
   return <Component {...props.options as any} />;
 };
 

@@ -9,9 +9,6 @@ import dts from "vite-plugin-dts";
 import {
   componentMapPlugin
 } from "./plugins";
-import {
-  test01
-} from "./stories/__test__/plugins";
 
 export default defineConfig({
   plugins: [
@@ -22,12 +19,8 @@ export default defineConfig({
       tsconfigPath: "./tsconfig.json",
       rollupTypes: true
     }),
-    test01(),
     componentMapPlugin()
   ],
-  optimizeDeps: {
-    include: ["mb-vue-arco-design-x", "mb-vue-element-x"]
-  },
   build: {
     target: "esnext",
     minify: true,

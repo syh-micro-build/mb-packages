@@ -11,11 +11,10 @@ import {
   EUiEleType
 } from "mb-vue-components-enum";
 
-import {
-  Button
-} from "virtual:component-map-plugin";
-
 import Container from "../src";
+
+// eslint-disable-next-line no-console
+console.log(import.meta.env.VITE_UI_TYPY);
 
 const data: PropsCheckJsonSchema = {
   type: EUiEleType.BUTTON,
@@ -31,8 +30,6 @@ const data: PropsCheckJsonSchema = {
   <ConfigProvider :type="EUiType.ARCO_DESIGN">
     <Container v-bind="data" />
   </ConfigProvider>
-
-  <Button>222</Button>
 </template>
 
 <style scoped>
