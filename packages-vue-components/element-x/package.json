@@ -24,10 +24,10 @@
     "prepublishOnly": "pnpm run clear:build && npm run build"
   },
   "module": "./dist/index.js",
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/types/src/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.ts",
+      "types": "./dist/types/src/index.d.ts",
       "import": "./dist/index.js"
     },
     "./*": "./*"
