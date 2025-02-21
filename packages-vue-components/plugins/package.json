@@ -1,0 +1,41 @@
+{
+  "name": "mb-vue-components-plugins",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/syh-micro-build/mb-packages",
+  "bugs": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syh-micro-build/mb-packages"
+  },
+  "license": "ISC",
+  "author": {
+    "email": "2236472089@qq.com",
+    "name": "Li Yong"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clear": "rm -fr node_modules",
+    "clear:build": "rm -fr dist",
+    "build": "pnpm run clear:build && vite build"
+  },
+  "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./*": "./*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "mb-ts-config": "workspace:^",
+    "mb-vue-components-config-provider": "workspace:^",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.1",
+    "vite-plugin-dts": "^4.5.0"
+  }
+}

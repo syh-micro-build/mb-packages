@@ -42,6 +42,7 @@
     "mb-vue-components-check-json-schema": "workspace:^",
     "mb-vue-components-config-provider": "workspace:^",
     "mb-vue-components-enum": "workspace:^",
+    "mb-vue-components-plugins": "workspace:^",
     "mb-vue-element-x": "workspace:^",
     "vue": "catalog:"
   },

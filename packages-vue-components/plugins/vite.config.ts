@@ -1,9 +1,3 @@
-import vue from "@vitejs/plugin-vue";
-import vueJsx from "@vitejs/plugin-vue-jsx";
-import {
-  componentMapPlugin
-} from "mb-vue-components-plugins";
-
 import {
   defineConfig
 } from "vite";
@@ -11,23 +5,17 @@ import dts from "vite-plugin-dts";
 
 export default defineConfig({
   plugins: [
-    vue(),
-    vueJsx(),
     dts({
       outDir: "./dist/types",
       tsconfigPath: "./tsconfig.json",
       rollupTypes: true
-    }),
-    componentMapPlugin()
+    })
   ],
   build: {
-    target: "esnext",
+    target: "node22",
     minify: true,
     sourcemap: false,
     rollupOptions: {
-      external: [
-        "vue"
-      ],
       input: "./src/index.ts",
       output: [
         {
@@ -35,10 +23,10 @@ export default defineConfig({
           entryFileNames: "[name].js",
           preserveModules: true,
           dir: "dist",
-          preserveModulesRoot: "src",
-          assetFileNames: "index.css"
+          preserveModulesRoot: "src"
         }
-      ]
+      ],
+      external: ["child_process"]
     },
     lib: {
       entry: "./src/index.ts",

@@ -12,7 +12,10 @@
     "experimentalDecorators": true,
     "baseUrl": ".",
     "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "node",
+    "paths": {
+      "*": ["node_modules/*", "src/*", "types/*"]
+    },
     "resolveJsonModule": true,
     "types": ["node"],
     "allowJs": false,
@@ -36,9 +39,13 @@
   ],
   "include": [
     "src/**/*.ts",
+    "src/**/*.tsx",
     "src/**/*.vue",
     "stories/**/*.vue",
-    "stories/**/*.ts"
+    "stories/**/*.ts",
+    "stories/**/*.tsx",
+    "./**/*.d.ts",
+    "./env.d.ts"
   ],
   "exclude": [
     "node_modules"
