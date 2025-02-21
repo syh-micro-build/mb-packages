@@ -16,6 +16,11 @@ import {
 export default async () => {
   const nav = [
     {
+      text: "指南",
+      link: "/src/guide/design",
+      activeMatch: "/src/guide/"
+    },
+    {
       text: "组件",
       link: "/src/components/index",
       activeMatch: "/src/components/"
@@ -42,13 +47,33 @@ export default async () => {
           }
         ]
       }
+    ],
+    "/src/guide": [
+      {
+        text: "基础",
+        collapsed: false,
+        items: [
+          {
+            text: "设计",
+            link: "/src/guide/design"
+          },
+          {
+            text: "安装",
+            link: "/src/guide/installation"
+          },
+          {
+            text: "快速开始",
+            link: "/src/guide/quickstart"
+          }
+        ]
+      }
     ]
   };
 
   const rules = await menuRules();
 
   if(rules) {
-    nav.unshift(rules?.nav);
+    nav.push(rules?.nav);
     sidebar[rules.nav.activeMatch] = rules?.menu;
   }
 
