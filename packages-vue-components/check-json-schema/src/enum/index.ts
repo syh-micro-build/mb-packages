@@ -4,6 +4,4 @@ export {
   ETypeButton
 } from "./button";
 
-export {
-  EUiEleType
-} from "mb-vue-components-enum";
+export { default as EUiEleType } from "./ui-ele-type";
