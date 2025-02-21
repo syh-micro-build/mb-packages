@@ -56,7 +56,7 @@
     "@storybook/test": "catalog:",
     "@storybook/vue3": "catalog:",
     "@storybook/vue3-vite": "catalog:",
-    "@types/node": "^22.13.4",
+    "@types/node": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
     "@vue/tsconfig": "catalog:",
     "storybook": "catalog:",
