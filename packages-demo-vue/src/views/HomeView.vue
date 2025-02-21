@@ -1,8 +1,17 @@
 <script setup lang="tsx">
 
+import Container from "mb-vue-components-container";
+
 import {
   Test01
 } from "../components";
+
+const data: any = {
+  type: "Button",
+  options: {
+    label: "Main Str"
+  }
+};
 </script>
 
 <template>
@@ -11,5 +20,7 @@ import {
     <hr />
 
     <Test01 />
+
+    <Container v-bind="data" />
   </main>
 </template>

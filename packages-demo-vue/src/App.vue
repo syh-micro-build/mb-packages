@@ -21,7 +21,7 @@ import {
       </nav>
     </div>
   </header>
-  <ConfigProvider :type="EUiType.ELEMENT">
+  <ConfigProvider :type="EUiType.ARCO_DESIGN">
     <RouterView />
   </ConfigProvider>
 </template>
