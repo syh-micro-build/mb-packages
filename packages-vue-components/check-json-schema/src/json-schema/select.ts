@@ -1,36 +1,46 @@
-export default {
-  "type": "object",
-  "properties": {
-    "type": {
-      "const": "Select"
+import {
+  EUiEleType
+} from "../enum";
+
+export const definitionsSelect = {
+  selectOptions: {
+    type: "object",
+    required: ["data"],
+    properties: {
+      data: {
+        type: "array"
+      }
     },
-    "options": {
-      "type": "object",
-      "properties": {
-        "data": {
-          "type": "array"
-        }
-      },
-      "required": ["data"],
-      "additionalProperties": false
-    }
-  },
-  "required": ["type", "options"],
-  "additionalProperties": false
+    additionalProperties: false
+  }
 };
 
-/*
-{
-  "type": "object",
-  "properties": {
-    "type": {
-      "const": "Select"
-    },
-    "style": {
-      "type": "string"
+export const $refSelect = {
+  $ref: "#/definitions/selectOptions"
+};
+
+export const noItemsCaseSchemaSelect = {
+  if: {
+    properties: {
+      type: {
+        const: "Input"
+      }
     }
   },
-  "required": ["type", "style"],
-  "additionalProperties": false
-}
-*/
+  then: {
+    properties: {
+      options: $refSelect
+    }
+  }
+};
+
+export const itemsCaseSchemaSelect = {
+  type: "object",
+  properties: {
+    type: {
+      const: EUiEleType.SELECT
+    },
+    options: $refSelect
+  },
+  required: ["type", "options"]
+};

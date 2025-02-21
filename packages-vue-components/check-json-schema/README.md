@@ -4,4 +4,6 @@
 
 [json-schema](https://json-schema.org/)
 
+[json-schema 中文](https://json-schema.apifox.cn/)
+
 [ajv](https://www.npmjs.com/package/ajv)

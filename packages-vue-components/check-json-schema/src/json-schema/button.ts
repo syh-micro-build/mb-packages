@@ -1,37 +1,52 @@
-export default {
-  "type": "object",
-  "properties": {
-    "type": {
-      "const": "Button"
-    },
-    "options": {
-      "type": "object",
-      "properties": {
-        "label": {
-          "type": "string"
-        },
-        "type": {
+import {
+  EUiEleType
+} from "../enum";
 
-          // enum: Object.values(EUiEleType) 枚举
-          "type": "string"
-        },
-        "style": {
-          "type": "string"
-        },
-        "class": {
-          "type": "string"
-        },
-        "shape": {
-          "type": "string"
-        },
-        "theme": {
-          "type": "string"
-        }
-      },
-      "required": ["label"],
-      "additionalProperties": false
+export const definitionsButtob = {
+  buttonOptions: {
+    type: "object",
+    required: ["label"],
+    properties: {
+      label: {
+        type: "string"
+      }
+    },
+    additionalProperties: false
+  }
+};
+
+export const $refButton = {
+  $ref: "#/definitions/buttonOptions"
+};
+
+/**
+ * Case 1: 根节点无 items 的情况
+ */
+export const noItemsCaseSchemaButtob = {
+  if: {
+    properties: {
+      type: {
+        const: "Button"
+      }
     }
   },
-  "required": ["type", "options"],
-  "additionalProperties": false
+  then: {
+    properties: {
+      options: $refButton
+    }
+  }
+};
+
+/**
+ * Case 2: 包含 items 的情况
+ */
+export const itemsCaseSchemaButtob = {
+  type: "object",
+  properties: {
+    type: {
+      const: EUiEleType.BUTTON
+    },
+    options: $refButton
+  },
+  required: ["type", "options"]
 };
