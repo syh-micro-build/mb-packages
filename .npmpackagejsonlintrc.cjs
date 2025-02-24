@@ -15,7 +15,7 @@ module.exports = {
     "no-repeated-dependencies": "error",
     "prefer-alphabetical-bundledDependencies": "error",
     "prefer-alphabetical-dependencies": "error",
-    "prefer-alphabetical-devDependencies": "off",
+    "prefer-alphabetical-devDependencies": "error",
     "prefer-alphabetical-optionalDependencies": "error",
     "prefer-alphabetical-peerDependencies": "error",
     "prefer-property-order": "off",
