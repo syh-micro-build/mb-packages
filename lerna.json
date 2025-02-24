@@ -5,5 +5,11 @@
     "packages*/**"
   ],
   "gitRemote": "origin",
-  "gitTagVersion": false
+  "gitTagVersion": false,
+  "command": {
+    "publish": {
+      "npmClient": "pnpm",
+      "npmClientArgs": ["--access", "public"]
+    }
+  }
 }
