@@ -13,3 +13,7 @@ export {
   EUiType,
   getConfigProviderProps
 }from "mb-vue-components-config-provider";
+
+export {
+  Button
+} from "mb-vue-components-container";

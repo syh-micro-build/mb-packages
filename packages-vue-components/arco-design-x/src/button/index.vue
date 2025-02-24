@@ -13,10 +13,11 @@ import {
   withDefaults
 } from "vue";
 
-const props = withDefaults(defineProps<PropsButton>(), {
+const props = withDefaults(defineProps<Omit<PropsButton, "label"> & { label?: string }>(), {
   type: ETypeButton.DEFAULT,
   shape: EShapeButton.DEFAULT,
-  theme: EThemeButton.DEFAULT
+  theme: EThemeButton.DEFAULT,
+  label: ""
 });
 
 const _theme = computed(() => {

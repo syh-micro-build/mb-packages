@@ -1,6 +1,6 @@
 <script setup lang="tsx">
 
-import Container from "mb-vue-components-container";
+import Container from "mb-vue-components-container-render";
 
 import {
   Test01
@@ -21,6 +21,6 @@ const data: any = {
 
     <Test01 />
 
-    <Container v-bind="data" />
+    <Container :value="data" />
   </main>
 </template>

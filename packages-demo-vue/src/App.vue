@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import ConfigProvider, {
-  EUiType
-} from "mb-vue-components-config-provider";
+import {
+  EUiType,
+  ConfigProvider
+} from "mb-vue-components-container-render";
 import {
   RouterLink,
   RouterView
