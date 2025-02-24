@@ -16,9 +16,10 @@ const data3: PropsCheckJsonSchema = {
         "data": [1, 2]
       }
     }
-  ],
-  "margin": "10px",
-  "padding": "10px"
+  ]
+
+  // "margin": "10px",
+  // "padding": "10px"
 };
 
 const data4: PropsCheckJsonSchema = {

@@ -9,8 +9,9 @@ type TComponentsProps = IButton | ISelect;
 
 interface IProps {
   items: TComponentsProps[];
-  margin: string;
-  padding: string;
+  margin?: string;
+  padding?: string;
+  class?: string;
 }
 
 type TProps = IProps | TComponentsProps;
