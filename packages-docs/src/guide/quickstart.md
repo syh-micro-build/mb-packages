@@ -4,6 +4,10 @@
 
 ### 确定 UI 框架
 
+注：推荐在 `App.vue` 中配置 `ConfigProvider`，但是也可以在模块中使用。
+
+<span style="font-size: 8px;">后面即将推出 2.0 在已有项目中集成使用。</span>
+
 ```vue
 <script setup lang="ts">
 import {
