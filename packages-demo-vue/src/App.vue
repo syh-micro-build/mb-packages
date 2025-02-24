@@ -2,7 +2,7 @@
 import {
   EUiType,
   ConfigProvider
-} from "mb-vue-components-container-render";
+} from "@mb-kit/vue-container-render";
 import {
   RouterLink,
   RouterView

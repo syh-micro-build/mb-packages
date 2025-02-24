@@ -1,1 +1,1 @@
-export { default } from "mb-commitlint-config";
+export { default } from "@mb-kit/commitlint-config";

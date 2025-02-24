@@ -1,25 +1,25 @@
-# mb-vue-components-container
+# @mb-kit/vue-container
 
 这块可以在拆，分 ui 库拆
 
 ## 1、使用
 
 ```bash
-pnpm add mb-vue-components-container
+pnpm add @mb-kit/vue-container
 ```
 
 ## 2、使用
 
 ```js
 // 必须引入这个样式文件
-import "mb-vue-components-container/dist/index.css";
+import "@mb-kit/vue-container/dist/index.css";
 ```
 
 ```tsx
 import checkJsonSchema, {
   PropsCheckJsonSchema
-} from "mb-vue-components-check-json-schema";
-import Container from "mb-vue-components-container";
+} from "@mb-kit/vue-schema-validator";
+import Container from "@mb-kit/vue-container";
 
 import {
   VNode

@@ -1,3 +1,4 @@
+//TODO 与 sort-package-json 冲突，后面保留一个
 module.exports = {
   extends: "npm-package-json-lint-config-default",
   rules: { // rules ref: https://npmpackagejsonlint.org/docs/rules
@@ -14,7 +15,7 @@ module.exports = {
     "no-repeated-dependencies": "error",
     "prefer-alphabetical-bundledDependencies": "error",
     "prefer-alphabetical-dependencies": "error",
-    "prefer-alphabetical-devDependencies": "error",
+    "prefer-alphabetical-devDependencies": "off",
     "prefer-alphabetical-optionalDependencies": "error",
     "prefer-alphabetical-peerDependencies": "error",
     "prefer-property-order": "off",

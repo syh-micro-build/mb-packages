@@ -18,7 +18,7 @@ import {
 import {
   EUiType,
   ConfigProvider
-} from "mb-vue-components-container-render";
+} from "@mb-kit/vue-container-render";
 </script>
 
 <template>
@@ -54,7 +54,7 @@ import {
 
 ```vue
 <script setup lang="ts">
-import RenderCheck from "mb-vue-components-container-render";
+import RenderCheck from "@mb-kit/vue-container-render";
 
 const data = {
   "type": "Button",
@@ -73,7 +73,7 @@ const data = {
 ### 安装
 
 ```bash
-npm  i mb-vue-components-plugins -D
+npm  i @mb-kit/vue-plugins -D
 ```
 
 ### 引用
@@ -83,7 +83,7 @@ npm  i mb-vue-components-plugins -D
 ```ts
 import {
   componentMapPlugin
-} from "mb-vue-components-plugins";
+} from "@mb-kit/vue-plugins";
 
 export default defineConfig({
   plugins: [

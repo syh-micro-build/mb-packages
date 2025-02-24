@@ -1,4 +1,4 @@
-# mb-eslint-config
+# @mb-kit/eslint-config
 
 [docs](https://eslint.nodejs.cn/)
 
@@ -7,7 +7,7 @@
 ## 安装
 
 ```bash
-npm install -D eslint mb-eslint-config
+npm install -D eslint @mb-kit/eslint-config
 ```
 
 ## 使用
@@ -17,7 +17,7 @@ npm install -D eslint mb-eslint-config
 `基础`
 
 ```js
-import EsLint from "mb-eslint-config";
+import EsLint from "@mb-kit/eslint-config";
 
 export default EsLint;
 ```
@@ -27,7 +27,7 @@ export default EsLint;
 ```js
 import EsLint, {
   vue
-} from "mb-eslint-config";
+} from "@mb-kit/eslint-config";
 
 export default [
   ...EsLint,
@@ -35,7 +35,7 @@ export default [
 ];
 ```
 
-注：推荐配合 [mb-prettier-config](https://www.npmjs.com/package/mb-prettier-config) 一块使用。
+注：推荐配合 [@mb-kit/prettier-config](https://www.npmjs.com/package/@mb-kit/prettier-config) 一块使用。
 
 ## 插件
 

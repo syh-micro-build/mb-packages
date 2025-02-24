@@ -1,6 +1,6 @@
 <script setup lang="tsx">
 
-import Container from "mb-vue-components-container-render";
+import Container from "@mb-kit/vue-container-render";
 
 import {
   Test01

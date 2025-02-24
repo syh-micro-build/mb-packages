@@ -1,6 +1,6 @@
 import {
   PropsContainerRender
-} from "mb-vue-components-container-render";
+} from "@mb-kit/vue-container-render";
 
 import convertOptionsToString from "../convert-options-to-string";
 

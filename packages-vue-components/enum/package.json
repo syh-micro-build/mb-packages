@@ -1,5 +1,5 @@
 {
-  "name": "mb-vue-components-enum",
+  "name": "@mb-kit/vue-enum",
   "version": "1.0.0",
   "description": "Micro build components vue enum.",
   "keywords": [],

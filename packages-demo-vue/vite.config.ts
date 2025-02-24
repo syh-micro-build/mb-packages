@@ -2,7 +2,7 @@ import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import {
   componentMapPlugin
-} from "mb-vue-components-plugins";
+} from "@mb-kit/vue-plugins";
 import vueDevTools from "vite-plugin-vue-devtools";
 
 import {

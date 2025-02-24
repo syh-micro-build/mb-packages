@@ -1,13 +1,13 @@
 <script lang="tsx" setup>
 import {
   PropsCheckJsonSchema
-} from "mb-vue-components-check-json-schema";
+} from "@mb-kit/vue-schema-validator";
 import ConfigProvider, {
   EUiType
-} from "mb-vue-components-config-provider";
+} from "@mb-kit/vue-config-provider";
 import {
   EUiEleType
-} from "mb-vue-components-enum";
+} from "@mb-kit/vue-enum";
 
 import Container, {
   Button

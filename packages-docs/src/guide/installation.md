@@ -3,5 +3,5 @@
 ## Install
 
 ```bash
-npm i mb-vue-components-container-render
+npm i @mb-kit/vue-container-render
 ```

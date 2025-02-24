@@ -1,9 +1,9 @@
-# mb-commitlint-config
+# @mb-kit/commitlint-config
 
 ## 安装
 
 ```bash
-npm install @commitlint/cli mb-commitlint-config -D
+npm install @commitlint/cli @mb-kit/commitlint-config -D
 ```
 
 注：package.json 中 type 必须为 module
@@ -13,7 +13,7 @@ npm install @commitlint/cli mb-commitlint-config -D
 项目下新建 .commitlintrc.js
 
 ```js
-export { default } from 'mb-commitlint-config';
+export { default } from '@mb-kit/commitlint-config';
 ```
 
 ## git commit 规范

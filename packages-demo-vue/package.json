@@ -24,18 +24,18 @@
     "type-check": "vue-tsc --build"
   },
   "dependencies": {
-    "mb-vue-components-container-render": "workspace:^",
+    "@mb-kit/vue-container-render": "workspace:^",
     "pinia": "catalog:",
     "vue": "catalog:",
     "vue-router": "catalog:"
   },
   "devDependencies": {
+    "@mb-kit/vue-plugins": "workspace:^",
     "@tsconfig/node22": "catalog:",
     "@types/node": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
     "@vitejs/plugin-vue-jsx": "catalog:",
     "@vue/tsconfig": "catalog:",
-    "mb-vue-components-plugins": "workspace:^",
     "npm-run-all2": "catalog:",
     "rollup-plugin-visualizer": "^5.14.0",
     "typescript": "catalog:",

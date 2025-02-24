@@ -1,1 +1,1 @@
-export { default } from "mb-prettier-config";
+export { default } from "@mb-kit/prettier-config";

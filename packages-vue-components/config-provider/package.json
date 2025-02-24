@@ -1,5 +1,5 @@
 {
-  "name": "mb-vue-components-config-provider",
+  "name": "@mb-kit/vue-config-provider",
   "version": "1.0.0",
   "description": "Micro build config provider.",
   "keywords": [],

@@ -1,10 +1,10 @@
 <script lang="tsx" setup>
 import {
   PropsCheckJsonSchema
-} from "mb-vue-components-check-json-schema";
+} from "@mb-kit/vue-schema-validator";
 import {
   EUiEleType
-} from "mb-vue-components-enum";
+} from "@mb-kit/vue-enum";
 import {
   computed,
   reactive

@@ -1,5 +1,5 @@
 {
-  "name": "mb-vue-components-check-json-schema",
+  "name": "@mb-kit/vue-schema-validator",
   "version": "1.0.0",
   "description": "Micro build components vue check json schema.",
   "keywords": [],
@@ -37,8 +37,8 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
+    "@mb-kit/vue-enum": "workspace:^",
     "ajv": "catalog:",
-    "mb-vue-components-enum": "workspace:^",
     "vue": "catalog:"
   },
   "devDependencies": {

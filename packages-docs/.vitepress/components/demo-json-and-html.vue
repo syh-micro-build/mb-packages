@@ -2,7 +2,7 @@
 import Tabs from "./tabs.vue";
 import ContainerRender, {
   PropsContainerRender
-} from "mb-vue-components-container-render";
+} from "@mb-kit/vue-container-render";
 import {
   ref,
   computed,

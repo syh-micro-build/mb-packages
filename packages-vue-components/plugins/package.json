@@ -1,5 +1,5 @@
 {
-  "name": "mb-vue-components-plugins",
+  "name": "@mb-kit/vue-plugins",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -32,8 +32,8 @@
   },
   "devDependencies": {
     "@types/node": "catalog:",
-    "mb-ts-config": "workspace:^",
-    "mb-vue-components-config-provider": "workspace:^",
+    "@mb-kit/vue-config-provider": "workspace:^",
+    "@mb-kit/ts-config": "workspace:^",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:"

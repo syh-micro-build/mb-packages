@@ -1,5 +1,5 @@
 {
-  "name": "mb-vue-components-container-render",
+  "name": "@mb-kit/vue-container-render",
   "version": "1.0.0",
   "description": "Micro build components vue integration container.",
   "keywords": [],
@@ -37,11 +37,11 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
+    "@mb-kit/vue-config-provider": "workspace:^",
+    "@mb-kit/vue-container": "workspace:^",
+    "@mb-kit/vue-enum": "workspace:^",
+    "@mb-kit/vue-schema-validator": "workspace:^",
     "@vitejs/plugin-vue-jsx": "catalog:",
-    "mb-vue-components-check-json-schema": "workspace:^",
-    "mb-vue-components-config-provider": "workspace:^",
-    "mb-vue-components-container": "workspace:^",
-    "mb-vue-components-enum": "workspace:^",
     "vue": "catalog:"
   },
   "devDependencies": {

@@ -1,9 +1,9 @@
-# mb-ts-config
+# @mb-kit/ts-config
 
 ## 下载
 
 ```bash
-npm install -D typescript mb-ts-config
+npm install -D typescript @mb-kit/ts-config
 ```
 
 ## 使用
@@ -13,7 +13,7 @@ npm install -D typescript mb-ts-config
 ```json
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": ["mb-ts-config/index.json"],
+  "extends": ["@mb-kit/ts-config/index.json"],
   "include": ["src"],
   "exclude": ["node_modules"]
 }
@@ -24,7 +24,7 @@ npm install -D typescript mb-ts-config
 ```json
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": ["mb-ts-config/index.json", "mb-ts-config/vue.json"],
+  "extends": ["@mb-kit/ts-config/index.json", "@mb-kit/ts-config/vue.json"],
   "include": ["src"],
   "exclude": ["node_modules"]
 }

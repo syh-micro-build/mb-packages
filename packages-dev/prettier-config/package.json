@@ -1,10 +1,10 @@
 {
-  "name": "mb-prettier-config",
+  "name": "@mb-kit/prettier-config",
   "version": "1.0.3",
   "description": "",
   "keywords": [
     "prettier",
-    "mb-prettier-config",
+    "@mb-kit/prettier-config",
     "mb-prettier"
   ],
   "homepage": "https://github.com/syh-micro-build/mb-packages",

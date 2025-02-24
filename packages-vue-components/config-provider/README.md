@@ -1,1 +1,1 @@
-# mb-vue-components-config-provider
+# @mb-kit/vue-config-provider

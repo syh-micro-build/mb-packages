@@ -1,4 +1,4 @@
-# mb-stylelint-config
+# @mb-kit/stylelint-config
 
 [docs](https://www.stylelint.cn/)
 
@@ -7,7 +7,7 @@
 ## 安装
 
 ```bash
-npm install -D stylelint mb-stylelint-config
+npm install -D stylelint @mb-kit/stylelint-config
 ```
 
 ## 使用
@@ -16,7 +16,7 @@ npm install -D stylelint mb-stylelint-config
 
 ```js
 export default {
-  extends: ['mb-stylelint-config'],
+  extends: ['@mb-kit/stylelint-config'],
   root: true,
 };
 ```
@@ -24,7 +24,7 @@ export default {
 ### 2、vue 项目新建 `stylelint.config.mjs`
 
 ```js
-export { default } from 'mb-stylelint-config/vue';
+export { default } from '@mb-kit/stylelint-config/vue';
 ```
 
 ## 忽略

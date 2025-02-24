@@ -3,7 +3,7 @@ import {
   EUiType,
   CONFIG_PROVIDER,
   ConfigProviderProps
-} from "mb-vue-components-config-provider";
+} from "@mb-kit/vue-config-provider";
 import {
   ref,
   inject

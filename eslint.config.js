@@ -1,6 +1,6 @@
 import EsLint, {
   vue
-} from "mb-eslint-config";
+} from "@mb-kit/eslint-config";
 
 export default [
   ...EsLint,

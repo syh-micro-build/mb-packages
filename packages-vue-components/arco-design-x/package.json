@@ -1,5 +1,5 @@
 {
-  "name": "@micro-build-kit/vue-arco-design-x",
+  "name": "@mb-kit/vue-arco-design-x",
   "version": "1.0.0",
   "description": "Micro build vue arco-design-x.",
   "keywords": [],
@@ -38,8 +38,8 @@
   },
   "dependencies": {
     "@arco-design/web-vue": "catalog:",
+    "@mb-kit/vue-schema-validator": "workspace:^",
     "@vitejs/plugin-vue-jsx": "catalog:",
-    "mb-vue-components-check-json-schema": "workspace:^",
     "vue": "catalog:"
   },
   "devDependencies": {

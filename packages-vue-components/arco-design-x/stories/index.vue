@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  mb-vue-arco-design-x
+  @mb-kit/vue-arco-design-x
 </template>
 
 <style scoped>

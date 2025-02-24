@@ -6,14 +6,14 @@ export { default } from "./render";
 export type {
   PropsComponents,
   PropsCheckJsonSchema as PropsContainerRender
-} from "mb-vue-components-check-json-schema";
+} from "@mb-kit/vue-schema-validator";
 
 export {
   default as ConfigProvider,
   EUiType,
   getConfigProviderProps
-}from "mb-vue-components-config-provider";
+}from "@mb-kit/vue-config-provider";
 
 export {
   Button
-} from "mb-vue-components-container";
+} from "@mb-kit/vue-container";

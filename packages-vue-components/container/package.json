@@ -1,5 +1,5 @@
 {
-  "name": "mb-vue-components-container",
+  "name": "@mb-kit/vue-container",
   "version": "1.0.0",
   "description": "Micro build container.",
   "keywords": [],
@@ -37,13 +37,13 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
+    "@mb-kit/vue-arco-design-x": "workspace:^",
+    "@mb-kit/vue-config-provider": "workspace:^",
+    "@mb-kit/vue-element-x": "workspace:^",
+    "@mb-kit/vue-enum": "workspace:^",
+    "@mb-kit/vue-plugins": "workspace:^",
+    "@mb-kit/vue-schema-validator": "workspace:^",
     "@vitejs/plugin-vue-jsx": "catalog:",
-    "mb-vue-arco-design-x": "workspace:^",
-    "mb-vue-components-check-json-schema": "workspace:^",
-    "mb-vue-components-config-provider": "workspace:^",
-    "mb-vue-components-enum": "workspace:^",
-    "mb-vue-components-plugins": "workspace:^",
-    "mb-vue-element-x": "workspace:^",
     "vue": "catalog:"
   },
   "devDependencies": {

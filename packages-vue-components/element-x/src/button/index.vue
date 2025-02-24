@@ -4,7 +4,7 @@ import {
   EShapeButton,
   EThemeButton,
   PropsButton
-} from "mb-vue-components-check-json-schema";
+} from "@mb-kit/vue-schema-validator";
 import {
   withDefaults,
   computed

@@ -3,11 +3,11 @@
 import {
   PropsCheckJsonSchema,
   PropsComponents
-} from "mb-vue-components-check-json-schema";
+} from "@mb-kit/vue-schema-validator";
 import {
   EUiType,
   getConfigProviderProps
-} from "mb-vue-components-config-provider";
+} from "@mb-kit/vue-config-provider";
 import {
   computed,
   defineProps

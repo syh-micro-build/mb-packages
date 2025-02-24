@@ -1,4 +1,4 @@
-declare module "mb-commitlint-config" {
+declare module "@mb-kit/commitlint-config" {
 
   // 定义模块的导出类型
   export interface IConfig {
