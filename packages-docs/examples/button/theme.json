@@ -1,7 +1,39 @@
 {
-  "type": "Button",
-  "options": {
-    "label": "按钮",
-    "theme": "success"
-  }
+  "items": [
+    {
+      "type": "Button",
+      "options": {
+        "label": "按钮",
+        "theme": "success"
+      }
+    },
+    {
+      "type": "Button",
+      "options": {
+        "label": "按钮",
+        "theme": "primary"
+      }
+    },
+    {
+      "type": "Button",
+      "options": {
+        "label": "按钮",
+        "theme": "warning"
+      }
+    },
+    {
+      "type": "Button",
+      "options": {
+        "label": "按钮",
+        "theme": "danger"
+      }
+    },
+    {
+      "type": "Button",
+      "options": {
+        "label": "按钮",
+        "theme": "info"
+      }
+    }
+  ]
 }

@@ -20,9 +20,9 @@ import RenderCheck, {
 } from "../src";
 
 const data: PropsCheckJsonSchema = reactive({
-  "type": EUiEleType.BUTTON,
-  "options": {
-    "label": "123 Main St"
+  type: EUiEleType.BUTTON,
+  options: {
+    label: "Main Str"
   }
 });
 
