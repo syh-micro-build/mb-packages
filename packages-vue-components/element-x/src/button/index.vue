@@ -14,10 +14,11 @@ import {
   ElButton
 } from "element-plus";
 
-const props = withDefaults(defineProps<PropsButton>(), {
+const props = withDefaults(defineProps<Omit<PropsButton, "label"> & { label?: string }>(), {
   type: ETypeButton.DEFAULT,
   shape: EShapeButton.DEFAULT,
-  theme: EThemeButton.DEFAULT
+  theme: EThemeButton.DEFAULT,
+  label: ""
 });
 
 const isInvalidTheme = computed(() => Object.values(EThemeButton).includes(props.theme as EThemeButton));
@@ -33,7 +34,7 @@ const isInvalidTheme = computed(() => Object.values(EThemeButton).includes(props
     :color="!isInvalidTheme ? props.theme : undefined"
   >
     <slot>
-      {{ props.label }}
+      {{ props?.label }}
     </slot>
   </ElButton>
 </template>

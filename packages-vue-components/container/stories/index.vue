@@ -9,7 +9,9 @@ import {
   EUiEleType
 } from "mb-vue-components-enum";
 
-import Container from "../src";
+import Container, {
+  Button
+} from "../src";
 
 // eslint-disable-next-line no-console
 console.log(import.meta.env.VITE_UI_TYPY);
@@ -55,6 +57,9 @@ const DOM = () => arr.map(item => <span key={item}>{item}</span>);
   <hr />
 
   <DOM />
+  <Button>
+    222
+  </Button>
 </template>
 
 <style scoped>
