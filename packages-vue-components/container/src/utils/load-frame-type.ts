@@ -7,6 +7,6 @@ import {
   ArcoComponentMap
 } from "../const";
 
-const loadFrameTypeFun = import.meta.env.VITE_UI_TYPY === EUiType.ELEMENT ? ElementComponentMap : ArcoComponentMap;
+const loadFrameType = import.meta.env.VITE_UI_TYPY === EUiType.ELEMENT ? ElementComponentMap : ArcoComponentMap;
 
-export default loadFrameTypeFun;
+export default loadFrameType;
