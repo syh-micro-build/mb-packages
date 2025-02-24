@@ -48,7 +48,7 @@ const JSON_SCHEMA = {
     // Case 2: With items object (root level)
     {
       type: "object",
-      required: ["items", "margin", "class"],
+      required: ["items", "margin", "padding"],
       properties: {
         items: {
           type: "array",
@@ -62,7 +62,7 @@ const JSON_SCHEMA = {
         margin: {
           type: "string"
         },
-        class: {
+        padding: {
           type: "string"
         }
       },
