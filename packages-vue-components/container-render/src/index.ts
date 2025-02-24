@@ -4,6 +4,7 @@
 export { default } from "./render";
 
 export type {
+  PropsComponents,
   PropsCheckJsonSchema as PropsContainerRender
 } from "mb-vue-components-check-json-schema";
 

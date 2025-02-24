@@ -55,3 +55,8 @@
 .VPSidebarItem .item .caret {
   display: none;
 }
+
+/* 处理 arco 按钮 */
+.arco-btn + .arco-btn {
+  margin-left: 12px;
+}
