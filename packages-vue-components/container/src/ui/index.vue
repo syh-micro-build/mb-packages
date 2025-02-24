@@ -1,15 +1,16 @@
 <script setup lang="tsx">
 
 import {
-  PropsCheckJsonSchema
+  PropsCheckJsonSchema,
+  PropsComponents
 } from "mb-vue-components-check-json-schema";
 import {
   EUiType,
   getConfigProviderProps
 } from "mb-vue-components-config-provider";
 import {
-  defineProps,
-  computed
+  computed,
+  defineProps
 } from "vue";
 
 import {
@@ -33,17 +34,35 @@ const componentMap = computed(() => {
   return loadFrameType;
 });
 
-const DOM = () => {
-  const Component = componentMap.value[props.type as keyof typeof componentMap.value];
+const El = (value: PropsComponents) => {
+  const {
+    type,
+    options
+  } = value;
+
+  const Component = componentMap.value[type as keyof typeof componentMap.value];
 
   if (!Component) {
-    console.warn(`组件 ${props.type} 在当前UI框架中未找到`);
+    console.warn(`组件 ${type} 在当前UI框架中未找到`);
 
-    return <div>组件 {props.type} 未找到</div>;
+    return <div>组件 {type} 未找到</div>;
   }
 
-  return <Component {...props.options as any} />;
+  return <Component {...options as any} />;
 };
+
+const DOM = computed(() => {
+  if ("items" in props && props.items) {
+    return <div class={props.class} style={{
+      padding: props.padding,
+      margin: props.margin
+    }}>
+      { props.items.map((item, index) => <El key={index} {...item} />) }
+    </div>;
+  }
+
+  return <El {...props as PropsComponents} />;
+});
 
 </script>
 <template>

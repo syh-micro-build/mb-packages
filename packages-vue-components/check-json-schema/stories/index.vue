@@ -15,6 +15,12 @@ const data3: PropsCheckJsonSchema = {
       "options": {
         "data": [1, 2]
       }
+    },
+    {
+      type: "Button",
+      "options": {
+        "label": "Button 2"
+      }
     }
   ]
 

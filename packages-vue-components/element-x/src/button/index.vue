@@ -24,18 +24,16 @@ const isInvalidTheme = computed(() => Object.values(EThemeButton).includes(props
 
 </script>
 <template>
-  <div>
-    <ElButton
-      :class="props.class"
-      :style="props.style"
-      :type="(isInvalidTheme ? props.theme : EThemeButton.DEFAULT) as EThemeButton"
-      :link="props.type === ETypeButton.LINK"
-      :text="props.type === ETypeButton.TEXT"
-      :color="!isInvalidTheme ? props.theme : undefined"
-    >
-      <slot>
-        {{ props.label }}
-      </slot>
-    </ElButton>
-  </div>
+  <ElButton
+    :class="props.class"
+    :style="props.style"
+    :type="(isInvalidTheme ? props.theme : EThemeButton.DEFAULT) as EThemeButton"
+    :link="props.type === ETypeButton.LINK"
+    :text="props.type === ETypeButton.TEXT"
+    :color="!isInvalidTheme ? props.theme : undefined"
+  >
+    <slot>
+      {{ props.label }}
+    </slot>
+  </ElButton>
 </template>

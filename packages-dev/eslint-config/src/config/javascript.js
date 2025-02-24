@@ -350,7 +350,7 @@ export default {
      */
     "no-param-reassign": 1, // 禁止对 function 的参数进行重新赋值
     "no-proto": "error", // 禁止使用对象的 __proto__ 属性，若使用则报错
-    "no-prototype-builtins": "error", // 禁止使用如 hasOwnProperty、isPrototypeOf 等基于原型的内置方法，使用则报错
+    "no-prototype-builtins": "warn", // 禁止使用如 hasOwnProperty、isPrototypeOf 等基于原型的内置方法，使用则报错
     "no-redeclare": [
       "error",
       {

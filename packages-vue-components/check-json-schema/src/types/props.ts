@@ -5,15 +5,15 @@ import {
   ISelect
 } from "./select";
 
-type TComponentsProps = IButton | ISelect;
+export type TPropsComponents = IButton | ISelect;
 
 interface IProps {
-  items: TComponentsProps[];
+  items: TPropsComponents[];
   margin?: string;
   padding?: string;
   class?: string;
 }
 
-type TProps = IProps | TComponentsProps;
+type TProps = IProps | TPropsComponents;
 
 export default TProps;
