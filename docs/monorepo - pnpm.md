@@ -104,3 +104,5 @@ npx lerna publish --ignore-changes 包名-1,包名-2,包名-3
 
 # 不修改版本号，他就会默认不发布
 ```
+
+注：发布公共带 `@` 前缀的包 `pnpm publish --access public`。
