@@ -1,10 +1,9 @@
 <script lang="tsx" setup>
 import check, {
-  PropsCheckJsonSchema,
-  EUiEleType
+  PropsCheckJsonSchema
 } from "../src";
 const data4: PropsCheckJsonSchema = {
-  type: EUiEleType.SELECT,
+  type: "Select",
   options: {
     data: []
   }

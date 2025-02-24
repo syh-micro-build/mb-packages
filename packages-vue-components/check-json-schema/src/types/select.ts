@@ -7,6 +7,6 @@ export interface IPropsSelect<T> {
 }
 
 export interface ISelect<T = object> {
-  type: EUiEleType.SELECT;
+  type: EUiEleType.SELECT | `${EUiEleType.SELECT}`;
   options: IPropsSelect<T>;
 }
