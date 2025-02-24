@@ -3,15 +3,12 @@ import pluginVue from "eslint-plugin-vue";
 import parserVue from "vue-eslint-parser";
 
 import parserTs from "@typescript-eslint/parser";
-import oxlint from "eslint-plugin-oxlint";
 
 export default [
   ...pluginVue.configs["flat/essential"],
 
   // TODO 打开这个会影响 package.json，暂时关闭
   // ...vueTsEslintConfig(),
-
-  oxlint.configs["flat/recommended"],
   {
     files: ["**/*.vue"],
     languageOptions: {
@@ -32,6 +29,7 @@ export default [
       vue: pluginVue
     },
     processor: pluginVue.processors[".vue"],
+
     rules: {
       ...pluginVue.configs.base.rules,
       ...pluginVue.configs["vue3-essential"].rules,
