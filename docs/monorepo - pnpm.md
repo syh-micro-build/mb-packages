@@ -84,21 +84,23 @@ pnpm add -D <pkg>
 
 ## 四、发布
 
+[lerna](https://lerna.nodejs.cn/)
+
 注：新增包，要遭 `lerna.json` ——> `packages` 添加文件名。
 
 ```bash
 # 在根目录下运行
 
-lerna publish
+npx lerna publish
 
 # 强制发布所有包
-lerna publish --force-publish=*
+npx lerna publish --force-publish=*
 
 # 使用 --skip 选项来跳过指定包的发布 
-lerna publish --ignore-changes 包名
+npx lerna publish --ignore-changes 包名
 
 # 多个包，可以使用逗号分隔它们
-lerna publish --ignore-changes 包名-1,包名-2,包名-3
+npx lerna publish --ignore-changes 包名-1,包名-2,包名-3
 
 # 不修改版本号，他就会默认不发布
 ```

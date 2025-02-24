@@ -24,6 +24,9 @@
     "type": "git",
     "url": "https://github.com/syh-micro-build/mb-packages"
   },
+  "workspaces": [
+    "packages*/**"
+  ],
   "license": "ISC",
   "author": {
     "email": "2236472089@qq.com",
