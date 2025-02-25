@@ -7,7 +7,9 @@ import {
 } from "vitepress";
 
 import {
-  jsonToHtml
+
+  // jsonToHtml,
+  jsonContainerRender
 }from "../utils";
 
 const projRoot = resolve(__dirname, "..", "..", "..");
@@ -51,7 +53,7 @@ function createJsonContainer(md: MarkdownRenderer): IContainerOpts {
           throw new Error(`Incorrect source file: ${sourceFile}`);
         }
 
-        const code = jsonToHtml(source);
+        const code = jsonContainerRender(source);
 
         return `<DemoJsonAndHtml source="${encodeURIComponent(md.render(`\`\`\` json\n${source}\`\`\``))}" 
         path="${sourceFile}"
