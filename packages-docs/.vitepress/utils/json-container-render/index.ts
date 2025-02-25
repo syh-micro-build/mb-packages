@@ -21,12 +21,12 @@ const data: PropsContainerRender = ${JSON.stringify(data)};
 </script>
   `;
 
-  const template = () => `<template>
+  const template = `<template>
   <ContainerRender :value="data" />
 </template>`;
 
   return `
 ${script}
-${template()}
+${template}
 `;
 }
