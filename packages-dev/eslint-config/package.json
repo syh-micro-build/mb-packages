@@ -1,6 +1,6 @@
 {
   "name": "@mb-kit/eslint-config",
-  "version": "1.1.4",
+  "version": "1.0.0",
   "description": "Eslint 的规则配置",
   "keywords": [
     "eslint",
