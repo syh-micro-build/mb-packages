@@ -3,33 +3,46 @@ import pluginVue from "eslint-plugin-vue";
 import parserVue from "vue-eslint-parser";
 
 import parserTs from "@typescript-eslint/parser";
+import oxlint from "eslint-plugin-oxlint";
 
 export default [
-  ...pluginVue.configs["flat/essential"],
 
-  // TODO 打开这个会影响 package.json，暂时关闭
-  // ...vueTsEslintConfig(),
+  // {
+  //   files: ["**/*.{tsx,vue}"],
+  //   ignores: ["**/dist/**", "**/dist-ssr/**", "**/node_modules/**"]
+  // },
+  // ...pluginVue.configs["flat/essential"],
+
+  ...pluginVue.configs["flat/recommended"],
   {
-    files: ["**/*.vue"],
+    files: ["**/*.{tsx,vue}"],
+    ignores: ["**/dist/**", "**/dist-ssr/**", "**/node_modules/**"],
     languageOptions: {
+      parser: parserVue,
       globals: {
         defineModel: true
       },
-      parser: parserVue,
       parserOptions: {
         ecmaFeatures: {
           jsx: true
         },
         extraFileExtensions: [".vue"],
         parser: parserTs,
-        sourceType: "module"
+        sourceType: "module",
+        ecmaVersion: "latest"
       }
     },
     plugins: {
       vue: pluginVue
     },
-    processor: pluginVue.processors[".vue"],
+    processor: pluginVue.processors[".vue"]
+  },
 
+  ...oxlint.configs["flat/recommended"],
+
+  // TODO 打开这个会影响 package.json，暂时关闭
+  // ...vueTsEslintConfig(),
+  {
     rules: {
       ...pluginVue.configs.base.rules,
       ...pluginVue.configs["vue3-essential"].rules,
