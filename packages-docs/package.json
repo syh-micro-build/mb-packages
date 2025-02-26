@@ -20,12 +20,12 @@
   },
   "main": "index.js",
   "dependencies": {
-    "@mb-kit/vue-container-render": "workspace:^"
+    "@micro-test-01/vue-container-render": "workspace:^"
   },
   "devDependencies": {
-    "@mb-kit/vc-codemirror": "workspace:^",
-    "@mb-kit/vc-icon": "workspace:^",
-    "@mb-kit/vue-config-provider": "workspace:^",
+    "@micro-test-01/vc-codemirror": "workspace:^",
+    "@micro-test-01/vc-icon": "workspace:^",
+    "@micro-test-01/vue-config-provider": "workspace:^",
     "glob": "catalog:",
     "markdown-it-container": "catalog:",
     "typescript": "catalog:",

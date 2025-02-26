@@ -1,5 +1,5 @@
 {
-  "name": "@mb-kit/commitlint-config",
+  "name": "@micro-test-01/commitlint-config",
   "version": "1.0.0",
   "description": "Git lint",
   "keywords": [

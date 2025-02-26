@@ -24,13 +24,13 @@
     "type-check": "vue-tsc --build"
   },
   "dependencies": {
-    "@mb-kit/vue-container-render": "workspace:^",
+    "@micro-test-01/vue-container-render": "workspace:^",
     "pinia": "catalog:",
     "vue": "catalog:",
     "vue-router": "catalog:"
   },
   "devDependencies": {
-    "@mb-kit/vue-plugins": "workspace:^",
+    "@micro-test-01/vue-plugins": "workspace:^",
     "@tsconfig/node22": "catalog:",
     "@types/node": "catalog:",
     "@vitejs/plugin-vue": "catalog:",

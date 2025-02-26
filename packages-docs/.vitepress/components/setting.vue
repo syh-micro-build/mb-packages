@@ -3,7 +3,7 @@ import {
   EUiType,
   CONFIG_PROVIDER,
   ConfigProviderProps
-} from "@mb-kit/vue-config-provider";
+} from "@micro-test-01/vue-config-provider";
 import {
   ref,
   inject
@@ -11,7 +11,7 @@ import {
 
 import {
   Setting
-} from "@mb-kit/vc-icon";
+} from "@micro-test-01/vc-icon";
 
 const showDrawer = ref(false);
 

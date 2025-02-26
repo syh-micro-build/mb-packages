@@ -6,7 +6,7 @@ import {
   CONFIG_PROVIDER,
   ConfigProviderProps,
   EUiType
-} from "@mb-kit/vue-config-provider";
+} from "@micro-test-01/vue-config-provider";
 import {
   DefineComponent,
   h,

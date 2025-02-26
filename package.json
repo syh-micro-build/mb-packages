@@ -53,10 +53,10 @@
   "devDependencies": {
     "@changesets/cli": "catalog:",
     "@commitlint/cli": "catalog:",
-    "@mb-kit/commitlint-config": "workspace:^",
-    "@mb-kit/eslint-config": "workspace:^",
-    "@mb-kit/prettier-config": "workspace:^",
-    "@mb-kit/stylelint-config": "workspace:^",
+    "@micro-test-01/commitlint-config": "workspace:^",
+    "@micro-test-01/eslint-config": "workspace:^",
+    "@micro-test-01/prettier-config": "workspace:^",
+    "@micro-test-01/stylelint-config": "workspace:^",
     "cspell": "catalog:",
     "depcheck": "catalog:",
     "eslint": "catalog:",
@@ -77,9 +77,6 @@
   },
   "packageManager": "pnpm@9.15.3",
   "lint-staged": {
-    "package.json": "npmPkgJsonLint",
-    "*.{js,ts,vue,tsx,jsx}": "eslint",
-    "*.{js,ts,css,vue}": "stylelint --fix --allow-empty-input",
-    "*.md": "markdownlint-cli2"
+    "*.{js,ts,css,vue}": "stylelint --fix --allow-empty-input"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@mb-kit/eslint-config",
+  "name": "@micro-test-01/eslint-config",
   "version": "1.0.0",
   "description": "Eslint 的规则配置",
   "keywords": [

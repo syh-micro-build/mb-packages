@@ -7,13 +7,13 @@ export {
   default as ConfigProvider,
   EUiType,
   getConfigProviderProps
-}from "@mb-kit/vue-config-provider";
+}from "@micro-test-01/vue-config-provider";
 
 export {
   Button
-} from "@mb-kit/vue-container";
+} from "@micro-test-01/vue-container";
 
 export type {
   PropsComponents,
   PropsCheckJsonSchema as PropsContainerRender
-} from "@mb-kit/vue-schema-validator";
+} from "@micro-test-01/vue-schema-validator";

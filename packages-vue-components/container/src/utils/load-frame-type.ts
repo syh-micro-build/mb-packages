@@ -1,6 +1,6 @@
 import {
   EUiType
-} from "@mb-kit/vue-config-provider";
+} from "@micro-test-01/vue-config-provider";
 
 import {
   ElementComponentMap,

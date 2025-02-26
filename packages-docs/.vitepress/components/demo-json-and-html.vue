@@ -2,7 +2,7 @@
 import Tabs from "./tabs.vue";
 import ContainerRender, {
   PropsContainerRender
-} from "@mb-kit/vue-container-render";
+} from "@micro-test-01/vue-container-render";
 import {
   ref,
   computed,
@@ -12,7 +12,7 @@ import {
 import {
   Code,
   CaretTop
-} from "@mb-kit/vc-icon";
+} from "@micro-test-01/vc-icon";
 
 import {
   TABS

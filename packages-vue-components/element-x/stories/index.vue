@@ -6,7 +6,7 @@ import {
 </script>
 
 <template>
-  @mb-kit/vue-element-x
+  @micro-test-01/vue-element-x
   <ElButton>按钮</ElButton>
 </template>
 

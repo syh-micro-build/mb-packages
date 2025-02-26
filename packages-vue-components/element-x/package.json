@@ -1,5 +1,5 @@
 {
-  "name": "@mb-kit/vue-element-x",
+  "name": "@micro-test-01/vue-element-x",
   "version": "1.0.0",
   "description": "Micro build vue element x.",
   "keywords": [],
@@ -36,7 +36,7 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
-    "@mb-kit/vue-schema-validator": "workspace:^",
+    "@micro-test-01/vue-schema-validator": "workspace:^",
     "@vitejs/plugin-vue-jsx": "catalog:",
     "element-plus": "catalog:",
     "vite-plugin-css-injected-by-js": "catalog:",

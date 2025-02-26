@@ -1,10 +1,10 @@
 <script lang="tsx" setup>
 import {
   EUiEleType
-} from "@mb-kit/vue-enum";
+} from "@micro-test-01/vue-enum";
 import {
   PropsCheckJsonSchema
-} from "@mb-kit/vue-schema-validator";
+} from "@micro-test-01/vue-schema-validator";
 import {
   computed,
   reactive
@@ -12,7 +12,7 @@ import {
 
 import Codemirror, {
   CodeMirrorType
-} from "@mb-kit/vc-codemirror";
+} from "@micro-test-01/vc-codemirror";
 
 import RenderCheck, {
   EUiType,

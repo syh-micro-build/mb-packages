@@ -1,5 +1,5 @@
 {
-  "name": "@mb-kit/vue-plugins",
+  "name": "@micro-test-01/vue-plugins",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -38,8 +38,8 @@
     "glob": "catalog:"
   },
   "devDependencies": {
-    "@mb-kit/ts-config": "workspace:^",
-    "@mb-kit/vue-config-provider": "workspace:^",
+    "@micro-test-01/ts-config": "workspace:^",
+    "@micro-test-01/vue-config-provider": "workspace:^",
     "@types/glob": "catalog:",
     "@types/node": "catalog:",
     "typescript": "catalog:",

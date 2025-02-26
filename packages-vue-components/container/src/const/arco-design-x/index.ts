@@ -1,6 +1,6 @@
 import {
   Button
-} from "@mb-kit/vue-arco-design-x";
+} from "@micro-test-01/vue-arco-design-x";
 
 const COMPONENT_MAP = {
   Button

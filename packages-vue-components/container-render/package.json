@@ -1,5 +1,5 @@
 {
-  "name": "@mb-kit/vue-container-render",
+  "name": "@micro-test-01/vue-container-render",
   "version": "1.0.0",
   "description": "Micro build components vue integration container.",
   "keywords": [],
@@ -37,16 +37,16 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
-    "@mb-kit/vue-config-provider": "workspace:^",
-    "@mb-kit/vue-container": "workspace:^",
-    "@mb-kit/vue-enum": "workspace:^",
-    "@mb-kit/vue-schema-validator": "workspace:^",
+    "@micro-test-01/vue-config-provider": "workspace:^",
+    "@micro-test-01/vue-container": "workspace:^",
+    "@micro-test-01/vue-enum": "workspace:^",
+    "@micro-test-01/vue-schema-validator": "workspace:^",
     "@vitejs/plugin-vue-jsx": "catalog:",
     "vue": "catalog:"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "catalog:",
-    "@mb-kit/vc-codemirror": "workspace:^",
+    "@micro-test-01/vc-codemirror": "workspace:^",
     "@storybook/addon-essentials": "catalog:",
     "@storybook/addon-interactions": "catalog:",
     "@storybook/addon-onboarding": "catalog:",

@@ -1,11 +1,11 @@
 {
-  "name": "@mb-kit/stylelint-config",
+  "name": "@micro-test-01/stylelint-config",
   "version": "1.0.0",
   "description": "",
   "keywords": [
     "stylelint",
     "stylelint-config",
-    "@mb-kit/stylelint-config"
+    "@micro-test-01/stylelint-config"
   ],
   "homepage": "https://github.com/syh-micro-build/mb-packages",
   "bugs": {},

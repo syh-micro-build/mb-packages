@@ -1,6 +1,6 @@
 import {
   EUiType
-} from "@mb-kit/vue-config-provider";
+} from "@micro-test-01/vue-config-provider";
 
 import {
   execSync
@@ -134,7 +134,7 @@ export default function componentMapPlugin(): Plugin {
 
       uiType = EUiType[allTypes[0] as keyof typeof EUiType];
 
-      const external = uiType === EUiType.ELEMENT ? ["@mb-kit/vue-arco-design-x"] : ["@mb-kit/vue-element-x"];
+      const external = uiType === EUiType.ELEMENT ? ["@micro-test-01/vue-arco-design-x"] : ["@micro-test-01/vue-element-x"];
 
       return {
         build: {

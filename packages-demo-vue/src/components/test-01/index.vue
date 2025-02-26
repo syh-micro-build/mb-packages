@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import {
   getConfigProviderProps
-} from "@mb-kit/vue-container-render";
+} from "@micro-test-01/vue-container-render";
 
 const obj = getConfigProviderProps();
 </script>

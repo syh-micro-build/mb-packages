@@ -1,5 +1,5 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": ["@mb-kit/ts-config/index.json"],
+  "extends": ["@micro-test-01/ts-config/index.json"],
   "include": ["src"]
 }

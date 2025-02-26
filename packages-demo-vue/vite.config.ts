@@ -1,6 +1,6 @@
 import {
   componentMapPlugin
-} from "@mb-kit/vue-plugins";
+} from "@micro-test-01/vue-plugins";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import vueDevTools from "vite-plugin-vue-devtools";

@@ -1,6 +1,6 @@
 import {
   PropsContainerRender
-} from "@mb-kit/vue-container-render";
+} from "@micro-test-01/vue-container-render";
 
 export default function jsonContainerRender(value: string): string {
 
@@ -9,7 +9,7 @@ export default function jsonContainerRender(value: string): string {
   const script = `<script setup lang="ts">
 import ContainerRender, {
   PropsContainerRender
-} from "@mb-kit/vue-container-render";
+} from "@micro-test-01/vue-container-render";
 
 /**
  * 推荐 json 数据的引入方式

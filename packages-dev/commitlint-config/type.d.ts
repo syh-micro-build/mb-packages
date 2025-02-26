@@ -1,4 +1,4 @@
-declare module "@mb-kit/commitlint-config" {
+declare module "@micro-test-01/commitlint-config" {
 
   // 定义模块的导出类型
   export interface IConfig {
