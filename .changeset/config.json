@@ -11,5 +11,8 @@
   "ignore": [
     "packages-demo-vue",
     "packages-docs"
-  ]
+  ],
+  "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
+    "defaultUpdateType": "minor"
+  }
 }
