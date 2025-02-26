@@ -84,6 +84,8 @@ pnpm add -D <pkg>
 
 ## 四、发布
 
+### <del>1、lerna 发布</del>
+
 [lerna](https://lerna.nodejs.cn/)
 
 注：新增包，要遭 `lerna.json` ——> `packages` 添加文件名。
@@ -106,3 +108,19 @@ npx lerna publish --ignore-changes 包名-1,包名-2,包名-3
 ```
 
 注：发布公共带 `@` 前缀的包 `pnpm publish --access public`。
+
+### 2、Changesets
+
+[docs](https://pnpm.io/zh/using-changesets)
+
+## 1、安装
+
+```bash
+pnpm add @changesets/cli -D
+```
+
+## 2、初始化
+
+```bash
+npx changeset init
+```
