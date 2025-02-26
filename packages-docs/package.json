@@ -22,11 +22,11 @@
     "@mb-kit/vue-container-render": "workspace:^"
   },
   "devDependencies": {
+    "@mb-kit/vc-codemirror": "workspace:^",
+    "@mb-kit/vc-icon": "workspace:^",
     "@mb-kit/vue-config-provider": "workspace:^",
     "glob": "catalog:",
     "markdown-it-container": "catalog:",
-    "mb-vc-codemirror": "workspace:^",
-    "mb-vc-icon": "workspace:^",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vitepress": "catalog:",

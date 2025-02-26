@@ -12,7 +12,7 @@ import {
 
 import Codemirror, {
   CodeMirrorType
-} from "mb-vc-codemirror";
+} from "@mb-kit/vc-codemirror";
 
 import RenderCheck, {
   EUiType,

@@ -12,7 +12,7 @@ import {
 import {
   Code,
   CaretTop
-} from "mb-vc-icon";
+} from "@mb-kit/vc-icon";
 
 import {
   TABS

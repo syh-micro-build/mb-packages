@@ -8,7 +8,7 @@ import {
 import {
   Code,
   CaretTop
-} from "mb-vc-icon";
+} from "@mb-kit/vc-icon";
 
 const props = defineProps<{
   source: string;

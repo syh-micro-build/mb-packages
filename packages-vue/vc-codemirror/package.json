@@ -1,7 +1,7 @@
 {
-  "name": "mb-vc-codemirror",
+  "name": "@mb-kit/vc-codemirror",
   "version": "1.0.1",
-  "description": "Micro build mb-vc-codemirror.",
+  "description": "Micro build @mb-kit/vc-codemirror.",
   "keywords": [],
   "homepage": "https://github.com/syh-micro-build/mb-packages",
   "bugs": {},

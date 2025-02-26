@@ -11,7 +11,7 @@ import {
 
 import {
   Setting
-} from "mb-vc-icon";
+} from "@mb-kit/vc-icon";
 
 const showDrawer = ref(false);
 

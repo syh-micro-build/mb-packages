@@ -1,7 +1,7 @@
 {
-  "name": "mb-vc-icon",
+  "name": "@mb-kit/vc-icon",
   "version": "1.0.0",
-  "description": "Micro build mb-vc-icon.",
+  "description": "Micro build @mb-kit/vc-icon.",
   "keywords": [],
   "homepage": "https://github.com/syh-micro-build/mb-packages",
   "bugs": {},

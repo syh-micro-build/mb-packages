@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "catalog:",
+    "@mb-kit/vc-codemirror": "workspace:^",
     "@storybook/addon-essentials": "catalog:",
     "@storybook/addon-interactions": "catalog:",
     "@storybook/addon-onboarding": "catalog:",
@@ -56,7 +57,6 @@
     "@storybook/vue3-vite": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
     "@vue/tsconfig": "catalog:",
-    "mb-vc-codemirror": "workspace:^",
     "storybook": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
