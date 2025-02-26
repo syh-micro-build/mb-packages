@@ -7,12 +7,12 @@
   "privatePackages": { "version": true, "tag": false }, 
   "access": "public",
   "baseBranch": "main",
-  "updateInternalDependencies": "minor",
+  "updateInternalDependencies": "patch",
   "ignore": [
     "packages-demo-vue",
     "packages-docs"
   ],
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
-    "defaultUpdateType": "minor"
+    "defaultUpdateType": "patch"
   }
 }
