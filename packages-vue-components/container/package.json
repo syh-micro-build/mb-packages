@@ -44,6 +44,7 @@
     "@mb-kit/vue-plugins": "workspace:^",
     "@mb-kit/vue-schema-validator": "workspace:^",
     "@vitejs/plugin-vue-jsx": "catalog:",
+    "rollup-plugin-visualizer": "^5.14.0",
     "vue": "catalog:"
   },
   "devDependencies": {

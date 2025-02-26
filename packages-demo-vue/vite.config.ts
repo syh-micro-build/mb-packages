@@ -1,8 +1,8 @@
-import vue from "@vitejs/plugin-vue";
-import vueJsx from "@vitejs/plugin-vue-jsx";
 import {
   componentMapPlugin
 } from "@mb-kit/vue-plugins";
+import vue from "@vitejs/plugin-vue";
+import vueJsx from "@vitejs/plugin-vue-jsx";
 import vueDevTools from "vite-plugin-vue-devtools";
 
 import {
@@ -29,6 +29,7 @@ export default defineConfig({
       gzipSize: true, // 显示gzip后的大小
       brotliSize: true // 显示brotli压缩后的大小
     })
+
   ],
   resolve: {
     alias: {

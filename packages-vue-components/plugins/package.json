@@ -30,10 +30,18 @@
     },
     "./*": "./*"
   },
+  "dependencies": {
+    "@babel/generator": "^7.26.9",
+    "@babel/parser": "^7.26.9",
+    "@babel/traverse": "^7.26.9",
+    "@vue/compiler-sfc": "^3.5.13",
+    "glob": "^11.0.1"
+  },
   "devDependencies": {
-    "@types/node": "catalog:",
-    "@mb-kit/vue-config-provider": "workspace:^",
     "@mb-kit/ts-config": "workspace:^",
+    "@mb-kit/vue-config-provider": "workspace:^",
+    "@types/glob": "^8.1.0",
+    "@types/node": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:"

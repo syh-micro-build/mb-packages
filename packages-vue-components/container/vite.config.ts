@@ -1,8 +1,8 @@
-import vue from "@vitejs/plugin-vue";
-import vueJsx from "@vitejs/plugin-vue-jsx";
 import {
   componentMapPlugin
 } from "@mb-kit/vue-plugins";
+import vue from "@vitejs/plugin-vue";
+import vueJsx from "@vitejs/plugin-vue-jsx";
 
 import {
   defineConfig
