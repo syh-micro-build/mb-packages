@@ -29,7 +29,6 @@ export default defineConfig({
       gzipSize: true, // 显示gzip后的大小
       brotliSize: true // 显示brotli压缩后的大小
     })
-
   ],
   resolve: {
     alias: {
