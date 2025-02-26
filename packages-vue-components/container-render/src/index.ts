@@ -13,7 +13,7 @@ export {
   Button
 } from "@mb-kit/vue-container";
 
-export {
+export type {
   PropsComponents,
   PropsCheckJsonSchema as PropsContainerRender
 } from "@mb-kit/vue-schema-validator";

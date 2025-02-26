@@ -1,6 +1,3 @@
-import {
-  componentMapPlugin
-} from "@mb-kit/vue-plugins";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 
@@ -17,8 +14,9 @@ export default defineConfig({
       outDir: "./dist/types",
       tsconfigPath: "./tsconfig.json",
       rollupTypes: true
-    }),
-    componentMapPlugin()
+    })
+
+    // componentMapPlugin(),
   ],
   build: {
     target: "esnext",

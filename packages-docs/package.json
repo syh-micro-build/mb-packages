@@ -14,7 +14,7 @@
   "scripts": {
     "clear": "rm -fr node_modules",
     "dev": "vitepress dev .",
-    "build": "vitepress build",
+    "build:doc": "vitepress build",
     "preview": "vitepress preview"
   },
   "main": "index.js",
@@ -22,11 +22,11 @@
     "@mb-kit/vue-container-render": "workspace:^"
   },
   "devDependencies": {
+    "@mb-kit/vue-config-provider": "workspace:^",
     "glob": "catalog:",
     "markdown-it-container": "catalog:",
     "mb-vc-codemirror": "workspace:^",
     "mb-vc-icon": "workspace:^",
-    "@mb-kit/vue-config-provider": "workspace:^",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vitepress": "catalog:",

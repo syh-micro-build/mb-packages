@@ -134,12 +134,12 @@ export default function componentMapPlugin(): Plugin {
 
       uiType = EUiType[allTypes[0] as keyof typeof EUiType];
 
-      const externalDeps = uiType === EUiType.ELEMENT ? ["@mb-kit/vue-arco-design-x"] : ["@mb-kit/vue-element-x"];
+      const external = uiType === EUiType.ELEMENT ? ["@mb-kit/vue-arco-design-x"] : ["@mb-kit/vue-element-x"];
 
       return {
         build: {
           rollupOptions: {
-            external: externalDeps
+            external
           }
         }
       };
