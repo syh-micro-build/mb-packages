@@ -4,9 +4,10 @@
   "commit": false,
   "fixed": [],
   "linked": [],
+  "privatePackages": { "version": true, "tag": false }, 
   "access": "public",
   "baseBranch": "main",
-  "updateInternalDependencies": "patch",
+  "updateInternalDependencies": "minor",
   "ignore": [
     "packages-demo-vue",
     "packages-docs"
