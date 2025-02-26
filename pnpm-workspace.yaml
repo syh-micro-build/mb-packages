@@ -1,5 +1,6 @@
 packages:
   - packages*/**
+  - "!packages-demo*"
 catalog:
   "@arco-design/web-vue": ^2.56.3
   "@babel/generator": ^7.26.9

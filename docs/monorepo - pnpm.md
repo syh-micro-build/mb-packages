@@ -124,3 +124,17 @@ pnpm add @changesets/cli -D
 ```bash
 npx changeset init
 ```
+
+## 3、配置参数
+
+`updateInternalDependencies` 控制依赖包变更时的版本更新策略
+
+- "patch"：仅升级补丁版本
+- "minor"：升级次版本
+
+`ignore` 排除不参与版本控制的包（如文档站点、示例项目）
+
+`privatePackages` 控制私有包行为
+
+- version: true：更新版本但不发布
+- tag: true：生成 Git 标签
