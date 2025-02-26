@@ -37,7 +37,7 @@
     "@vitejs/plugin-vue-jsx": "catalog:",
     "@vue/tsconfig": "catalog:",
     "npm-run-all2": "catalog:",
-    "rollup-plugin-visualizer": "^5.14.0",
+    "rollup-plugin-visualizer": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vite-plugin-vue-devtools": "catalog:",

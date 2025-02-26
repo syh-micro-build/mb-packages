@@ -51,6 +51,7 @@
     "registry": "https://registry.npmjs.org"
   },
   "devDependencies": {
+    "@changesets/cli": "catalog:",
     "@commitlint/cli": "catalog:",
     "@mb-kit/commitlint-config": "workspace:^",
     "@mb-kit/eslint-config": "workspace:^",
