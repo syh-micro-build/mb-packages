@@ -26,7 +26,15 @@ export default defineConfig({
           preserveModulesRoot: "src"
         }
       ],
-      external: ["child_process"]
+      external: [
+        "child_process",
+        "fs",
+        "path",
+        "node:events",
+        "node:stream",
+        "node:string_decoder",
+        /node:.*/
+      ]
     },
     lib: {
       entry: "./src/index.ts",
