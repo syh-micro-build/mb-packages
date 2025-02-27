@@ -22,7 +22,7 @@ import {
       </nav>
     </div>
   </header>
-  <ConfigProvider :type="EUiType.ARCO_DESIGN">
+  <ConfigProvider :type="EUiType.ELEMENT">
     <RouterView />
   </ConfigProvider>
 </template>
