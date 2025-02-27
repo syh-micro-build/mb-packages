@@ -117,6 +117,11 @@ export default function replaceImportPlugin(): PluginOption {
     },
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     configResolved(config: any) {
+      if (uiType) {
+        config.define["import.meta.env.VITE_UI_TYPY"] = JSON.stringify(uiType);
+      }
+    },
+    config: async () => {
       try {
         execSync("rm -rf node_modules/.vite", {
           stdio: "inherit"
@@ -124,12 +129,6 @@ export default function replaceImportPlugin(): PluginOption {
       } catch (error) {
         console.error("Error deleting node_modules/.vite folder", error);
       }
-
-      if (uiType) {
-        config.define["import.meta.env.VITE_UI_TYPY"] = JSON.stringify(uiType);
-      }
-    },
-    config: async () => {
 
       // 读取文件内容
       const files = await glob("**/*.{vue,tsx}", {
