@@ -99,7 +99,6 @@ export default function componentMapPlugin(): Plugin {
 
       return code;
     },
-
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     configResolved(config: any) {
       try {
