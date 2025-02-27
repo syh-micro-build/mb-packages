@@ -88,7 +88,7 @@ export default function replaceImportPlugin(): PluginOption {
               },
 
               default: {
-                pattern: /import\s+([\w$]+)\s+from\s+['"](\.\.[\\/]const[\\/]arco-design[\\/]index\.js)['"];?/g,
+                pattern: /import\s+([\w$]+)\s+from\s+['"](\.\.[\\/]const[\\/]arco-design-x[\\/]index\.js)['"];?/g,
                 replacement: "import $1 from \"../const/element-x/index.js\";"
               }
             };
@@ -108,7 +108,7 @@ export default function replaceImportPlugin(): PluginOption {
           });
         }
 
-        if (id.includes("container-render/dist/container/dist/element-x")) {
+        if (id.includes(uiType === EUiType.ARCO_DESIGN ? "container-render/dist/container/dist/arco-design-x" : "container-render/dist/container/dist/element-x")) {
           return "";
         }
       }
