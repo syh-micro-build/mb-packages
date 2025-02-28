@@ -67,28 +67,3 @@ const data = {
   <RenderCheck :value="data" />
 </template>
 ```
-
-## 导入插件，缩小打包提及
-
-### 安装
-
-```bash
-npm  i @mb-kit/vue-plugins -D
-```
-
-### 引用
-
-`vite.config.ts`
-
-```ts
-import {
-  componentMapPlugin
-} from "@mb-kit/vue-plugins";
-
-export default defineConfig({
-  plugins: [
-    // ... 其他的额外插件
-    componentMapPlugin()
-  ]
-});
-```
