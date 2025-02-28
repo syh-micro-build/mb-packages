@@ -31,9 +31,29 @@ const JSON_SCHEMA = {
           enum: Object.values(EUiEleType)
         },
         options: {
-          oneOf: [
-            $refButton,
-            $refLink
+          allOf: [
+            {
+              if: {
+                properties: {
+                  type: {
+                    const: "Button"
+                  }
+                },
+                required: ["type"]
+              },
+              then: $refButton
+            },
+            {
+              if: {
+                properties: {
+                  type: {
+                    const: "Link"
+                  }
+                },
+                required: ["type"]
+              },
+              then: $refLink
+            }
           ]
         }
       },
