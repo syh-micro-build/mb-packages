@@ -6,7 +6,7 @@
 npm i @mb-kit/vue-container-render
 ```
 
-## 导入插件，缩小打包提及
+## 导入插件，缩小打包体积
 
 ### Install plugins
 
