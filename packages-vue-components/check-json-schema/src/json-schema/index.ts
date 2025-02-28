@@ -3,13 +3,11 @@ import {
 } from "../enum";
 import {
   definitionsButton,
-  $refButton,
   noItemsCaseSchemaButton,
   itemsCaseSchemaButton
 } from "./button";
 import {
   definitionsLink,
-  $refLink,
   noItemsCaseSchemaLink,
   itemsCaseSchemaLink
 } from "./link";
@@ -32,6 +30,9 @@ const JSON_SCHEMA = {
         },
         options: {
           allOf: [
+
+            /*
+            // TODO 与 noItemsCaseSchemaButton 内容有些许不同，但是能跑
             {
               if: {
                 properties: {
@@ -43,17 +44,9 @@ const JSON_SCHEMA = {
               },
               then: $refButton
             },
-            {
-              if: {
-                properties: {
-                  type: {
-                    const: "Link"
-                  }
-                },
-                required: ["type"]
-              },
-              then: $refLink
-            }
+            */
+            noItemsCaseSchemaButton,
+            noItemsCaseSchemaLink
           ]
         }
       },

@@ -17,7 +17,8 @@ const data1: PropsCheckJsonSchema = {
     {
       type: EUiEleType.LINK,
       options: {
-        label: "测试"
+        label: "测试",
+        disabled: false
       }
     }
   ],
@@ -35,7 +36,9 @@ const data2: PropsCheckJsonSchema = {
 const data3: PropsCheckJsonSchema = {
   type: EUiEleType.LINK,
   options: {
-    label: "测试"
+    label: "测试",
+    color: "primary",
+    disabled: false
   }
 };
 
