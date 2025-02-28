@@ -5,5 +5,6 @@ export type {
   PropsButton,
   TProps as PropsCheckJsonSchema,
   PropsComponents,
+  PropsLink,
   PropsSelect
 } from "./types";

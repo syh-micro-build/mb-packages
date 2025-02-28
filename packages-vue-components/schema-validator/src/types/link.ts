@@ -11,7 +11,7 @@ export interface IPropsLink {
   color?: EColor | `${EColor}`;
   underline?: boolean;
   disabled?: boolean;
-  href?: boolean;
+  href?: string;
   target?: "_blank" | "_parent" | "_self" | "_top";
   icon?: IVnode | HTMLElement;
   loading?: boolean;

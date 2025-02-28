@@ -2,7 +2,7 @@ import {
   IPropsButton
 } from "./button";
 import {
-  ILink
+  IPropsLink
 } from "./link";
 import TProps, {
   TPropsComponents
@@ -12,9 +12,9 @@ import {
 } from "./select";
 
 export {
-  ILink as Link,
   IPropsButton as PropsButton,
   TPropsComponents as PropsComponents,
+  IPropsLink as PropsLink,
   IPropsSelect as PropsSelect,
   TProps
 };

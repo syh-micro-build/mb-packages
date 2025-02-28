@@ -2,7 +2,7 @@
 import {
   ETypeButton,
   EShapeButton,
-  EThemeButton,
+  EColor,
   PropsButton
 } from "@mb-kit/vue-schema-validator";
 import {
@@ -17,21 +17,21 @@ import {
 const props = withDefaults(defineProps<Omit<PropsButton, "label"> & { label?: string }>(), {
   type: ETypeButton.DEFAULT,
   shape: EShapeButton.DEFAULT,
-  theme: EThemeButton.DEFAULT,
+  color: EColor.DEFAULT,
   label: ""
 });
 
-const isInvalidTheme = computed(() => Object.values(EThemeButton).includes(props.theme as EThemeButton));
+const isInvalidTheme = computed(() => Object.values(EColor).includes(props.color as EColor));
 
 </script>
 <template>
   <ElButton
     :class="props.class"
     :style="props.style"
-    :type="(isInvalidTheme ? props.theme : EThemeButton.DEFAULT) as EThemeButton"
+    :type="(isInvalidTheme ? props.color : EColor.DEFAULT) as EColor"
     :link="props.type === ETypeButton.LINK"
     :text="props.type === ETypeButton.TEXT"
-    :color="!isInvalidTheme ? props.theme : undefined"
+    :color="!isInvalidTheme ? props.color : undefined"
   >
     <slot>
       {{ props?.label }}

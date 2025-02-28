@@ -34,7 +34,7 @@ export const definitionsLink = {
         ]
       },
       href: {
-        type: "boolean"
+        type: "string"
       },
       target: {
         type: "string"

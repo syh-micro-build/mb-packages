@@ -36,7 +36,6 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
-    "@mb-kit/vue-schema-validator": "workspace:^",
     "@vitejs/plugin-vue-jsx": "catalog:",
     "element-plus": "catalog:",
     "vite-plugin-css-injected-by-js": "catalog:",
@@ -44,6 +43,7 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "catalog:",
+    "@mb-kit/vue-schema-validator": "workspace:^",
     "@storybook/addon-essentials": "catalog:",
     "@storybook/addon-interactions": "catalog:",
     "@storybook/addon-onboarding": "catalog:",

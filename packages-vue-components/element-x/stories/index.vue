@@ -1,13 +1,16 @@
 <script lang="tsx" setup>
+
 import {
-  ElButton
-} from "element-plus";
+  Link
+} from "../src";
 
 </script>
 
 <template>
-  @mb-kit/vue-element-x
-  <ElButton>按钮</ElButton>
+  <Link
+    label="sdsd"
+    color="success"
+  />
 </template>
 
 <style scoped>

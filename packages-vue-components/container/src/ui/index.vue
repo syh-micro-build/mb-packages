@@ -1,13 +1,13 @@
 <script setup lang="tsx">
 
 import {
-  PropsCheckJsonSchema,
-  PropsComponents
-} from "@mb-kit/vue-schema-validator";
-import {
   EUiType,
   getConfigProviderProps
 } from "@mb-kit/vue-config-provider";
+import {
+  PropsCheckJsonSchema,
+  PropsComponents
+} from "@mb-kit/vue-schema-validator";
 import {
   computed,
   defineProps
