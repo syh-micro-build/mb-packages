@@ -2,10 +2,10 @@ import {
   EUiEleType
 } from "../enum";
 import {
-  definitionsButtob,
+  definitionsButton,
   $refButton,
-  noItemsCaseSchemaButtob,
-  itemsCaseSchemaButtob
+  noItemsCaseSchemaButton,
+  itemsCaseSchemaButton
 } from "./button";
 import {
   definitionsLink,
@@ -17,7 +17,7 @@ import {
 const JSON_SCHEMA = {
   type: "object",
   definitions: {
-    ...definitionsButtob,
+    ...definitionsButton,
     ...definitionsLink
   },
   oneOf: [
@@ -40,7 +40,7 @@ const JSON_SCHEMA = {
       required: ["type", "options"],
       additionalProperties: false,
       allOf: [
-        noItemsCaseSchemaButtob,
+        noItemsCaseSchemaButton,
         noItemsCaseSchemaLink
       ]
     },
@@ -54,7 +54,7 @@ const JSON_SCHEMA = {
           type: "array",
           items: {
             oneOf: [
-              itemsCaseSchemaButtob,
+              itemsCaseSchemaButton,
               itemsCaseSchemaLink
             ]
           }

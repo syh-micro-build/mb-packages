@@ -5,7 +5,7 @@ import {
   ETypeButton
 } from "../enum";
 
-export const definitionsButtob = {
+export const definitionsButton = {
   buttonOptions: {
     type: "object",
     required: ["label"],
@@ -58,7 +58,7 @@ export const $refButton = {
 /**
  * Case 1: 根节点无 items 的情况
  */
-export const noItemsCaseSchemaButtob = {
+export const noItemsCaseSchemaButton = {
   if: {
     properties: {
       type: {
@@ -76,7 +76,7 @@ export const noItemsCaseSchemaButtob = {
 /**
  * Case 2: 包含 items 的情况
  */
-export const itemsCaseSchemaButtob = {
+export const itemsCaseSchemaButton = {
   type: "object",
   properties: {
     type: {
