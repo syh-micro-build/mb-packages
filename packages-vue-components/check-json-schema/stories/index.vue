@@ -1,47 +1,55 @@
 <script lang="tsx" setup>
 import check, {
-  PropsCheckJsonSchema
+  PropsCheckJsonSchema,
+  EUiEleType
 } from "../src";
-const data3: PropsCheckJsonSchema = {
+
+const data1: PropsCheckJsonSchema = {
   items: [
     {
-      type: "Button",
+      "type": "Button",
       "options": {
-        "label": "Button 1"
+        "label": "Button 1",
+        "color": "red"
       }
     },
     {
-      "type": "Select",
-      "options": {
-        "data": [1, 2]
-      }
-    },
-    {
-      type: "Button",
-      "options": {
-        "label": "Button 2"
+      type: EUiEleType.LINK,
+      options: {
+        label: "测试"
       }
     }
-  ]
-
-  // "margin": "10px",
-  // "padding": "10px"
+  ],
+  "margin": "10px",
+  "padding": "10px"
 };
 
-const data4: PropsCheckJsonSchema = {
-  type: "Select",
+const data2: PropsCheckJsonSchema = {
+  type: "Button",
   options: {
-    data: []
+    "label": "Button 1"
   }
 };
 
-const isCheck1 = check(data3);
+const data3: PropsCheckJsonSchema = {
+  type: EUiEleType.LINK,
+  options: {
+    label: "测试"
+  }
+};
 
-const isCheck2 = check(data4);
+const isCheck1 = check(data1);
+
+const isCheck2 = check(data2);
+
+const isCheck3 = check(data3);
 
 </script>
 <template>
   {{ isCheck1 }}
+
   <hr />
   {{ isCheck2 }}
+  <hr />
+  {{ isCheck3 }}
 </template>

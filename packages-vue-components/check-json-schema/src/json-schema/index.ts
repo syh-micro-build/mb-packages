@@ -8,17 +8,17 @@ import {
   itemsCaseSchemaButtob
 } from "./button";
 import {
-  definitionsSelect,
-  $refSelect,
-  noItemsCaseSchemaSelect,
-  itemsCaseSchemaSelect
-} from "./select";
+  definitionsLink,
+  $refLink,
+  noItemsCaseSchemaLink,
+  itemsCaseSchemaLink
+} from "./link";
 
 const JSON_SCHEMA = {
   type: "object",
   definitions: {
     ...definitionsButtob,
-    ...definitionsSelect
+    ...definitionsLink
   },
   oneOf: [
 
@@ -33,7 +33,7 @@ const JSON_SCHEMA = {
         options: {
           oneOf: [
             $refButton,
-            $refSelect
+            $refLink
           ]
         }
       },
@@ -41,7 +41,7 @@ const JSON_SCHEMA = {
       additionalProperties: false,
       allOf: [
         noItemsCaseSchemaButtob,
-        noItemsCaseSchemaSelect
+        noItemsCaseSchemaLink
       ]
     },
 
@@ -55,7 +55,7 @@ const JSON_SCHEMA = {
           items: {
             oneOf: [
               itemsCaseSchemaButtob,
-              itemsCaseSchemaSelect
+              itemsCaseSchemaLink
             ]
           }
         },

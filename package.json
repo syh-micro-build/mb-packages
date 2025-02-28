@@ -45,7 +45,8 @@
     "build": "pnpm --filter \"./packages-**\" build && pnpm --filter \"./packages-**/**\" build",
     "lint:style": "stylelint \"./packages-**/**/*.{tsx,css,vue,ts}\" --fix --allow-empty-input --version",
     "lint:md": "markdownlint-cli2 ./packages-**/**/*.md",
-    "lint:cspell": "cspell lint **/*.ts **/README.md .changeset/*.md **/*.tsx **/*.vue --no-progress"
+    "lint:cspell": "cspell lint **/*.ts **/README.md .changeset/*.md **/*.tsx **/*.vue --no-progress",
+    "pub": ""
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"

@@ -6,14 +6,13 @@ import {
 } from "../types";
 
 const ajv = new Ajv({
-  allErrors: true
+  allErrors: false
 });
 
 /**
  * checkJsonSchema
  */
 export default function check(props: TProps): TProps | undefined {
-
   const validate = ajv.compile(JSON_SCHEMA);
 
   if (validate(props)) {

@@ -42,8 +42,8 @@ export default async () => {
             link: "/src/components/button"
           },
           {
-            text: "下拉框",
-            link: "/src/components/select"
+            text: "链接",
+            link: "/src/components/link"
           }
         ]
       }

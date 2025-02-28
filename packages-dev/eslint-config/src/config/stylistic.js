@@ -13,6 +13,17 @@ export default [
       "@stylistic/ts": stylisticTs
     },
     rules: {
+      "@stylistic/space-infix-ops": ["error"],
+      "@stylistic/switch-colon-spacing": ["error", {
+        "after": true,
+        "before": false
+      }],
+
+      // 空格
+      "@stylistic/key-spacing": ["error", {
+        "beforeColon": false,
+        "afterColon": true
+      }],
 
       // TODO 与 indent 冲突
       "@stylistic/indent": "off",

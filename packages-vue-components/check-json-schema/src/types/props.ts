@@ -2,10 +2,13 @@ import {
   IButton
 } from "./button";
 import {
+  ILink
+} from "./link";
+import {
   ISelect
 } from "./select";
 
-export type TPropsComponents = IButton | ISelect;
+export type TPropsComponents = IButton | ISelect | ILink;
 
 interface IProps {
   items: TPropsComponents[];

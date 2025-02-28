@@ -1,7 +1,7 @@
 import {
   EUiEleType,
   EShapeButton,
-  EThemeButton,
+  EColor,
   ETypeButton
 } from "../enum";
 
@@ -28,10 +28,24 @@ export const definitionsButtob = {
         type: "string",
         enum: Object.values(EShapeButton)
       },
-      theme: {
-        type: "string",
-        enum: Object.values(EThemeButton)
+      color: {
+        anyOf: [
+          {
+            enum: Object.values(EColor)
+          },
+          {
+            type: "string"
+          }
+        ]
       }
+
+      // oneOf: [
+      //   { enum: Object.values(EColor) },          // 枚举值
+      //   {
+      //     type: "string",
+      //     not: { enum: Object.values(EColor) }    // 排除枚举值后的其他字符串
+      //   }
+      // ]
     },
     additionalProperties: false
   }
@@ -48,7 +62,7 @@ export const noItemsCaseSchemaButtob = {
   if: {
     properties: {
       type: {
-        const: "Button"
+        const: EUiEleType.BUTTON
       }
     }
   },
