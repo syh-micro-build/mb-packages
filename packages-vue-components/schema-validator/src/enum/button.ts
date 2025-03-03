@@ -5,9 +5,34 @@ export enum ETypeButton {
 }
 
 export enum EShapeButton {
+
+  /**
+   * 默认
+   */
   DEFAULT = "default",
+
+  /**
+   * 是否为朴素按钮
+   */
   PLAIN = "plain",
+
+  /**
+   * 是否为圆角按钮
+   */
   ROUND = "round",
+
+  /**
+   * 是否为圆形按钮
+   */
   CIRCLE = "circle",
-  SECONDARY = "secondary"
+
+  /**
+   * 线形按钮
+   */
+  OUTLINE = "outline",
+
+  /**
+   * 虚线按钮
+   */
+  DASHED = "dashed"
 }
