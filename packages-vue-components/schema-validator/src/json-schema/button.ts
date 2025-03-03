@@ -1,6 +1,7 @@
 import {
   EUiEleType,
   EShapeButton,
+  ESize,
   EColor,
   ETypeButton
 } from "../enum";
@@ -12,6 +13,15 @@ export const definitionsButton = {
     properties: {
       label: {
         type: "string"
+      },
+      disabled: {
+        type: "boolean"
+      },
+      loading: {
+        type: "boolean"
+      },
+      long: {
+        type: "boolean"
       },
       style: {
         type: "string"
@@ -37,6 +47,10 @@ export const definitionsButton = {
             type: "string"
           }
         ]
+      },
+      size: {
+        type: "string",
+        enum: Object.values(ESize)
       }
 
       // oneOf: [

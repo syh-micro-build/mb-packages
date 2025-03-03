@@ -7,3 +7,11 @@ export enum EColor {
   INFO = "info",
   DEFAULT = "default"
 }
+
+// 'mini' | 'small' | 'medium' | 'large'
+export enum ESize {
+  MINI = "mini",
+  SMALL = "small",
+  MEDIUM = "medium",
+  LARGE = "large"
+}
