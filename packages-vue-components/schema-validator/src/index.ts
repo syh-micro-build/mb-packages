@@ -8,3 +8,7 @@ export type {
   PropsLink,
   PropsSelect
 } from "./types";
+
+export {
+  isValueInEnum
+} from "./utils";
