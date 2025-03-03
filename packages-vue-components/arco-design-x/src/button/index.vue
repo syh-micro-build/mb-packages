@@ -6,7 +6,8 @@ import {
 import {
   PropsButton,
   EColor,
-  EShapeButton
+  EShapeButton,
+  ETypeButton
 } from "@mb-kit/vue-schema-validator";
 import {
   computed,
@@ -28,18 +29,26 @@ const attrs = useAttrs();
 
 const isValueInEnum = <T extends Record<string, unknown>>(value: unknown, enumObj: T): value is T[keyof T] => Object.values(enumObj).includes(value as T[keyof T]);
 
-const options = computed(() => ({
-  status: props?.color && isValueInEnum(props.color, EColor) ? props.color : undefined,
-  color: props?.color && isValueInEnum(props.color, EColor) ? undefined : props.color,
-  type: props?.shape && Object.values(EShapeButton).includes(props.color as EShapeButton) ? props.shape : undefined,
-  size: props.size,
-  long: props.long,
-  loading: props.loading,
-  disabled: props.disabled,
-  style: props.style,
-  class: `${props.class} style`,
-  ...attrs
-} as ButtonProps & { color: string }));
+const options = computed(() => {
+  const obj = {
+    status: props?.color && isValueInEnum(props.color, EColor) ? props.color : undefined,
+    color: props?.color && isValueInEnum(props.color, EColor) ? undefined : props.color,
+    type: props?.shape && Object.values(EShapeButton).includes(props.color as EShapeButton) ? props.shape : undefined,
+    size: props.size,
+    long: props.long,
+    loading: props.loading,
+    disabled: props.disabled,
+    style: props.style,
+    class: `${props.class} style`,
+    ...attrs
+  } as ButtonProps & { color: string };
+
+  if(props.type === ETypeButton.TEXT) {
+    obj.type = ETypeButton.TEXT;
+  }
+
+  return obj;
+});
 </script>
 <template>
   <Button

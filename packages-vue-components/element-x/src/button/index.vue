@@ -16,6 +16,10 @@ import {
 
 const props = defineProps<PropsButton>();
 
+const emits = defineEmits<{
+  (e: "clcik", ev: MouseEvent): void;
+}>();
+
 const isValueInEnum = <T extends Record<string, unknown>>(value: unknown, enumObj: T): value is T[keyof T] => Object.values(enumObj).includes(value as T[keyof T]);
 
 const options = computed(() => {
@@ -78,9 +82,16 @@ const options = computed(() => {
   return obj;
 });
 
+const handleClick = (e: MouseEvent) => {
+  emits("clcik", e);
+};
+
 </script>
 <template>
-  <ElButton v-bind="{...options}">
+  <ElButton
+    v-bind="{...options}"
+    @click="handleClick"
+  >
     <slot>
       {{ props?.label }}
     </slot>
