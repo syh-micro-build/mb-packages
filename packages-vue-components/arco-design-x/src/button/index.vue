@@ -9,10 +9,22 @@ import {
   EShapeButton
 } from "@mb-kit/vue-schema-validator";
 import {
-  computed
+  computed,
+  useAttrs
 } from "vue";
 
 const props = defineProps<PropsButton>();
+
+const emits = defineEmits<{
+  (e: "clcik", ev: MouseEvent): void;
+}>();
+
+const handleClick = (e: MouseEvent) => {
+  emits("clcik", e);
+};
+
+// 获取所有非 props 属性
+const attrs = useAttrs();
 
 const isValueInEnum = <T extends Record<string, unknown>>(value: unknown, enumObj: T): value is T[keyof T] => Object.values(enumObj).includes(value as T[keyof T]);
 
@@ -25,14 +37,14 @@ const options = computed(() => ({
   loading: props.loading,
   disabled: props.disabled,
   style: props.style,
-  class: props.class
+  class: `${props.class} style`,
+  ...attrs
 } as ButtonProps & { color: string }));
-
 </script>
 <template>
   <Button
     v-bind="{...options}"
-    class="style"
+    @click="handleClick"
   >
     <slot>
       {{ props.label }}

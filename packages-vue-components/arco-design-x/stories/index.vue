@@ -3,6 +3,11 @@
 import {
   Button
 } from "../src";
+
+const handleClick = () => {
+  // eslint-disable-next-line no-console
+  console.log(11);
+};
 </script>
 
 <template>
@@ -10,7 +15,7 @@ import {
   <hr />
   <Button
     label="按钮"
-    color="#fff"
+    @clcik="handleClick"
   />
 </template>
 
