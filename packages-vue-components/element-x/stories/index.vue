@@ -12,12 +12,14 @@ import {
   <hr />
   <Button
     label="按钮"
-    shape="circle"
+    shape="plain"
+    :long="true"
+    type="link"
   />
   <hr />
   <Link
     label="sdsd"
-    color="success"
+    color="default"
   />
 </template>
 

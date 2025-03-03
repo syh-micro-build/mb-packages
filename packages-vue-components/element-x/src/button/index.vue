@@ -2,6 +2,7 @@
 
 import {
   EColor,
+  ETypeButton,
   EShapeButton,
   PropsButton
 } from "@mb-kit/vue-schema-validator";
@@ -27,7 +28,7 @@ const options = computed(() => {
     color: !isValueInEnum(props.color, EColor) ? props.color : undefined,
     loading: props.loading,
     disabled: props.disabled,
-    class: props.class,
+    class: `${props.class} ${props.long ? "long" : ""}`,
     style: props.style
   };
 
@@ -58,6 +59,22 @@ const options = computed(() => {
     }
   }
 
+  if(props.type) {
+    switch(props.type) {
+      case ETypeButton.LINK:
+        obj.link = true;
+
+        break;
+      case ETypeButton.TEXT:
+        obj.text = true;
+
+        break;
+      default:
+        obj.text = false;
+        obj.link = false;
+    }
+  }
+
   return obj;
 });
 
@@ -72,5 +89,9 @@ const options = computed(() => {
 <style scoped>
 .dashed {
   border: 1px dashed var(--el-color-info-dark-2);
+}
+
+.long {
+  width: 100%;
 }
 </style>
