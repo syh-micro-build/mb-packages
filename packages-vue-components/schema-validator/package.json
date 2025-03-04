@@ -37,7 +37,6 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
-    "@mb-kit/vue-enum": "workspace:^",
     "ajv": "catalog:",
     "vue": "catalog:"
   },

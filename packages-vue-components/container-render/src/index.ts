@@ -9,11 +9,8 @@ export {
   getConfigProviderProps
 }from "@mb-kit/vue-config-provider";
 
-export {
-  Button
-} from "@mb-kit/vue-container";
-
 export type {
+  EUiEleType,
   PropsComponents,
   PropsCheckJsonSchema as PropsContainerRender
 } from "@mb-kit/vue-schema-validator";

@@ -7,10 +7,18 @@ import {
   PropsLink
 } from "@mb-kit/vue-schema-validator";
 import {
-  computed
+  computed,
+  defineSlots,
+  VNode
 } from "vue";
 
 const props = defineProps<PropsLink>();
+
+// 定义插槽类型
+const slots = defineSlots<{
+  default?: (props: {}) => VNode;
+  icon?: (props: {}) => VNode;
+}>();
 
 const options = computed(() => {
   const obj = {
@@ -42,10 +50,10 @@ const options = computed(() => {
 <template>
   <Link v-bind="{...options}">
     <template
-      v-if="$slots.icon"
+      v-if="slots.icon"
       #icon
     >
-      <slot name="header"></slot>
+      <slot name="icon"></slot>
     </template>
     <slot>
       {{ label }}

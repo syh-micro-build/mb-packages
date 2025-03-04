@@ -1,9 +1,7 @@
 <script lang="tsx" setup>
 import {
+  PropsCheckJsonSchema,
   EUiEleType
-} from "@mb-kit/vue-enum";
-import {
-  PropsCheckJsonSchema
 } from "@mb-kit/vue-schema-validator";
 import {
   computed,

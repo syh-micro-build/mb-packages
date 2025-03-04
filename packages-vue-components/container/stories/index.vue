@@ -3,10 +3,8 @@ import ConfigProvider, {
   EUiType
 } from "@mb-kit/vue-config-provider";
 import {
+  PropsCheckJsonSchema,
   EUiEleType
-} from "@mb-kit/vue-enum";
-import {
-  PropsCheckJsonSchema
 } from "@mb-kit/vue-schema-validator";
 
 import Container from "../src";

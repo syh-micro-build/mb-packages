@@ -1,9 +1,11 @@
 import {
-  Button
+  Button,
+  Link
 } from "@mb-kit/vue-arco-design-x";
 
 const COMPONENT_MAP = {
-  Button
+  Button,
+  Link
 };
 
 export default COMPONENT_MAP;

@@ -40,7 +40,6 @@
     "@mb-kit/vue-arco-design-x": "workspace:^",
     "@mb-kit/vue-config-provider": "workspace:^",
     "@mb-kit/vue-element-x": "workspace:^",
-    "@mb-kit/vue-enum": "workspace:^",
     "@mb-kit/vue-plugins": "workspace:^",
     "@mb-kit/vue-schema-validator": "workspace:^",
     "@vitejs/plugin-vue-jsx": "catalog:",
