@@ -70,7 +70,7 @@ const {
   height: 20%;
   margin: 0 auto;
   content: '';
-  background-color: var(--el-link-hover-text-color);
+  background-color: var(--el-link-text-color);
   border-radius: 100%;
   animation: sk-circle-fade-delay 1.2s infinite ease-in-out both;
 }
