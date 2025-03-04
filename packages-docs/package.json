@@ -1,8 +1,8 @@
 {
   "name": "packages-docs",
   "version": "1.0.0",
-  "private": true,
   "description": "",
+  "private": true,
   "keywords": [],
   "homepage": "https://github.com/syh-micro-build/mb-packages",
   "bugs": {},

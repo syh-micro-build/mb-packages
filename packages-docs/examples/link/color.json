@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "type": "Link",
+      "options": {
+        "label": "primary",
+        "color": "primary"
+      }
+    },
+    {
+      "type": "Link",
+      "options": {
+        "label": "success",
+        "color": "success"
+      }
+    },
+    {
+      "type": "Link",
+      "options": {
+        "label": "warning",
+        "color": "warning"
+      }
+    },
+    {
+      "type": "Link",
+      "options": {
+        "label": "danger",
+        "color": "danger"
+      }
+    },
+    {
+      "type": "Link",
+      "options": {
+        "label": "info",
+        "color": "info"
+      }
+    },
+    {
+      "type": "Link",
+      "options": {
+        "label": "default",
+        "color": "default"
+      }
+    }
+  ]
+}

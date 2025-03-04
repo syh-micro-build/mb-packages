@@ -77,6 +77,11 @@
     "pnpm": ">=9.15.0"
   },
   "packageManager": "pnpm@9.15.3",
+  "pnpm": {
+    "patchedDependencies": {
+      "vitepress": "patches/vitepress.patch"
+    }
+  },
   "lint-staged": {
     "package.json": "npmPkgJsonLint",
     "*.{js,ts,vue,tsx,jsx}": "eslint",
