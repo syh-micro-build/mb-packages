@@ -50,6 +50,10 @@ const {
   </ElLink>
 </template>
 <style scoped>
+.link {
+  flex-direction: row-reverse;
+}
+
 .sk-fading-circle {
   position: relative;
   width: 12px;

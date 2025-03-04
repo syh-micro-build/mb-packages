@@ -17,7 +17,7 @@ import {
   <hr />
   <Link
     label="链接"
-    color="default"
+    color="success"
     :loaing="true"
   />
 </template>
