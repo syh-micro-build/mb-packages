@@ -4,7 +4,8 @@ import {
   EColor,
   ETypeButton,
   EShapeButton,
-  PropsButton
+  PropsButton,
+  ESize
 } from "@mb-kit/vue-schema-validator";
 import {
   computed
@@ -27,7 +28,7 @@ const options = computed(() => {
   let obj: Record<string, unknown> = {};
 
   obj = {
-    size: props.size,
+    size: props.size === ESize.MINI ? ESize.SMALL : props.size,
     type: isValueInEnum(props.color, EColor) ? props.color : "info",
     color: !isValueInEnum(props.color, EColor) ? props.color : undefined,
     loading: props.loading,

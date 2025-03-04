@@ -10,7 +10,7 @@ button/basic
 
 ## 颜色
 
-:::json 类型有：`primary`、`success`、`warning`、`danger`、`info`
+:::json 类型：`primary`、`success`、`warning`、`danger`、`info`
 
 button/theme
 
@@ -18,9 +18,17 @@ button/theme
 
 ## 形状
 
-:::json
+:::json 类型：`plain`、`round`、`circle`、`outline`、`dashed`
 
 button/shape
+
+:::
+
+## 大小
+
+:::json 类型：`mini`、`small`、`medium`、`large`
+
+button/size
 
 :::
 

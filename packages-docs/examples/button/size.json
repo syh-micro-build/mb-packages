@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "type": "Button",
+      "options": {
+        "label": "mini",
+        "size": "mini"
+      }
+    },
+    {
+      "type": "Button",
+      "options": {
+        "label": "small",
+        "size": "small"
+      }
+    },
+    {
+      "type": "Button",
+      "options": {
+        "label": "medium",
+        "size": "medium"
+      }
+    },
+    {
+      "type": "Button",
+      "options": {
+        "label": "large",
+        "size": "large"
+      }
+    }
+  ]
+}
