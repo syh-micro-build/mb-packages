@@ -9,9 +9,7 @@ import {
   PropsCheckJsonSchema
 } from "@mb-kit/vue-schema-validator";
 
-import Container, {
-  Button
-} from "../src";
+import Container from "../src";
 
 // eslint-disable-next-line no-console
 console.log(import.meta.env.VITE_UI_TYPY);
@@ -24,22 +22,43 @@ const data1: PropsCheckJsonSchema = {
 };
 
 const data2: PropsCheckJsonSchema = {
-  items: [
+  "items": [
     {
-      type: EUiEleType.BUTTON,
-      options: {
-        label: "1"
+      "type": "Button",
+      "options": {
+        "label": "plain",
+        "shape": "plain"
       }
     },
     {
-      type: EUiEleType.BUTTON,
-      options: {
-        label: "2"
+      "type": "Button",
+      "options": {
+        "label": "outline",
+        "shape": "outline"
+      }
+    },
+    {
+      "type": "Button",
+      "options": {
+        "label": "round",
+        "shape": "round"
+      }
+    },
+    {
+      "type": "Button",
+      "options": {
+        "label": "circle",
+        "shape": "circle"
+      }
+    },
+    {
+      "type": "Button",
+      "options": {
+        "label": "dashed",
+        "color": "dashed"
       }
     }
-  ],
-  margin: "10px",
-  class: "test"
+  ]
 };
 
 const arr = [1, 2, 3, 4];
@@ -57,9 +76,6 @@ const DOM = () => arr.map(item => <span key={item}>{item}</span>);
   <hr />
 
   <DOM />
-  <Button>
-    222
-  </Button>
 </template>
 
 <style scoped>

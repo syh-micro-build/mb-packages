@@ -3,36 +3,36 @@
     {
       "type": "Button",
       "options": {
-        "label": "按钮",
-        "color": "primary"
+        "label": "plain",
+        "shape": "plain"
       }
     },
     {
       "type": "Button",
       "options": {
-        "label": "按钮",
-        "color": "success"
+        "label": "outline",
+        "shape": "outline"
       }
     },
     {
       "type": "Button",
       "options": {
-        "label": "按钮",
-        "color": "warning"
+        "label": "round",
+        "shape": "round"
       }
     },
     {
       "type": "Button",
       "options": {
-        "label": "按钮",
-        "color": "danger"
+        "label": "circle",
+        "shape": "circle"
       }
     },
     {
       "type": "Button",
       "options": {
-        "label": "按钮",
-        "color": "info"
+        "label": "dashed",
+        "color": "dashed"
       }
     }
   ]

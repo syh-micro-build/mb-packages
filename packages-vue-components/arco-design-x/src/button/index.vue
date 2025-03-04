@@ -33,15 +33,49 @@ const options = computed(() => {
   const obj = {
     status: props?.color && isValueInEnum(props.color, EColor) ? props.color : undefined,
     color: props?.color && isValueInEnum(props.color, EColor) ? undefined : props.color,
-    type: props?.shape && Object.values(EShapeButton).includes(props.color as EShapeButton) ? props.shape : undefined,
+    type: "secondary",
     size: props.size,
     long: props.long,
     loading: props.loading,
     disabled: props.disabled,
     style: props.style,
-    class: `${props.class} style`,
+    class: `${props.class}`,
     ...attrs
-  } as ButtonProps & { color: string };
+  } as ButtonProps & { color: string } as any;
+
+  if(props?.color && !isValueInEnum(props.color, EColor)) {
+    obj.class = `${obj.class} style`;
+  }
+
+  if(props.shape) {
+    switch(props.shape) {
+      case EShapeButton.DEFAULT:
+        obj.type = "secondary";
+
+        break;
+      case EShapeButton.PLAIN:
+        obj.type = "primary";
+
+        break;
+      case EShapeButton.DASHED:
+        obj.type = "dashed";
+
+        break;
+      case EShapeButton.OUTLINE:
+        obj.type = "outline";
+
+        break;
+      case EShapeButton.CIRCLE:
+        obj.shape = "circle";
+
+        break;
+      case EShapeButton.ROUND:
+        obj.shape = "round";
+
+        break;
+      default:
+    }
+  }
 
   if(props.type === ETypeButton.TEXT) {
     obj.type = ETypeButton.TEXT;

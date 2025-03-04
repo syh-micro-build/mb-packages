@@ -13,8 +13,6 @@ import {
   <Button
     label="按钮"
     shape="plain"
-    :long="true"
-    type="link"
   />
   <hr />
   <Link

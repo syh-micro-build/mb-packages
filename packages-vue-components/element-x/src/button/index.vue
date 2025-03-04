@@ -102,6 +102,10 @@ const handleClick = (e: MouseEvent) => {
   border: 1px dashed var(--el-color-info-dark-2);
 }
 
+.dashed:hover{
+  border: 1px dashed var(--el-button-hover-link-text-color) !important;
+}
+
 .long {
   width: 100%;
 }

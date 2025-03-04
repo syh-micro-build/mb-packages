@@ -15,6 +15,7 @@ const handleClick = () => {
   <hr />
   <Button
     label="按钮"
+    shape="plain"
     @clcik="handleClick"
   />
 </template>
