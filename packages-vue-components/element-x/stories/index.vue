@@ -16,8 +16,9 @@ import {
   />
   <hr />
   <Link
-    label="sdsd"
+    label="链接"
     color="default"
+    :loaing="true"
   />
 </template>
 
