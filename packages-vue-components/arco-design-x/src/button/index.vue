@@ -6,8 +6,8 @@ import {
 import {
   PropsButton,
   EColor,
-  EShapeButton,
-  ETypeButton
+  EButtonShape,
+  EButtonType
 } from "@mb-kit/vue-schema-validator";
 import {
   computed,
@@ -49,27 +49,27 @@ const options = computed(() => {
 
   if(props.shape) {
     switch(props.shape) {
-      case EShapeButton.DEFAULT:
+      case EButtonShape.DEFAULT:
         obj.type = "secondary";
 
         break;
-      case EShapeButton.PLAIN:
+      case EButtonShape.PLAIN:
         obj.type = "primary";
 
         break;
-      case EShapeButton.DASHED:
+      case EButtonShape.DASHED:
         obj.type = "dashed";
 
         break;
-      case EShapeButton.OUTLINE:
+      case EButtonShape.OUTLINE:
         obj.type = "outline";
 
         break;
-      case EShapeButton.CIRCLE:
+      case EButtonShape.CIRCLE:
         obj.shape = "circle";
 
         break;
-      case EShapeButton.ROUND:
+      case EButtonShape.ROUND:
         obj.shape = "round";
 
         break;
@@ -77,8 +77,8 @@ const options = computed(() => {
     }
   }
 
-  if(props.type === ETypeButton.TEXT) {
-    obj.type = ETypeButton.TEXT;
+  if(props.type === EButtonType.TEXT) {
+    obj.type = EButtonType.TEXT;
   }
 
   return obj;

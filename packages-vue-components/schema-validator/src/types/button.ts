@@ -1,7 +1,7 @@
 import {
   EUiEleType,
-  ETypeButton,
-  EShapeButton,
+  EButtonType,
+  EButtonShape,
   EColor,
   ESize
 } from "../enum";
@@ -13,8 +13,8 @@ export interface IPropsButton {
   long?: boolean;
   style?: string;
   class?: string;
-  type?: ETypeButton | `${ETypeButton}`;
-  shape?: EShapeButton | `${EShapeButton}`;
+  type?: EButtonType | `${EButtonType}`;
+  shape?: EButtonShape | `${EButtonShape}`;
   color?: EColor | `${EColor}` | string;
   size?: ESize | `${ESize}`;
 }

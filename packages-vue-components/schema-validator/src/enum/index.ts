@@ -1,6 +1,6 @@
 export {
-  EShapeButton,
-  ETypeButton
+  EButtonShape,
+  EButtonType
 } from "./button";
 export {
   EColor,

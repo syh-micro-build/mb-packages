@@ -1,9 +1,9 @@
 import {
   EUiEleType,
-  EShapeButton,
+  EButtonShape,
   ESize,
   EColor,
-  ETypeButton
+  EButtonType
 } from "../enum";
 
 export const definitionsButton = {
@@ -32,11 +32,11 @@ export const definitionsButton = {
       },
       type: {
         type: "string",
-        enum: Object.values(ETypeButton)
+        enum: Object.values(EButtonType)
       },
       shape: {
         type: "string",
-        enum: Object.values(EShapeButton)
+        enum: Object.values(EButtonShape)
       },
       color: {
         anyOf: [

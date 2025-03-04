@@ -1,10 +1,10 @@
-export enum ETypeButton {
+export enum EButtonType {
   TEXT = "text",
   LINK = "link",
   DEFAULT = "default"
 }
 
-export enum EShapeButton {
+export enum EButtonShape {
 
   /**
    * 默认
