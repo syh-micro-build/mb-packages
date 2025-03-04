@@ -1,7 +1,8 @@
 <script lang="tsx" setup>
 
 import {
-  Button
+  Button,
+  Link
 } from "../src";
 
 const handleClick = () => {
@@ -17,6 +18,13 @@ const handleClick = () => {
     label="按钮"
     shape="plain"
     @clcik="handleClick"
+  />
+  <hr />
+  <Link
+    label="链接"
+    color="warning"
+    :underline="true"
+    :loading="true"
   />
 </template>
 
