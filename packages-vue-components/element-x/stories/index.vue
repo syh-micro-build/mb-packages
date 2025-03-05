@@ -18,7 +18,7 @@ import {
   <Link
     label="链接"
     color="success"
-    :loaing="true"
+    :loading="false"
   />
 </template>
 

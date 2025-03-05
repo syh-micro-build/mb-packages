@@ -19,7 +19,18 @@ const handleClick = () => {
     shape="plain"
     @clcik="handleClick"
   />
+  <Button
+    label="按钮"
+    shape="plain"
+    @clcik="handleClick"
+  />
   <hr />
+  <Link
+    label="链接"
+    color="warning"
+    :underline="true"
+    :loading="true"
+  />
   <Link
     label="链接"
     color="warning"

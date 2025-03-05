@@ -2,6 +2,9 @@
 import {
   PropsLink
 } from "@mb-kit/vue-schema-validator";
+import {
+  computed
+} from "vue";
 
 import {
   ElLink
@@ -11,23 +14,31 @@ const {
   label,
   ...rest
 } = defineProps<PropsLink>();
+
+const _disabled = computed(() => {
+  if(rest.loading) {
+    return true;
+  }
+
+  return rest.disabled;
+});
 </script>
 <template>
   <ElLink
     :type="rest.color"
     :underline="rest.underline"
-    :disabled="rest.disabled"
+    :disabled="_disabled"
     :href="rest.href"
     :target="rest.target"
     :icon="rest.icon"
     class="link"
   >
-    <template
-      v-if="!rest.loading"
-      #icon
-    >
+    <template #icon>
       <slot name="icon">
-        <div class="sk-fading-circle">
+        <div
+          v-if="rest.loading"
+          class="sk-fading-circle"
+        >
           <div class="sk-circle1 sk-circle"></div>
           <div class="sk-circle2 sk-circle"></div>
           <div class="sk-circle3 sk-circle"></div>
