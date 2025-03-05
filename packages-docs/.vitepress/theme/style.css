@@ -1,3 +1,7 @@
+.el-link + .el-link {
+  margin-left: 12px;
+}
+
 .arco-link + .arco-link {
   margin-left: 12px;
 }
