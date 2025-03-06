@@ -15,7 +15,7 @@ const props = defineProps<{
   link?: string;
 }>();
 
-const _width = computed(() => `${ props?.width || 300 }px`);
+const _width = computed(() => `${ props?.width || 200 }px`);
 
 const router = useRouter();
 
