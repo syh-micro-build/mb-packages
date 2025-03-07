@@ -51,7 +51,7 @@
     "eslint-plugin-perfectionist": "catalog:",
     "eslint-plugin-prettier": "catalog:",
     "eslint-plugin-react": "catalog:",
-    "eslint-plugin-react-compiler": "19.0.0-beta-40c6c23-20250301",
+    "eslint-plugin-react-compiler": "catalog:",
     "eslint-plugin-react-hooks": "catalog:",
     "eslint-plugin-regexp": "catalog:",
     "eslint-plugin-unused-imports": "catalog:",

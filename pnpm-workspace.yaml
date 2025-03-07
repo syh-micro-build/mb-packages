@@ -55,6 +55,7 @@ catalog:
   eslint-plugin-perfectionist: ^4.6.0
   eslint-plugin-prettier: ^5.2.1
   eslint-plugin-react: ^7.37.4
+  eslint-plugin-react-compiler: 19.0.0-beta-40c6c23-20250301
   eslint-plugin-react-hooks: ^5.2.0
   eslint-plugin-regexp: ^2.7.0
   eslint-plugin-unused-imports: ^4.1.4
