@@ -35,6 +35,19 @@ export default [
 ];
 ```
 
+`react`
+
+```js
+import EsLint, {
+  react
+} from "@mb-kit/eslint-config";
+
+export default [
+  ...EsLint,
+  ...react
+];
+```
+
 注：推荐配合 [@mb-kit/prettier-config](https://www.npmjs.com/package/@mb-kit/prettier-config) 一块使用。
 
 ## 插件
