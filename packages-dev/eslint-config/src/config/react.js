@@ -1,26 +1,37 @@
-import pluginJs from "@eslint/js";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import pluginReact from "eslint-plugin-react";
 import * as reactHooks from "eslint-plugin-react-hooks";
-import globals from "globals";
-import tseslint from "typescript-eslint";
 
 export default [
   {
-    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"]
-  },
-  {
-    languageOptions: {
-      globals: globals.browser
+    files: ["**/*.{js,jsx,ts,tsx}"],
+    plugins: {
+      "react-hooks": reactHooks
+    },
+    rules: {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "error"
     }
   },
-
-  pluginJs.configs.recommended,
-  reactHooks.configs["recommended-latest"],
-  ...tseslint.configs.recommended,
-  pluginReact.configs.flat.recommended,
-  jsxA11y.flatConfigs.recommended,
   {
+    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+    ...pluginReact.configs.flat.recommended,
+
+    ...jsxA11y.flatConfigs.recommended,
+
+    languageOptions: {
+
+      // parserOptions: {
+      //   ecmaFeatures: {
+      //     jsx: true
+      //   }
+      // },
+      ...pluginReact.configs.flat.recommended.languageOptions,
+      ...jsxA11y.flatConfigs.recommended.languageOptions
+    },
+    plugins: {
+      react: pluginReact
+    },
     rules: {
 
       // 强制一致地使用属性、状态和上下文的解构分配
@@ -169,14 +180,7 @@ export default [
       "react/jsx-filename-extension": [2, {
         extensions: [".tsx"],
         allow: "as-needed"
-      }],
-
-      /**
-       * 需安装 eslint-plugin-react-hooks
-       */
-      "react-hooks/exhaustive-deps": "error",
-
-      "@typescript-eslint/no-unused-expressions": "off"
+      }]
     }
   }
 ];
