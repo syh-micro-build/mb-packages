@@ -7,7 +7,7 @@ import {
 import {
   PropsCheckJsonSchema,
   PropsComponents
-} from "@mb-kit/vue-schema-validator";
+} from "@mb-kit/schema-validator";
 import {
   computed,
   defineProps

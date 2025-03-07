@@ -8,7 +8,7 @@ import {
   EColor,
   EButtonShape,
   EButtonType
-} from "@mb-kit/vue-schema-validator";
+} from "@mb-kit/schema-validator";
 import {
   computed,
   useAttrs

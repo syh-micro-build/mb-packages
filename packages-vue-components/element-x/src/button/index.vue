@@ -6,7 +6,7 @@ import {
   EButtonShape,
   PropsButton,
   ESize
-} from "@mb-kit/vue-schema-validator";
+} from "@mb-kit/schema-validator";
 import {
   computed
 } from "vue";

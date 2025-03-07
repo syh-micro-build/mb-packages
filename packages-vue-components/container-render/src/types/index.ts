@@ -1,6 +1,6 @@
 import {
   PropsCheckJsonSchema
-} from "@mb-kit/vue-schema-validator";
+} from "@mb-kit/schema-validator";
 
 export interface IProps {
   value: PropsCheckJsonSchema;

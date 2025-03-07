@@ -18,7 +18,7 @@ import "@mb-kit/vue-container/dist/index.css";
 ```tsx
 import checkJsonSchema, {
   PropsCheckJsonSchema
-} from "@mb-kit/vue-schema-validator";
+} from "@mb-kit/schema-validator";
 import Container from "@mb-kit/vue-container";
 
 import {

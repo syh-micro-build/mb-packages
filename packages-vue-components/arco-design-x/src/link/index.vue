@@ -5,7 +5,7 @@ import {
 import {
   EColor,
   PropsLink
-} from "@mb-kit/vue-schema-validator";
+} from "@mb-kit/schema-validator";
 import {
   computed,
   defineSlots,

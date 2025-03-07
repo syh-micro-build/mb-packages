@@ -13,4 +13,4 @@ export type {
   EUiEleType,
   PropsComponents,
   PropsCheckJsonSchema as PropsContainerRender
-} from "@mb-kit/vue-schema-validator";
+} from "@mb-kit/schema-validator";

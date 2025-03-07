@@ -5,7 +5,7 @@ import ConfigProvider, {
 import {
   PropsCheckJsonSchema,
   EUiEleType
-} from "@mb-kit/vue-schema-validator";
+} from "@mb-kit/schema-validator";
 
 import Container from "../src";
 

@@ -1,5 +1,5 @@
 {
-  "name": "@mb-kit/vue-schema-validator",
+  "name": "@mb-kit/schema-validator",
   "version": "1.0.0",
   "description": "Micro build components vue check json schema.",
   "keywords": [],

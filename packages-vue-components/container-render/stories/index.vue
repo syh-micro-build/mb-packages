@@ -2,7 +2,7 @@
 import {
   PropsCheckJsonSchema,
   EUiEleType
-} from "@mb-kit/vue-schema-validator";
+} from "@mb-kit/schema-validator";
 import {
   computed,
   reactive

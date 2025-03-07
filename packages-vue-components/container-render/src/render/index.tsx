@@ -1,6 +1,6 @@
 import checkJsonSchema, {
   PropsCheckJsonSchema
-} from "@mb-kit/vue-schema-validator";
+} from "@mb-kit/schema-validator";
 import Container from "@mb-kit/vue-container";
 import {
   VNode

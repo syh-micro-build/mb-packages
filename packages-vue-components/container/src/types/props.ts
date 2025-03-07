@@ -1,5 +1,5 @@
 import {
   PropsCheckJsonSchema
-} from "@mb-kit/vue-schema-validator";
+} from "@mb-kit/schema-validator";
 
 export type TProps = PropsCheckJsonSchema;

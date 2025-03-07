@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {
   PropsLink
-} from "@mb-kit/vue-schema-validator";
+} from "@mb-kit/schema-validator";
 import {
   computed
 } from "vue";
