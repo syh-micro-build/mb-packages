@@ -5,7 +5,9 @@ import parserTs from "@typescript-eslint/parser";
  * TODO 后面改为 typescript-eslint
  */
 export default {
-  files: ["**/*.?([cm])[jt]s?(x)"],
+
+  // "**/*.vue" 验证 vue 文件中的 ts
+  files: ["**/*.?([cm])[jt]s?(x)", "**/*.vue"],
   languageOptions: {
     parser: parserTs,
     parserOptions: {
@@ -14,7 +16,6 @@ export default {
         jsx: true
       },
       ecmaVersion: "latest",
-      extraFileExtensions: [".vue"],
       jsxPragma: "React",
 
       // TODO Parsing error: ESLint was configured to run on `<tsconfigRootDir>/eslint.config.js` using `parserOptions.project`:

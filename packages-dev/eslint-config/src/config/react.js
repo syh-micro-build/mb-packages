@@ -58,7 +58,11 @@ export default [
       }],
 
       // TODO 在JSX中强制第一个属性的正确位置
-      "react/jsx-first-prop-new-line": [2, "multiline-multiprop"],
+      "react/jsx-max-props-per-line": ["error", {
+        "maximum": 1
+      }],
+
+      "react/jsx-indent-props": ["error", 2],
 
       // 事件处理名称
       "react/jsx-handler-names": [2, {

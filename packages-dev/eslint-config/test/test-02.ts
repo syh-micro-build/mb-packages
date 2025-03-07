@@ -39,3 +39,5 @@ export interface IPropsLink {
   color: EColor | `${EColor}`;
   underline?: boolean;
 }
+
+export const arr = [1, 2, 34];
