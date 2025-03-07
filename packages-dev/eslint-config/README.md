@@ -75,6 +75,10 @@ export default [
 | @vue/eslint-config-typescript | Vue 官方的 TypeScript 配置，为 TypeScript 项目和 Vue 代码提供支持 |
 | <del> @vue/eslint-config-prettier/skip-formatting</del> | 禁用 ESLint 和 Prettier 冲突的格式化规则 |
 | eslint-plugin-oxlint | Oxlint 提供的一组代码风格和质量保证的规则 |
+|  |  |
+| eslint-plugin-jsx-a11y | 该插件主要用于检查 JSX 代码中的可访问性 |
+| eslint-plugin-react-hooks | 用于确保 React Hooks 的正确使用 |
+| eslint-plugin-react | 检查 React 代码规范和最佳实践 |
 
 ## TODO List
 
