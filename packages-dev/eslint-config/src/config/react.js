@@ -1,5 +1,6 @@
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import pluginReact from "eslint-plugin-react";
+import reactCompiler from "eslint-plugin-react-compiler";
 import * as reactHooks from "eslint-plugin-react-hooks";
 
 export default [
@@ -30,9 +31,13 @@ export default [
       ...jsxA11y.flatConfigs.recommended.languageOptions
     },
     plugins: {
-      react: pluginReact
+      react: pluginReact,
+      "react-compiler": reactCompiler
     },
     rules: {
+
+      // https://zh-hans.react.dev/learn/react-compiler#installing-eslint-plugin-react-compiler
+      "react-compiler/react-compiler": "error",
 
       // 强制一致地使用属性、状态和上下文的解构分配
       "react/destructuring-assignment": "error",
