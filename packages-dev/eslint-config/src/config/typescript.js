@@ -124,7 +124,10 @@ export default {
 
     "@typescript-eslint/no-unsafe-function-type": "warn",
 
-    "@typescript-eslint/no-unused-expressions": "off",
+    "@typescript-eslint/no-unused-expressions": ["error", {
+      "allowShortCircuit": true,
+      "allowTernary": true
+    }],
 
     "@typescript-eslint/no-use-before-define": "off", // 禁止在变量声明之前使用它们
     "@typescript-eslint/no-var-requires": "error", // 禁止使用 require

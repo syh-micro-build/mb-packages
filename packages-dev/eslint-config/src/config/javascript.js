@@ -3,6 +3,10 @@ import pluginUnusedImports from "eslint-plugin-unused-imports";
 import globals from "globals";
 
 export default {
+
+  // ignores: [
+  //   "**/*.json"
+  // ],
   languageOptions: {
     ecmaVersion: "latest",
     globals: {

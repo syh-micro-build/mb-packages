@@ -7,6 +7,7 @@ export { default as jsdoc } from "./jsdoc.js";
 export { default as jsonc } from "./jsonc.js";
 export { default as perfectionist } from "./perfectionist.js";
 export { default as prettier } from "./prettier.js";
+export { default as react } from "./react.js";
 export { default as regexp } from "./regexp.js";
 export { default as stylistic } from "./stylistic.js";
 export { default as typescript } from "./typescript.js";

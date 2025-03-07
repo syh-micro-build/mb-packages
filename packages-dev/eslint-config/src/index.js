@@ -10,6 +10,7 @@ import {
   perfectionist,
   import as _import,
   vue,
+  react,
   prettier,
   stylistic
 } from "./config/index.js";
@@ -21,16 +22,17 @@ const DEFAULT = [
   command,
   comments,
   jsdoc,
-  ...jsonc,
   regexp,
   perfectionist,
   ..._import,
   prettier,
-  ...stylistic
+  ...stylistic,
+  ...jsonc
 ];
 
 export default DEFAULT;
 
 export {
+  react,
   vue
 };
