@@ -135,7 +135,13 @@ export default [
       "react/react-in-jsx-scope": "off",
 
       // 禁止组件没有闭合
-      "react/self-closing-comp": "error",
+      "react/self-closing-comp": [
+        "error",
+        {
+          component: true,   // 强制 React 组件自闭合（无子元素时）
+          html: true         // 强制 HTML 标签自闭合（如 <img />）
+        }
+      ],
 
       // react/sort-comp 组件引入顺序
       "react/sort-comp": [1, {
