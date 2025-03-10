@@ -18,22 +18,16 @@ export default defineConfig(() => {
         fileName: "index"
       },
       rollupOptions: {
-        external: ["fs", "path", "react", "react-dom"],
-        output: {
-          globals: {
-            fs: "fs"
-          }
-        }
+        external: ["path", "react", "react-dom"]
       },
       emptyOutDir: !isWatchMode
     },
     plugins: [
       react(),
       dts({
-        entryRoot: "src/index",
-        rollupTypes: true,
-        strictOutput: true,
-        tsconfigPath: "./tsconfig.json"
+        tsconfigPath: "./tsconfig.app.json",
+        rollupTypes: false,
+        strictOutput: true
       })
     ]
   };
