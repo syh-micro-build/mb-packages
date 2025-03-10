@@ -1,4 +1,6 @@
 export enum EUiType {
-  ELEMENT = "element-plus",
+  ANT_DESIGN = "ant-design",
+
+  // 字节
   ARCO_DESIGN = "arco-design"
 }
