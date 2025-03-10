@@ -1,3 +1,4 @@
+import react from "@vitejs/plugin-react";
 import {
   resolve
 } from "path";
@@ -27,10 +28,12 @@ export default defineConfig(() => {
       emptyOutDir: !isWatchMode
     },
     plugins: [
+      react(),
       dts({
         entryRoot: "src/index",
         rollupTypes: true,
-        strictOutput: true
+        strictOutput: true,
+        tsconfigPath: "./tsconfig.json"
       })
     ]
   };

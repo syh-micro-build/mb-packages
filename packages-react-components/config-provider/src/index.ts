@@ -1,3 +1,1 @@
-const test = "test222";
-
-export default test;
+export { default as ConfigProvider } from "./config-provider/index";

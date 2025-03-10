@@ -1,5 +1,9 @@
-import React from "react";
+import {
+  ConfigProvider
+} from "../src";
 
 export default function Index(){
-  return <div>11</div>;
+  return <div>
+    <ConfigProvider value="" />
+  </div>;
 }
