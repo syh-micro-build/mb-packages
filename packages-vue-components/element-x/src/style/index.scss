@@ -1,0 +1,29 @@
+$--colors: (
+  'primary': (
+    'base': rgb(183, 190, 183),
+  ),
+  'success': (
+    'base': #7d65be,
+  ),
+  'warning': (
+    'base': #f2711c,
+  ),
+  'danger': (
+    'base': #db2828,
+  ),
+  'error': (
+    'base': #db2828,
+  ),
+  'info': (
+    'base': #42b8dd,
+  ),
+);
+
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: $--colors,
+  $button-padding-horizontal: ('default': 50px),
+  $border-radius: ('base': 0px, 'small': 0px, 'round': 00px, 'circle': 100%),
+  $tag: ('border-radius': 0px)
+);
+
+@use "element-plus/theme-chalk/src/index.scss" as *;

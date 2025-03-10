@@ -1,16 +1,16 @@
 <script setup lang="tsx">
 
 import {
+  computed
+} from "vue";
+
+import {
   EColor,
   EButtonType,
   EButtonShape,
   PropsButton,
   ESize
 } from "@mb-kit/schema-validator";
-import {
-  computed
-} from "vue";
-
 import {
   ElButton
 } from "element-plus";
@@ -91,6 +91,7 @@ const handleClick = (e: MouseEvent) => {
 <template>
   <ElButton
     v-bind="{...options}"
+    class="aaaaaa-test"
     @click="handleClick"
   >
     <slot>
