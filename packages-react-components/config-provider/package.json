@@ -18,10 +18,22 @@
   "scripts": {
     "clear": "rm -fr node_modules",
     "clear:build": "rm -fr dist",
+    "dev": "vite build --watch",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "main": "index.js",
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs"
+    }
+  },
+  "dependencies": {
+    "vite": "^6.2.1"
+  },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.5",
     "@storybook/addon-essentials": "^8.6.4",
@@ -37,6 +49,7 @@
     "react": "^19.0.0",
     "storybook": "^8.6.4",
     "typescript": "^5.8.2",
+    "vite-plugin-dts": "^4.5.3",
     "vitest": "^3.0.8"
   }
 }
