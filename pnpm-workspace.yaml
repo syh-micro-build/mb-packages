@@ -1,6 +1,7 @@
 packages:
   - packages*/**
 catalog:
+  "@ant-design/v5-patch-for-react-19": ^1.0.3
   "@arco-design/web-vue": ^2.56.3
   "@babel/generator": ^7.26.9
   "@babel/parser": ^7.26.9
@@ -15,7 +16,7 @@ catalog:
   "@commitlint/config-conventional": ^19.6.0
   "@eslint/js": ^9.17.0
   "@storybook/addon-essentials": ^8.6.4
-  "@storybook/addon-interactions": ^8.5.0
+  "@storybook/addon-interactions": ^8.6.4
   "@storybook/addon-onboarding": ^8.6.4
   "@storybook/blocks": ^8.6.4
   "@storybook/experimental-addon-test": ^8.6.4
@@ -44,6 +45,7 @@ catalog:
   "@vue/eslint-config-typescript": ^14.2.0
   "@vue/tsconfig": ^0.7.0
   ajv: ^8.17.1
+  antd: ^5.24.3
   codemirror: ^6.0.1
   commitlint-plugin-function-rules: ^4.0.1
   cspell: ^8.17.2
@@ -85,7 +87,9 @@ catalog:
   postcss-html: ^1.7.0
   prettier: ^3.4.2
   react: ^19.0.0
+  react-dom: ^19.0.0
   rollup-plugin-visualizer: ^5.14.0
+  sass-embedded: ^1.85.1
   storybook: ^8.6.4
   stylelint: ^16.12.0
   stylelint-config-recess-order: ^5.1.1
