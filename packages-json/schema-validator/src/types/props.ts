@@ -1,9 +1,7 @@
 import {
-  Button
-} from "../button";
-import {
+  Button,
   Link
-} from "../link";
+} from "../components";
 
 type TPropsComponents = Button | Link;
 

@@ -263,7 +263,10 @@ export default {
     /**
      * ES6
      */
-    "no-duplicate-imports": "error", // Error; 禁止import重复模块
+    // "no-duplicate-imports": "error", // Error; 禁止import重复模块
+    "no-duplicate-imports": ["error", {
+      includeExports: true
+    }],
     "no-else-return": [
       "warn",
       {

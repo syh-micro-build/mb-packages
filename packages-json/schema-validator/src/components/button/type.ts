@@ -2,7 +2,7 @@ import {
   EUiEleType,
   EColor,
   ESize
-} from "../enum";
+} from "../../enum";
 import {
   EButtonType,
   EButtonVariant

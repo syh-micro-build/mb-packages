@@ -1,10 +1,10 @@
 import {
   EColor,
   EUiEleType
-} from "../enum";
+} from "../../enum";
 import {
   Vnode
-} from "../types";
+} from "../../types";
 
 export interface IPropsLink {
   label: string;

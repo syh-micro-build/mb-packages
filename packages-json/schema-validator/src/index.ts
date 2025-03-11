@@ -1,15 +1,12 @@
+export { default } from "./check";
 export type {
   ButtonProps,
   EButtonType,
-  EButtonVariant
-} from "./button";
-export { default } from "./check";
+  EButtonVariant,
+  ILinkProps as LinkProps
+} from "./components";
 
 export * from "./enum";
-
-export type {
-  ILinkProps as LinkProps
-} from "./link";
 
 export type {
   Props as PropsCheckJsonSchema,

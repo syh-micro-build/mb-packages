@@ -1,7 +1,7 @@
 import {
   EUiEleType,
   EColor
-} from "../enum";
+} from "../../enum";
 
 export const definitionsLink = {
   linkOptions: {
