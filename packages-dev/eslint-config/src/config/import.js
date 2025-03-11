@@ -43,6 +43,7 @@ export default [
 
       // 强制将导出语句放在文件的最后
       "import/exports-last": 1, // 设置为警告级别
+      "import/export": "off", // 关闭导出语句的检查
 
       // 配置模块导入的顺序
       "import/order": ["off", {

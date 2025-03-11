@@ -1,4 +1,3 @@
-// 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default'
 export enum EColor {
   PRIMARY = "primary",
   SUCCESS = "success",
@@ -8,10 +7,8 @@ export enum EColor {
   DEFAULT = "default"
 }
 
-// 'mini' | 'small' | 'medium' | 'large'
 export enum ESize {
-  MINI = "mini",
-  SMALL = "small",
-  MEDIUM = "medium",
-  LARGE = "large"
+      SMALL = "small",
+      MEDIUM = "medium",
+      LARGE = "large"
 }

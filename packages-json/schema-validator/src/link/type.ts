@@ -3,8 +3,8 @@ import {
   EUiEleType
 } from "../enum";
 import {
-  IVnode
-} from "./common";
+  Vnode
+} from "../types";
 
 export interface IPropsLink {
   label: string;
@@ -13,7 +13,7 @@ export interface IPropsLink {
   disabled?: boolean;
   href?: string;
   target?: "_blank" | "_parent" | "_self" | "_top";
-  icon?: IVnode | HTMLElement;
+  icon?: Vnode | HTMLElement;
   loading?: boolean;
 }
 

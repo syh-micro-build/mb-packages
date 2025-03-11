@@ -5,6 +5,11 @@ const ajv = new Ajv({
   allErrors: true
 });
 
+ajv.addKeyword({
+  keyword: "isFunction",
+  validate: (_schema, data) => typeof data === "function"
+});
+
 const schema = {
   type: "object",
   definitions: { // 将公共定义提到顶层
@@ -14,6 +19,9 @@ const schema = {
       properties: {
         label: {
           type: "string"
+        },
+        onClick: {
+          isFunction: true
         }
       },
       additionalProperties: false
@@ -113,7 +121,11 @@ const validate = data => {
 const data1 = {
   "type": "Button",
   "options": {
-    "label": "Button 1"
+    "label": "Button 1",
+    "onClick": () => {
+      // eslint-disable-next-line no-console
+      console.log("click");
+    }
   }
 };
 

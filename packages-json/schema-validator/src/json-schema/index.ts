@@ -1,16 +1,16 @@
 import {
-  EUiEleType
-} from "../enum";
-import {
   definitionsButton,
   noItemsCaseSchemaButton,
   itemsCaseSchemaButton
-} from "./button";
+} from "../button";
+import {
+  EUiEleType
+} from "../enum";
 import {
   definitionsLink,
   noItemsCaseSchemaLink,
   itemsCaseSchemaLink
-} from "./link";
+} from "../link";
 
 const JSON_SCHEMA = {
   type: "object",

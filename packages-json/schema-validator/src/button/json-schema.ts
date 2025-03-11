@@ -1,10 +1,12 @@
 import {
-  EUiEleType,
-  EButtonShape,
-  ESize,
   EColor,
-  EButtonType
+  ESize,
+  EUiEleType
 } from "../enum";
+import {
+  EButtonVariant,
+  EButtonType
+} from "./enum";
 
 export const definitionsButton = {
   buttonOptions: {
@@ -20,13 +22,9 @@ export const definitionsButton = {
       loading: {
         type: "boolean"
       },
-      long: {
-        type: "boolean"
-      },
       style: {
         type: "string"
       },
-
       class: {
         type: "string"
       },
@@ -36,7 +34,7 @@ export const definitionsButton = {
       },
       shape: {
         type: "string",
-        enum: Object.values(EButtonShape)
+        enum: Object.values(EButtonVariant)
       },
       color: {
         anyOf: [
@@ -51,6 +49,11 @@ export const definitionsButton = {
       size: {
         type: "string",
         enum: Object.values(ESize)
+      },
+
+      // 自定义
+      onClick: {
+        isFunction: true
       }
 
       // oneOf: [

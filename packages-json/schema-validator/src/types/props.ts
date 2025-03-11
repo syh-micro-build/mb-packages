@@ -1,14 +1,11 @@
 import {
-  IButton
-} from "./button";
+  Button
+} from "../button";
 import {
-  ILink
-} from "./link";
-import {
-  ISelect
-} from "./select";
+  Link
+} from "../link";
 
-export type TPropsComponents = IButton | ISelect | ILink;
+type TPropsComponents = Button | Link;
 
 interface IProps {
   items: TPropsComponents[];
@@ -19,4 +16,7 @@ interface IProps {
 
 type TProps = IProps | TPropsComponents;
 
-export default TProps;
+export {
+  TProps,
+  TPropsComponents
+};

@@ -1,20 +1,13 @@
 import {
-  IPropsButton
-} from "./button";
+  IVnode
+} from "./common";
 import {
-  IPropsLink
-} from "./link";
-import TProps, {
-  TPropsComponents
+  TPropsComponents,
+  TProps
 } from "./props";
-import {
-  IPropsSelect
-} from "./select";
 
 export {
-  IPropsButton as PropsButton,
+  TProps as Props,
   TPropsComponents as PropsComponents,
-  IPropsLink as PropsLink,
-  IPropsSelect as PropsSelect,
-  TProps
+  IVnode as Vnode
 };

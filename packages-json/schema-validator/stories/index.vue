@@ -29,7 +29,11 @@ const data1: PropsCheckJsonSchema = {
 const data2: PropsCheckJsonSchema = {
   type: "Button",
   options: {
-    "label": "Button 1"
+    "label": "Button 1",
+    "onClick": () => {
+      // eslint-disable-next-line no-console
+      console.log("click");
+    }
   }
 };
 
