@@ -64,6 +64,9 @@ export const definitionsButton = {
       //   }
       // ]
     },
+    patternProperties: {
+      "^(api[-A-Za-z0-9]*|api[A-Za-z0-9]*)$": {}
+    },
     additionalProperties: false
   }
 };

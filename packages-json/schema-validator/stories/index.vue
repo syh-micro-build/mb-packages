@@ -9,9 +9,8 @@ const data1: PropsCheckJsonSchema = {
     {
       "type": "Button",
       "options": {
-        "label": "Button 1"
-
-        // "color": "red"
+        "label": "Button 1",
+        "api-": 222
       }
     },
     {

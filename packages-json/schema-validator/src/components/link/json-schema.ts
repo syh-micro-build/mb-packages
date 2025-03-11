@@ -46,6 +46,9 @@ export const definitionsLink = {
         type: "boolean"
       }
     },
+    patternProperties: {
+      "^(api[-A-Za-z0-9]*|api[A-Za-z0-9]*)$": {}
+    },
     additionalProperties: false
   }
 };

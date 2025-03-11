@@ -3,10 +3,11 @@ import {
   EUiEleType
 } from "../../enum";
 import {
-  Vnode
+  Vnode,
+  ApiAttributes
 } from "../../types";
 
-export interface IPropsLink {
+export interface IPropsLink extends ApiAttributes {
   label: string;
   color?: EColor | `${EColor}`;
   underline?: boolean;

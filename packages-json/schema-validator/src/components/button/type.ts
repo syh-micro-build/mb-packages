@@ -4,11 +4,14 @@ import {
   ESize
 } from "../../enum";
 import {
+  ApiAttributes
+} from "../../types";
+import {
   EButtonType,
   EButtonVariant
 } from "./enum";
 
-export interface IButtonProps {
+export interface IButtonProps extends ApiAttributes {
   label: string | HTMLElement | unknown;
   disabled?: boolean;
   loading?: boolean;
