@@ -3,6 +3,14 @@ import {
 } from "antd";
 import React from "react";
 
-export default function _Button(): React.ReactElement {
-  return <Button>222</Button>;
+interface IProps {
+  children: React.ReactNode | string | number | boolean;
+}
+
+export default function _Button({
+  children
+}: IProps): React.ReactElement {
+  return <Button>
+    {children}
+  </Button>;
 }

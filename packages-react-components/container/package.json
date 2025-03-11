@@ -23,6 +23,20 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs"
+    }
+  },
+  "dependencies": {
+    "@mb-kit/react-ant-design-x": "workspace:^",
+    "@mb-kit/react-config-provider": "workspace:^",
+    "@mb-kit/schema-validator": "workspace:^"
+  },
   "devDependencies": {
     "@chromatic-com/storybook": "catalog:",
     "@storybook/addon-essentials": "catalog:",
@@ -35,6 +49,7 @@
     "@types/react": "catalog:",
     "@vitejs/plugin-react": "catalog:",
     "react": "catalog:",
+    "react-dom": "^19.0.0",
     "storybook": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",

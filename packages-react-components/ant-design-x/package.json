@@ -1,5 +1,5 @@
 {
-  "name": "@mb-kit/ant-design-x",
+  "name": "@mb-kit/react-ant-design-x",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -22,6 +22,15 @@
     "build": "pnpm run clear:build && vite build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
+  },
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs"
+    }
   },
   "dependencies": {
     "@ant-design/v5-patch-for-react-19": "catalog:",
