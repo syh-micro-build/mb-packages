@@ -1,3 +1,6 @@
+import {
+  ConfigProviderX
+} from "@mb-kit/react-ant-design-x";
 import checkJsonSchema, {
   PropsCheckJsonSchema
 } from "@mb-kit/schema-validator";
@@ -18,5 +21,11 @@ export default function Validator({
     return <div>JSON 数据错误</div>;
   }
 
-  return <Render value={obj} />;
+  return <ConfigProviderX theme={{
+    token: {
+      borderRadius: 0
+    }
+  }}>
+    <Render value={obj} />
+  </ConfigProviderX>;
 }

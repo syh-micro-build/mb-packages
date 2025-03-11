@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "catalog:",
+    "@mb-kit/schema-validator": "workspace:^",
     "@storybook/addon-essentials": "catalog:",
     "@storybook/addon-interactions": "catalog:",
     "@storybook/addon-onboarding": "catalog:",

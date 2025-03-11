@@ -1,4 +1,8 @@
 import {
+  Properties
+} from "csstype";
+
+import {
   EUiEleType,
   EColor,
   ESize
@@ -12,10 +16,11 @@ import {
 } from "./enum";
 
 export interface IButtonProps extends ApiAttributes {
-  label: string | HTMLElement | unknown;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  label: any;
   disabled?: boolean;
   loading?: boolean;
-  style?: string;
+  style?: Properties;
   class?: string;
   type?: EButtonType | `${EButtonType}`;
   shape?: EButtonVariant | `${EButtonVariant}`;

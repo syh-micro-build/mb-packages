@@ -27,7 +27,9 @@ export default {
       navigator: "readonly",
 
       // 将window声明为只读的全局变量
-      window: "readonly"
+      window: "readonly",
+
+      React: "readonly"
     },
     parserOptions: {
       ecmaFeatures: {

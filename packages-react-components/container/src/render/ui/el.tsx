@@ -41,7 +41,5 @@ export default function El({
 
   const Component = componentMap[valueType];
 
-  return <Component>
-    {options.label}
-  </Component>;
+  return <Component {...options} />;
 }

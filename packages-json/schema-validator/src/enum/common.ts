@@ -8,7 +8,7 @@ export enum EColor {
 }
 
 export enum ESize {
-      SMALL = "small",
-      MEDIUM = "medium",
-      LARGE = "large"
+  SMALL = "small",
+  MEDIUM = "middle",
+  LARGE = "large"
 }
