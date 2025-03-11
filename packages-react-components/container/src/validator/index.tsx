@@ -21,11 +21,15 @@ export default function Validator({
     return <div>JSON 数据错误</div>;
   }
 
-  return <ConfigProviderX theme={{
-    token: {
-      borderRadius: 0
-    }
-  }}>
+  return <ConfigProviderX
+    theme={{
+      token: {
+        borderRadius: 0
+      }
+    }}
+    wave={{
+      disabled: true
+    }}>
     <Render value={obj} />
   </ConfigProviderX>;
 }
