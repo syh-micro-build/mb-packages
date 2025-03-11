@@ -20,7 +20,7 @@
     "clear:build": "rm -fr dist",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build": "pnpm run clear:build && vite build",
+    "build:todo": "pnpm run clear:build && vite build",
     "prepublishOnly": "pnpm run clear:build && npm run build"
   },
   "module": "./dist/index.js",
@@ -37,9 +37,9 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
+    "@mb-kit/schema-validator": "workspace:^",
     "@mb-kit/vue-config-provider": "workspace:^",
     "@mb-kit/vue-container": "workspace:^",
-    "@mb-kit/schema-validator": "workspace:^",
     "@vitejs/plugin-vue-jsx": "catalog:",
     "vue": "catalog:"
   },

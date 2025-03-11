@@ -7,7 +7,7 @@ import {
   ApiAttributes
 } from "../../types";
 
-export interface IPropsLink extends ApiAttributes {
+export interface ILinkProps extends ApiAttributes {
   label: string;
   color?: EColor | `${EColor}`;
   underline?: boolean;
@@ -20,5 +20,5 @@ export interface IPropsLink extends ApiAttributes {
 
 export interface ILink {
   type: EUiEleType.LINK | `${EUiEleType.LINK}`;
-  options: IPropsLink;
+  options: ILinkProps;
 }

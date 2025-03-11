@@ -35,7 +35,7 @@ export enum EColor {
   DEFAULT = "default"
 }
 
-export interface IPropsLink {
+export interface ILinkProps {
   color: EColor | `${EColor}`;
   underline?: boolean;
 }

@@ -4,7 +4,7 @@ import {
 } from "@arco-design/web-vue";
 import {
   EColor,
-  PropsLink
+  LinkProps
 } from "@mb-kit/schema-validator";
 import {
   computed,
@@ -12,7 +12,7 @@ import {
   VNode
 } from "vue";
 
-const props = defineProps<PropsLink>();
+const props = defineProps<LinkProps>();
 
 // 定义插槽类型
 const slots = defineSlots<{

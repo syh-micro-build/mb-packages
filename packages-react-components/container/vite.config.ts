@@ -18,9 +18,7 @@ export default defineConfig(() => {
         fileName: "index"
       },
       rollupOptions: {
-
-        // 依赖于外部
-        external: ["path", "react", "react-dom", "react-dom/client"]
+        external: ["path", "react", "react-dom"]
       },
       emptyOutDir: !isWatchMode
     },

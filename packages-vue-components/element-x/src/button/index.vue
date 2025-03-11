@@ -7,15 +7,15 @@ import {
 import {
   EColor,
   EButtonType,
-  EButtonShape,
-  PropsButton,
+  EButtonVariant,
+  ButtonProps,
   ESize
 } from "@mb-kit/schema-validator";
 import {
   ElButton
 } from "element-plus";
 
-const props = defineProps<PropsButton>();
+const props = defineProps<ButtonProps>();
 
 const emits = defineEmits<{
   (e: "clcik", ev: MouseEvent): void;
@@ -39,23 +39,23 @@ const options = computed(() => {
 
   if(props.shape) {
     switch (props.shape ){
-      case EButtonShape.ROUND:
+      case EButtonVariant.ROUND:
         obj.round = true;
 
         break;
-      case EButtonShape.CIRCLE:
+      case EButtonVariant.CIRCLE:
         obj.circle = true;
 
         break;
-      case EButtonShape.OUTLINE:
+      case EButtonVariant.OUTLINE:
         obj.type = "defaut";
 
         break;
-      case EButtonShape.DASHED:
-        obj.class = `${obj.class} ${EButtonShape.DASHED}`;
+      case EButtonVariant.DASHED:
+        obj.class = `${obj.class} ${EButtonVariant.DASHED}`;
 
         break;
-      case EButtonShape.PLAIN:
+      case EButtonVariant.PLAIN:
         obj.plain = true;
 
         break;

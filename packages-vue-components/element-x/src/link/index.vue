@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {
-  PropsLink
+  LinkProps
 } from "@mb-kit/schema-validator";
 import {
   computed
@@ -13,7 +13,7 @@ import {
 const {
   label,
   ...rest
-} = defineProps<PropsLink>();
+} = defineProps<LinkProps>();
 
 const _disabled = computed(() => {
   if(rest.loading) {

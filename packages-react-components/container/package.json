@@ -1,5 +1,5 @@
 {
-  "name": "@mb-kit/ant-design-x",
+  "name": "@mb-kit/react-container",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -22,11 +22,6 @@
     "build": "pnpm run clear:build && vite build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
-  },
-  "dependencies": {
-    "@ant-design/v5-patch-for-react-19": "^1.0.3",
-    "antd": "^5.24.3",
-    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.5",

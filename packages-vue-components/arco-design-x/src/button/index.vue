@@ -4,9 +4,9 @@ import {
   Button
 } from "@arco-design/web-vue";
 import {
-  PropsButton,
+  ButtonProps,
   EColor,
-  EButtonShape,
+  EButtonVariant,
   EButtonType
 } from "@mb-kit/schema-validator";
 import {
@@ -14,7 +14,7 @@ import {
   useAttrs
 } from "vue";
 
-const props = defineProps<PropsButton>();
+const props = defineProps<ButtonProps>();
 
 const emits = defineEmits<{
   (e: "clcik", ev: MouseEvent): void;
@@ -49,27 +49,27 @@ const options = computed(() => {
 
   if(props.shape) {
     switch(props.shape) {
-      case EButtonShape.DEFAULT:
+      case EButtonVariant.DEFAULT:
         obj.type = "secondary";
 
         break;
-      case EButtonShape.PLAIN:
+      case EButtonVariant.PLAIN:
         obj.type = "primary";
 
         break;
-      case EButtonShape.DASHED:
+      case EButtonVariant.DASHED:
         obj.type = "dashed";
 
         break;
-      case EButtonShape.OUTLINE:
+      case EButtonVariant.OUTLINE:
         obj.type = "outline";
 
         break;
-      case EButtonShape.CIRCLE:
+      case EButtonVariant.CIRCLE:
         obj.shape = "circle";
 
         break;
-      case EButtonShape.ROUND:
+      case EButtonVariant.ROUND:
         obj.shape = "round";
 
         break;

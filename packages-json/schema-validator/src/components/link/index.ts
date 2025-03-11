@@ -5,6 +5,6 @@ export {
 } from "./json-schema";
 
 export type {
-  IPropsLink as ILinkProps,
+  ILinkProps as ILinkProps,
   ILink as Link
 }from "./type";
