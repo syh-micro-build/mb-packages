@@ -13,9 +13,7 @@ export const definitionsButton = {
     type: "object",
     required: ["label"],
     properties: {
-      label: {
-        type: "string"
-      },
+      children: {},
       disabled: {
         type: "boolean"
       },
@@ -32,7 +30,7 @@ export const definitionsButton = {
         type: "string",
         enum: Object.values(EButtonType)
       },
-      shape: {
+      variant: {
         type: "string",
         enum: Object.values(EButtonVariant)
       },

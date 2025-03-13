@@ -3,7 +3,6 @@
       "composite": true,
       "target": "ESNext",
       "jsx": "preserve",
-      "jsxImportSource": "vue",
       "lib": [
         "ES2020",
         "DOM",

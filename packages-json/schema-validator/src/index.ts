@@ -1,9 +1,9 @@
 export { default } from "./check";
-export type {
-  ButtonProps,
-  EButtonType,
-  EButtonVariant,
-  ILinkProps as LinkProps
+export {
+  type ButtonProps,
+  EButtonType as ButtonType,
+  EButtonVariant as ButtonVariant,
+  type ILinkProps as LinkProps
 } from "./components";
 
 export * from "./enum";

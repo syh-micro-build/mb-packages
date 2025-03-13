@@ -17,13 +17,13 @@ import {
 
 export interface IButtonProps extends ApiAttributes {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  label: any;
+  children: any;
   disabled?: boolean;
   loading?: boolean;
   style?: Properties;
   class?: string;
   type?: EButtonType | `${EButtonType}`;
-  shape?: EButtonVariant | `${EButtonVariant}`;
+  variant?: EButtonVariant | `${EButtonVariant}`;
   color?: EColor | `${EColor}` | string;
   size?: ESize | `${ESize}`;
   onClick?: (event: MouseEvent) => void;

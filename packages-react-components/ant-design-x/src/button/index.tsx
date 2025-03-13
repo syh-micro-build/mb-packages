@@ -12,15 +12,14 @@ import {
 type TButtonClickEvent = _MouseEvent<HTMLButtonElement, MouseEvent>;
 
 export default function ButtonX({
-  label,
+  children,
   disabled,
   loading,
   style,
   class: _class,
   size,
-  onClick
-
-  // ...rest
+  onClick,
+  type
 }: ButtonProps): React.ReactElement {
   const handleClick = useCallback((e: TButtonClickEvent): void => {
     if (onClick) {
@@ -34,7 +33,8 @@ export default function ButtonX({
     loading={loading}
     onClick={handleClick}
     size={size}
-    style={style}>
-    {label}
+    style={style}
+    type={type}>
+    {children}
   </Button>;
 }
