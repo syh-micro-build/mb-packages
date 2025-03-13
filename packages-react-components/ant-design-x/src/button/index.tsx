@@ -24,7 +24,7 @@ export default function ButtonX({
 }: ButtonProps): React.ReactElement {
   const handleClick = useCallback((e: TButtonClickEvent): void => {
     if (onClick) {
-      onClick(e);
+      onClick(e as unknown as MouseEvent);
     }
   }, [onClick]);
 
