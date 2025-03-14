@@ -4,14 +4,13 @@ import {
 
 import {
   EUiEleType,
-  EColor,
+  EType,
   ESize
 } from "../../enum";
 import {
   ApiAttributes
 } from "../../types";
 import {
-  EButtonType,
   EButtonVariant
 } from "./enum";
 
@@ -22,9 +21,9 @@ export interface IButtonProps extends ApiAttributes {
   loading?: boolean;
   style?: Properties;
   class?: string;
-  type?: EButtonType | `${EButtonType}`;
+  type?: EType | `${EType}`;
   variant?: EButtonVariant | `${EButtonVariant}`;
-  color?: EColor | `${EColor}` | string;
+  color?: string;
   size?: ESize | `${ESize}`;
   onClick?: (event: MouseEvent) => void;
 }

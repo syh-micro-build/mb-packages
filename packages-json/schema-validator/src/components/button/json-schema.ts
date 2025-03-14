@@ -1,11 +1,10 @@
 import {
-  EColor,
+  EType,
   ESize,
   EUiEleType
 } from "../../enum";
 import {
-  EButtonVariant,
-  EButtonType
+  EButtonVariant
 } from "./enum";
 
 export const definitionsButton = {
@@ -28,7 +27,7 @@ export const definitionsButton = {
       },
       type: {
         type: "string",
-        enum: Object.values(EButtonType)
+        enum: Object.values(EType)
       },
       variant: {
         type: "string",
@@ -36,9 +35,10 @@ export const definitionsButton = {
       },
       color: {
         anyOf: [
-          {
-            enum: Object.values(EColor)
-          },
+
+          // {
+          //   enum: Object.values(EColor)
+          // },
           {
             type: "string"
           }

@@ -1,28 +1,28 @@
 $--colors: (
   'primary': (
-    'base': rgb(183, 190, 183),
+    'base': #1677ff,
   ),
   'success': (
-    'base': #7d65be,
+    'base': #52c41a,
   ),
   'warning': (
-    'base': #f2711c,
+    'base': #faad14,
   ),
   'danger': (
-    'base': #db2828,
+    'base': #ff4d4f,
   ),
   'error': (
-    'base': #db2828,
+    'base': #ff4d4f,
   ),
   'info': (
-    'base': #42b8dd,
+    'base': #1677ff,
   ),
 );
 
 @forward 'element-plus/theme-chalk/src/common/var.scss' with (
   $colors: $--colors,
-  $button-padding-horizontal: ('default': 50px),
-  $border-radius: ('base': 0px, 'small': 0px, 'round': 00px, 'circle': 100%),
+  $button-padding-horizontal: ('default': 15px),
+  $border-radius: ('base': 6px, 'small': 6px, 'round': 6px, 'circle': 100%),
   $tag: ('border-radius': 0px)
 );
 

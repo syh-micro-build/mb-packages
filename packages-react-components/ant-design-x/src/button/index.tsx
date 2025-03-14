@@ -1,10 +1,11 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
+  ButtonVariant,
   ButtonProps,
-  ButtonVariant
+  EType
 }from "@mb-kit/schema-validator";
 import {
-  Button
+  Button,
+  ButtonProps as _ButtonProps
 } from "antd";
 import {
   useCallback,
@@ -22,7 +23,6 @@ export default function ButtonX({
   class: _class,
   size,
   onClick,
-  type,
   ...rest
 }: ButtonProps): React.ReactElement {
   const handleClick = useCallback((e: TButtonClickEvent): void => {
@@ -31,33 +31,58 @@ export default function ButtonX({
     }
   }, [onClick]);
 
-  const variant = useMemo((): any => {
-    if (rest.variant === ButtonVariant.OUTLINE || rest.variant === ButtonVariant.DASHED || rest.variant === ButtonVariant.SOLID || rest.variant === ButtonVariant.FILLED) {
-      return rest.variant;
+  function transformtType(type: EType | undefined):_ButtonProps {
+    switch (type) {
+      case EType.PRIMARY:
+      case EType.INFO:
+        return {
+          type: EType.PRIMARY
+        };
+      case EType.SUCCESS:
+        return {
+          color: "green",
+          variant: "solid"
+        };
+      case EType.WARNING:
+        return {
+          color: "orange",
+          variant: "solid"
+        };
+      case EType.DANGER:
+        return {
+          color: "red",
+          variant: "solid"
+        };
+      default:
+        return {};
+    }
+  }
+
+  function transformtVariant(variant: ButtonVariant | undefined): _ButtonProps {
+    if(variant === ButtonVariant.ROUND || variant === ButtonVariant.CIRCLE) {
+      return {
+        shape: variant === ButtonVariant.ROUND ? "round" : "circle"
+      };
     }
 
-    return ButtonVariant.DEFAULT;
-  }, [rest]);
+    return {
+      variant: variant === ButtonVariant.OUTLINE ? "outlined" : "link"
+    };
+  }
 
-  const shape = useMemo((): any => {
-    if (rest.variant === ButtonVariant.ROUND || rest.variant === ButtonVariant.CIRCLE) {
-      return rest.variant;
-    }
-
-    return ButtonVariant.DEFAULT;
-  }, [rest]);
+  const options = useMemo<_ButtonProps>(() => ({
+    ...transformtType(rest.type as EType),
+    ...transformtVariant(rest.variant as ButtonVariant)
+  }), [rest]);
 
   return <Button
     className={_class}
-    color={rest.color as any}
     disabled={disabled}
     loading={loading}
     onClick={handleClick}
-    shape={shape}
     size={size}
-    style={style}
-    type={type}
-    variant={variant}>
+    {...options}
+    style={style}>
     {children}
   </Button>;
 }

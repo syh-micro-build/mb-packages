@@ -1,5 +1,4 @@
 export {
-  EButtonType,
   EButtonVariant
 } from "./enum";
 export {

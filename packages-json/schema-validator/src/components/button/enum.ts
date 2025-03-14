@@ -33,21 +33,15 @@ export enum EButtonVariant {
   /**
    * 是否为圆形按钮
    */
-  CIRCLE = "circle"
-}
-
-export enum EButtonType {
-  PRIMARY = "primary",
+  CIRCLE = "circle",
 
   /**
-   * 默认
+   * 文字
    */
-  DEFAULT = "default",
-
-  /**
-   * 虚线按钮
-   */
-  DASHED = "dashed",
   TEXT = "text",
+
+  /**
+   * 链接
+   */
   LINK = "link",
 }

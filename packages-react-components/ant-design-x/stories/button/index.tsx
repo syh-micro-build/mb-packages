@@ -1,5 +1,5 @@
 import {
-  ButtonType,
+  EType,
   ButtonVariant
 } from "@mb-kit/schema-validator";
 import {
@@ -18,23 +18,46 @@ export default function Index(): React.ReactElement {
   }, []);
 
   return <>
+    <p>颜色</p>
+
     <Button children="Default Button"
       onClick={handleClick} />
 
-    <Button type={ButtonType.PRIMARY}>Primary Button</Button>
-    <Button type={ButtonType.DASHED}>Dashed Button</Button>
-    <Button type={ButtonType.TEXT}>Text Button</Button>
-    <Button type={ButtonType.LINK}>Link Button</Button>
-    <br />
-    <br />
-
-    <Button color="red"
-      variant={ButtonVariant.SOLID}>
-      Outline Button
+    <Button type={EType.PRIMARY}>
+      Primary
     </Button>
 
-    <Button variant="circle">
-      A
+    <Button type={EType.SUCCESS}>
+      Primary
+    </Button>
+
+    <Button type={EType.INFO}>
+      Primary
+    </Button>
+
+    <Button type={EType.WARNING}>
+      Primary
+    </Button>
+
+    <Button type={EType.DANGER}>
+      Primary
+    </Button>
+
+    <p>形状</p>
+
+    <Button type={EType.WARNING}
+      variant={ButtonVariant.OUTLINE}>
+      Circle Button
+    </Button>
+
+    <Button type={EType.DEFAULT}
+      variant={ButtonVariant.CIRCLE}>
+      C
+    </Button>
+
+    <Button type={EType.DEFAULT}
+      variant={ButtonVariant.LINK}>
+      Link
     </Button>
   </>;
 }

@@ -1,6 +1,5 @@
 import {
-  EUiEleType,
-  EColor
+  EUiEleType
 } from "../../enum";
 
 export const definitionsLink = {
@@ -25,9 +24,10 @@ export const definitionsLink = {
       },
       color: {
         anyOf: [
-          {
-            enum: Object.values(EColor)
-          },
+
+          // {
+          //   enum: Object.values(EColor)
+          // },
           {
             type: "string"
           }

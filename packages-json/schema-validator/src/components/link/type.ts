@@ -1,5 +1,4 @@
 import {
-  EColor,
   EUiEleType
 } from "../../enum";
 import {
@@ -9,7 +8,6 @@ import {
 
 export interface ILinkProps extends ApiAttributes {
   label: string;
-  color?: EColor | `${EColor}`;
   underline?: boolean;
   disabled?: boolean;
   href?: string;
