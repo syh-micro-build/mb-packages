@@ -1,12 +1,15 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
-  ButtonProps
+  ButtonProps,
+  ButtonVariant
 }from "@mb-kit/schema-validator";
 import {
   Button
 } from "antd";
 import {
   useCallback,
-  MouseEvent as _MouseEvent
+  MouseEvent as _MouseEvent,
+  useMemo
 } from "react";
 
 type TButtonClickEvent = _MouseEvent<HTMLButtonElement, MouseEvent>;
@@ -19,7 +22,8 @@ export default function ButtonX({
   class: _class,
   size,
   onClick,
-  type
+  type,
+  ...rest
 }: ButtonProps): React.ReactElement {
   const handleClick = useCallback((e: TButtonClickEvent): void => {
     if (onClick) {
@@ -27,14 +31,33 @@ export default function ButtonX({
     }
   }, [onClick]);
 
+  const variant = useMemo((): any => {
+    if (rest.variant === ButtonVariant.OUTLINE || rest.variant === ButtonVariant.DASHED || rest.variant === ButtonVariant.SOLID || rest.variant === ButtonVariant.FILLED) {
+      return rest.variant;
+    }
+
+    return ButtonVariant.DEFAULT;
+  }, [rest]);
+
+  const shape = useMemo((): any => {
+    if (rest.variant === ButtonVariant.ROUND || rest.variant === ButtonVariant.CIRCLE) {
+      return rest.variant;
+    }
+
+    return ButtonVariant.DEFAULT;
+  }, [rest]);
+
   return <Button
     className={_class}
+    color={rest.color as any}
     disabled={disabled}
     loading={loading}
     onClick={handleClick}
+    shape={shape}
     size={size}
     style={style}
-    type={type}>
+    type={type}
+    variant={variant}>
     {children}
   </Button>;
 }

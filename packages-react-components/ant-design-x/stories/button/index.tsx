@@ -1,5 +1,6 @@
 import {
-  ButtonType
+  ButtonType,
+  ButtonVariant
 } from "@mb-kit/schema-validator";
 import {
   useCallback
@@ -24,5 +25,16 @@ export default function Index(): React.ReactElement {
     <Button type={ButtonType.DASHED}>Dashed Button</Button>
     <Button type={ButtonType.TEXT}>Text Button</Button>
     <Button type={ButtonType.LINK}>Link Button</Button>
+    <br />
+    <br />
+
+    <Button color="red"
+      variant={ButtonVariant.SOLID}>
+      Outline Button
+    </Button>
+
+    <Button variant="circle">
+      A
+    </Button>
   </>;
 }
