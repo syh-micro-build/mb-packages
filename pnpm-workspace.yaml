@@ -30,6 +30,7 @@ catalog:
   "@stylistic/eslint-plugin-ts": ^2.13.0
   "@stylistic/stylelint-plugin": ^3.1.1
   "@tsconfig/node22": ^22.0.0
+  "@types/css-modules": ^1.0.5
   "@types/eslint": ^9.6.1
   "@types/glob": ^8.1.0
   "@types/node": ^22.13.4
@@ -49,6 +50,7 @@ catalog:
   codemirror: ^6.0.1
   commitlint-plugin-function-rules: ^4.0.1
   cspell: ^8.17.2
+  csstype: ^3.1.3
   cz-git: ^1.11.0
   czg: ^1.11.0
   depcheck: ^1.4.7
@@ -104,6 +106,7 @@ catalog:
   vite-plugin-dts: ^4.5.3
   vite-plugin-vue-devtools: ^7.6.8
   vitepress: ^1.6.3
+  vitepress-demo-plugin: ^1.3.1
   vitest: ^3.0.8
   vue: ^3.5.13
   vue-eslint-parser: ^9.4.3

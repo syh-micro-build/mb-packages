@@ -49,7 +49,7 @@
     "@types/react": "catalog:",
     "@vitejs/plugin-react": "catalog:",
     "react": "catalog:",
-    "react-dom": "^19.0.0",
+    "react-dom": "catalog:",
     "storybook": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
