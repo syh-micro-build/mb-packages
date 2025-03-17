@@ -101,11 +101,11 @@ export default function Index(): React.ReactElement {
     </Button>
 
     <Button size={ESize.LARGE}>
-      Small
+      Large
     </Button>
 
     <Button size={ESize.SMALL}>
-      Large
+      Small
     </Button>
 
     <br />

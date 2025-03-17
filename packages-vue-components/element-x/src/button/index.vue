@@ -52,6 +52,25 @@ const variantComputed = computed(() => {
     };
   }
 
+  if(variant === ButtonVariant.DEFAULT || variant === ButtonVariant.SOLID) {
+    return {
+      color: "#000000"
+    };
+  }
+
+  if(variant === ButtonVariant.FILLED){
+    return {
+      text: true,
+      bg: true
+    };
+  }
+
+  if(variant === ButtonVariant.DASHED) {
+    return {
+      class: `${className} dashed`
+    };
+  }
+
   return {};
 });
 
@@ -74,5 +93,7 @@ const variantComputed = computed(() => {
   </ElButton>
 </template>
 <style scoped>
-
+.dashed {
+  border: 1px dashed var(--el-button-border-color);
+}
 </style>
