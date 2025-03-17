@@ -16,6 +16,7 @@ export enum EButtonVariant {
   DASHED = "dashed",
 
   /**
+   * @deprecated
    * 实线按钮
    */
   SOLID = "solid",

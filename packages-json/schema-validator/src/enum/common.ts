@@ -33,6 +33,6 @@ export enum EType {
 
 export enum ESize {
   SMALL = "small",
-  MEDIUM = "middle",
+  DEFAULT = "default",
   LARGE = "large"
 }

@@ -1,7 +1,8 @@
 import {
   ButtonVariant,
   ButtonProps,
-  EType
+  EType,
+  ESize
 }from "@mb-kit/schema-validator";
 import {
   Button,
@@ -71,10 +72,35 @@ export default function ButtonX({
       };
     }
 
+    if(variant === ButtonVariant.OUTLINE) {
+      return {
+        variant: "outlined"
+      };
+    }
+
+    if(variant === ButtonVariant.DEFAULT) {
+      return {
+        variant: "solid"
+      };
+    }
+
     return {
-      variant: variant === ButtonVariant.OUTLINE ? "outlined" : "link"
+      variant: variant as "outlined" | "dashed" | "solid" | "filled" | "text" | "link"
     };
   }
+
+  const buttonSize = useMemo(() => {
+    switch (size) {
+      case ESize.SMALL:
+        return "small";
+      case ESize.DEFAULT:
+        return "middle";
+      case ESize.LARGE:
+        return "large";
+      default:
+        return "middle";
+    }
+  }, [size]);
 
   const options = useMemo<_ButtonProps>(() => ({
     ...transformtType(rest.type as EType),
@@ -86,7 +112,7 @@ export default function ButtonX({
     disabled={disabled}
     loading={loading}
     onClick={handleClick}
-    size={size}
+    size={buttonSize}
     {...options}
     style={style}>
     {children}

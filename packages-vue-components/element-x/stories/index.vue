@@ -1,8 +1,8 @@
 <script lang="tsx" setup>
 
 import {
-  Button,
-  Link
+  Link,
+  Button
 } from "../src";
 
 </script>
@@ -10,10 +10,25 @@ import {
 <template>
   @mb-kit/vue-element-x
   <hr />
-  <Button
-    label="按钮"
-    shape="plain"
-  />
+  <Button>
+    Primary
+  </Button>
+
+  <Button type="primary">
+    Primary
+  </Button>
+  <Button type="success">
+    Success
+  </Button>
+  <Button type="info">
+    Info
+  </Button>
+  <Button type="warning">
+    Warning
+  </Button>
+  <Button type="danger">
+    Danger
+  </Button>
   <hr />
   <Link
     label="链接"
