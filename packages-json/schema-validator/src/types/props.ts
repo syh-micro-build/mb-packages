@@ -1,9 +1,8 @@
 import {
-  Button,
-  Link
+  Button
 } from "../components";
 
-type TPropsComponents = Button | Link;
+type TPropsComponents = Button;
 
 interface IProps {
   items: TPropsComponents[];

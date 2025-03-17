@@ -1,7 +1,6 @@
 <script lang="tsx" setup>
 import check, {
-  PropsCheckJsonSchema,
-  EUiEleType
+  PropsCheckJsonSchema
 } from "../src";
 
 const data1: PropsCheckJsonSchema = {
@@ -9,15 +8,8 @@ const data1: PropsCheckJsonSchema = {
     {
       "type": "Button",
       "options": {
-        "label": "Button 1",
+        "children": "Button 1",
         "api-": 222
-      }
-    },
-    {
-      type: EUiEleType.LINK,
-      options: {
-        label: "测试",
-        disabled: false
       }
     }
   ],
@@ -28,7 +20,7 @@ const data1: PropsCheckJsonSchema = {
 const data2: PropsCheckJsonSchema = {
   type: "Button",
   options: {
-    "label": "Button 1",
+    "children": "Button 1",
     "onClick": () => {
       // eslint-disable-next-line no-console
       console.log("click");
@@ -36,20 +28,9 @@ const data2: PropsCheckJsonSchema = {
   }
 };
 
-const data3: PropsCheckJsonSchema = {
-  type: EUiEleType.LINK,
-  options: {
-    label: "测试",
-    color: "primary",
-    disabled: false
-  }
-};
-
 const isCheck1 = check(data1);
 
 const isCheck2 = check(data2);
-
-const isCheck3 = check(data3);
 
 </script>
 <template>

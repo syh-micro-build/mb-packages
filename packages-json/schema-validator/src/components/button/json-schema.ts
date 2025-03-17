@@ -10,9 +10,11 @@ import {
 export const definitionsButton = {
   buttonOptions: {
     type: "object",
-    required: ["label"],
+    required: ["children"],
     properties: {
-      children: {},
+      children: {
+        type: "string"
+      },
       disabled: {
         type: "boolean"
       },

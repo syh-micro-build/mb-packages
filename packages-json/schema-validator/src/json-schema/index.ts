@@ -1,7 +1,8 @@
 import {
-  definitionsLink,
-  noItemsCaseSchemaLink,
-  itemsCaseSchemaLink,
+
+  // definitionsLink,
+  // noItemsCaseSchemaLink,
+  // itemsCaseSchemaLink,
   definitionsButton,
   noItemsCaseSchemaButton,
   itemsCaseSchemaButton
@@ -13,8 +14,7 @@ import {
 const JSON_SCHEMA = {
   type: "object",
   definitions: {
-    ...definitionsButton,
-    ...definitionsLink
+    ...definitionsButton
   },
   oneOf: [
 
@@ -43,16 +43,14 @@ const JSON_SCHEMA = {
               then: $refButton
             },
             */
-            noItemsCaseSchemaButton,
-            noItemsCaseSchemaLink
+            noItemsCaseSchemaButton
           ]
         }
       },
       required: ["type", "options"],
       additionalProperties: false,
       allOf: [
-        noItemsCaseSchemaButton,
-        noItemsCaseSchemaLink
+        noItemsCaseSchemaButton
       ]
     },
 
@@ -65,8 +63,7 @@ const JSON_SCHEMA = {
           type: "array",
           items: {
             oneOf: [
-              itemsCaseSchemaButton,
-              itemsCaseSchemaLink
+              itemsCaseSchemaButton
             ]
           }
         },
