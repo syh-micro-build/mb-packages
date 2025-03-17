@@ -10,6 +10,8 @@ import {
   Button
 } from "../../src";
 
+import "./index.css";
+
 export default function Index(): React.ReactElement {
 
   const handleClick = useCallback(() => {

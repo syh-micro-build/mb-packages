@@ -54,11 +54,17 @@ export default function ButtonX({
           variant: "solid"
         };
       default:
-        return {};
+        return {
+          color: "default"
+        };
     }
   }
 
   function transformtVariant(variant: ButtonVariant | undefined): _ButtonProps {
+    if(!variant) {
+      return {};
+    }
+
     if(variant === ButtonVariant.ROUND || variant === ButtonVariant.CIRCLE) {
       return {
         shape: variant === ButtonVariant.ROUND ? "round" : "circle"
