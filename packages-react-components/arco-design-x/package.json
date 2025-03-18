@@ -25,20 +25,20 @@
   },
   "main": "index.js",
   "dependencies": {
-    "@arco-design/web-react": "^2.65.0"
+    "@arco-design/web-react": "catalog:"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^3",
-    "@storybook/addon-essentials": "^8.6.7",
-    "@storybook/addon-interactions": "^8.6.7",
-    "@storybook/addon-onboarding": "^8.6.7",
-    "@storybook/blocks": "^8.6.7",
-    "@storybook/react": "^8.6.7",
-    "@storybook/react-vite": "^8.6.7",
-    "@storybook/test": "^8.6.7",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "storybook": "^8.6.7",
-    "typescript": "^5.8.2"
+    "@chromatic-com/storybook": "catalog:",
+    "@storybook/addon-essentials": "catalog:",
+    "@storybook/addon-interactions": "catalog:",
+    "@storybook/addon-onboarding": "catalog:",
+    "@storybook/blocks": "catalog:",
+    "@storybook/react": "catalog:",
+    "@storybook/react-vite": "catalog:",
+    "@storybook/test": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "storybook": "catalog:",
+    "typescript": "catalog:"
   }
 }
