@@ -1,0 +1,35 @@
+{
+  "name": "@mb-kit/react-arco-design-x",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/syh-micro-build/mb-packages",
+  "bugs": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syh-micro-build/mb-packages"
+  },
+  "license": "ISC",
+  "author": {
+    "email": "2236472089@qq.com",
+    "name": "Li Yong"
+  },
+  "type": "module",
+  "scripts": {
+    "clear": "rm -fr node_modules",
+    "clear:build": "rm -fr dist",
+    "dev": "vite build --watch",
+    "build": "pnpm run clear:build && vite build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@arco-design/web-react": "^2.65.0"
+  },
+  "devDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.8.2"
+  }
+}
