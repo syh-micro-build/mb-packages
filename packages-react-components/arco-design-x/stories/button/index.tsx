@@ -3,9 +3,6 @@ import {
   ButtonVariant,
   ESize
 } from "@mb-kit/schema-validator";
-import {
-  useCallback
-} from "react";
 
 import {
   Button
@@ -14,17 +11,9 @@ import {
 import "./index.css";
 
 export default function Index(): React.ReactElement {
-
-  const handleClick = useCallback(() => {
-    // eslint-disable-next-line no-console
-    console.log("Button clicked");
-  }, []);
-
   return <>
     <p>颜色</p>
-
-    <Button children="Default Button"
-      onClick={handleClick} />
+    <Button children="Default Button" />
 
     <Button type={EType.PRIMARY}>
       Primary

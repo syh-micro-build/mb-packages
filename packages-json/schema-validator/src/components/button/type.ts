@@ -25,7 +25,7 @@ export interface IButtonProps extends ApiAttributes {
   variant?: EButtonVariant | `${EButtonVariant}`;
   color?: string;
   size?: ESize | `${ESize}`;
-  onClick?: (event: MouseEvent) => void;
+  onClick?: (event: Event) => void;
 }
 
 export interface IButton {
