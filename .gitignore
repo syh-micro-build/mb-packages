@@ -49,3 +49,4 @@ pnpm-lock.yaml
 *storybook.log
 **/_generate-md
 **/storybook-static
+**/__test__/**

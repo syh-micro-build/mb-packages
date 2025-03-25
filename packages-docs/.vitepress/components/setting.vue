@@ -15,6 +15,7 @@ import {
 
 const showDrawer = ref(false);
 
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const idState = inject<ConfigProviderProps>(CONFIG_PROVIDER)!;
 
 const selectedOption = ref(idState.type);

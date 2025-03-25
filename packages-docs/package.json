@@ -19,9 +19,6 @@
     "preview": "vitepress preview"
   },
   "main": "index.js",
-  "dependencies": {
-    "@mb-kit/vue-container-render": "workspace:^"
-  },
   "devDependencies": {
     "@mb-kit/vc-codemirror": "workspace:^",
     "@mb-kit/vc-icon": "workspace:^",

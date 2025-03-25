@@ -7,6 +7,7 @@ import {
 interface IItem {
   label: string;
   value: string | number;
+  other?: string | number | Record<string, Object | string | unknown>;
 }
 const props = defineProps({
   tabs: {
@@ -19,17 +20,16 @@ const props = defineProps({
   }
 });
 
-type TabValue = typeof props.tabs[number]["value"];
-
-// eslint-disable-next-line vue/define-macros-order
 const emits = defineEmits<{
-  (e: "change", value: TabValue): void;
+  (e: "change", value): void;
 }>();
 
-const select = ref<TabValue>(props.defaultValue || props.tabs[0].value);
+type TTabValue = typeof props.tabs[number]["value"];
 
-const handleClick = (value: TabValue) => {
-  select.value = value;
+const select = ref<TTabValue>(props.defaultValue || props.tabs[0].value);
+
+const handleClick = (value, se) => {
+  select.value = se;
   emits("change", value);
 };
 
@@ -41,7 +41,7 @@ const handleClick = (value: TabValue) => {
       :key="item.value"
       class="item"
       :class="[item.value === select ? 'item-select' : '']"
-      @click="handleClick(item.value)"
+      @click="handleClick(item, item.value)"
     >
       {{ item.label }}
     </div>

@@ -1,12 +1,11 @@
 <script setup lang="ts">
+import RenderReact from "./render-react.vue";
+import RenderVue from "./render-vue.vue";
 import Tabs from "./tabs.vue";
-import ContainerRender, {
-  PropsContainerRender
-} from "@mb-kit/vue-container-render";
 import {
-  ref,
   computed,
-  ComputedRef
+  reactive,
+  ref
 } from "vue";
 
 import {
@@ -15,27 +14,27 @@ import {
 } from "@mb-kit/vc-icon";
 
 import {
-  TABS
-} from "../const";
-import {
-  EValueType
-} from "../enum";
+  EComponentType
+} from "../types";
 
-const props = defineProps<{
-  sourceData: string;
-  source: string;
+interface IProps {
   description?: string;
-  code: string;
-  path: string;
-}>();
+  items: string;
+}
 
-const decodedSource = computed(() => decodeURIComponent(props.source));
+const props = defineProps<IProps>();
+
+const items = computed(() => {
+  const arr = JSON.parse(decodeURIComponent(props.items));
+
+  return arr.map((item, index) => ({
+    label: item.name,
+    value: index,
+    other: item
+  }));
+});
 
 const decodedDescription = computed(() => (props.description ? decodeURIComponent(props.description) : ""));
-
-const decodedCode = computed(() => (decodeURIComponent(props.code)));
-
-const decodedSourceData:ComputedRef<PropsContainerRender> = computed(() => JSON.parse(decodeURIComponent(props.sourceData)));
 
 const isExpanded = ref(false); // 控制展开状态
 
@@ -43,16 +42,20 @@ const handleClick = () => {
   isExpanded.value = !isExpanded.value;
 };
 
-const select = ref(EValueType.JSON);
+const obj = reactive({
+  type: items.value[0].other.type,
+  path: items.value[0].other.path,
+  code: items.value[0].other.source
+});
 
 const handleChange = value => {
-  select.value = value;
+  obj.type = value.other.type;
+  obj.path = value.other.path;
+  obj.code = value.other.source;
 };
-
 </script>
-
 <template>
-  <div class="demo">
+  <div class="demo-html">
     <div
       v-if="decodedDescription"
       class="description"
@@ -60,30 +63,32 @@ const handleChange = value => {
     ></div>
     <div class="container">
       <div class="code-show">
-        <ContainerRender :value="decodedSourceData" />
+        <RenderReact
+          v-if="obj.type === EComponentType.REACT"
+          :path="obj.path"
+        />
+        <RenderVue
+          v-if="obj.type === EComponentType.VUE"
+          :path="obj.path"
+        />
       </div>
       <div class="show-icon">
+        <div></div>
+        <Tabs
+          :tabs="items"
+          @change="handleChange"
+        />
         <Code
           cursor-shape="pointer"
           @click="handleClick"
         />
       </div>
       <transition name="expand">
-        <div v-if="decodedSource && isExpanded">
-          <Tabs
-            :tabs="TABS"
-            @change="handleChange"
-          />
-          <div
-            v-if="EValueType.JSON === select"
-            class="code"
-            v-html="decodedSource"
-          ></div>
-          <div
-            v-else
-            class="code"
-            v-html="decodedCode"
-          ></div>
+        <div
+          v-if="isExpanded"
+          class="code"
+          v-html="obj.code"
+        >
         </div>
       </transition>
       <div
@@ -100,15 +105,18 @@ const handleChange = value => {
     </div>
   </div>
 </template>
-
 <style scoped>
-.demo {
+.demo-html {
   font-size: 16px;
 }
 
 .container {
   border: 1px solid #DCDFE7;
   border-radius: 4px;
+}
+
+.description {
+  margin-bottom: 16px;
 }
 
 .code-show {
@@ -118,7 +126,8 @@ const handleChange = value => {
 
 .show-icon {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
   padding: .5rem;
 }
 

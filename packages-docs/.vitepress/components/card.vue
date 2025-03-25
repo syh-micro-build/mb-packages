@@ -15,7 +15,7 @@ const props = defineProps<{
   link?: string;
 }>();
 
-const _width = computed(() => `${ props?.width || 200 }px`);
+const width = computed(() => `${ props?.width || 200 }px`);
 
 const router = useRouter();
 
@@ -55,7 +55,7 @@ const handleClick = () => {
 <style scoped>
 /* card 样式 */
 .card {
-  width: v-bind(_width);
+  width: v-bind(width);
   cursor: pointer;
   border: 1px solid var(--vp-c-divider);
   border-radius: 5px;

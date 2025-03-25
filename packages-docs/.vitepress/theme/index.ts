@@ -17,9 +17,8 @@ import DefaultTheme from "vitepress/theme";
 
 import {
   Demo,
-  Setting,
-  DemoJsonAndHtml,
-  Card
+  Card,
+  DemoHtml
 } from "../components";
 
 import "./style.css";
@@ -36,8 +35,9 @@ const state = ref<ConfigProviderProps>({
 export default {
   extends: DefaultTheme,
   Layout: () => h("div", [
-    h(DefaultTheme.Layout, null),
-    h(Setting)
+    h(DefaultTheme.Layout, null)
+
+    // h(Setting)
   ]),
   enhanceApp({
     app
@@ -47,7 +47,6 @@ export default {
 
     // 注册 Demo 容器组件
     app.component("Demo", Demo);
-    app.component("DemoJsonAndHtml", DemoJsonAndHtml);
 
     // 注册所有示例组件
     Object.entries(modules).forEach(([path, module]) => {
@@ -58,5 +57,6 @@ export default {
       app.component(`ep-${name}`, module.default as DefineComponent);
     });
     app.component("Card", Card);
+    app.component("DemoHtml", DemoHtml);
   }
 } satisfies Theme;
