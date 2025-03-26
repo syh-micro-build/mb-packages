@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import {
-  getConfigProviderProps
+  useConfigProviderProps
 } from "../../../src";
 
-const obj = getConfigProviderProps();
+const obj = useConfigProviderProps();
 </script>
 <template>
   <div>测试 - 01</div>

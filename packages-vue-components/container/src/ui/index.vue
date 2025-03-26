@@ -1,9 +1,8 @@
 <script setup lang="tsx">
 
-import {
-  EUiType,
-  getConfigProviderProps
-} from "@mb-kit/vue-config-provider";
+// import {
+//   useConfigProviderProps
+// } from "@mb-kit/vue-config-provider";
 import {
   computed,
   defineProps
@@ -19,24 +18,23 @@ import {
 import {
   IProps
 } from "../types";
-import {
-  loadFrameType
-} from "../utils";
 
 const {
   value
 } = defineProps<IProps>();
 
-const configProps = getConfigProviderProps();
+// const configProps = useConfigProviderProps();
 
-const componentMap = computed(() => {
+// const componentMap = computed(() => {
 
-  if(!import.meta.env.VITE_UI_TYPY) {
-    return configProps.type === EUiType.ARCO_DESIGN ? ElementComponentMap : ElementComponentMap;
-  }
+//   if(!import.meta.env.VITE_UI_TYPY) {
+//     return configProps.type === EUiType.ELEMENT ? ElementComponentMap : ElementComponentMap;
+//   }
 
-  return loadFrameType;
-});
+//   return ElementComponentMap;
+// });
+
+const componentMap = computed(() => ElementComponentMap);
 
 const El = (value: PropsComponents) => {
   const {

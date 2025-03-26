@@ -20,9 +20,11 @@
   },
   "main": "index.js",
   "devDependencies": {
+    "@mb-kit/react-container": "workspace:^",
     "@mb-kit/vc-codemirror": "workspace:^",
     "@mb-kit/vc-icon": "workspace:^",
     "@mb-kit/vue-config-provider": "workspace:^",
+    "@mb-kit/vue-container": "workspace:^",
     "glob": "catalog:",
     "markdown-it-container": "catalog:",
     "react": "catalog:",

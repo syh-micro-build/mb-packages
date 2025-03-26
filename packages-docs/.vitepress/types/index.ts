@@ -2,6 +2,7 @@ export enum EComponentType {
   VUE = "vue",
   REACT = "react",
   HTML = "html",
+  JSON = "json"
 }
 
 export interface IMixFilesItem {

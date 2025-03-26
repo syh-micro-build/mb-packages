@@ -1,5 +1,11 @@
+<script setup lang="ts">
+import Container from "@mb-kit/vue-container";
+
+import Json from "./index.json";
+
+</script>
 <template>
   <div>
-    vue 渲染测试
+    <Container :value="Json" />
   </div>
 </template>

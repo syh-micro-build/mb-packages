@@ -40,11 +40,12 @@ export default async () => {
           {
             text: "按钮",
             link: "/src/components/button"
-          },
-          {
-            text: "链接",
-            link: "/src/components/link"
           }
+
+          // {
+          //   text: "链接",
+          //   link: "/src/components/link"
+          // }
         ]
       }
     ],

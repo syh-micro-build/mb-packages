@@ -7,10 +7,6 @@ import Card from "./card.vue";
       title="按钮"
       link="/components/button/"
     />
-    <Card
-      title="链接"
-      link="/components/link/"
-    />
   </div>
 </template>
 <style scoped>

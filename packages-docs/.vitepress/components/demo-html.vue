@@ -49,9 +49,14 @@ const obj = reactive({
 });
 
 const handleChange = value => {
+  obj.code = value.other.source;
+
+  if (value.other.type === EComponentType.JSON) {
+    return;
+  }
+
   obj.type = value.other.type;
   obj.path = value.other.path;
-  obj.code = value.other.source;
 };
 </script>
 <template>
@@ -75,6 +80,7 @@ const handleChange = value => {
       <div class="show-icon">
         <div></div>
         <Tabs
+          v-if="items.length > 1"
           :tabs="items"
           @change="handleChange"
         />

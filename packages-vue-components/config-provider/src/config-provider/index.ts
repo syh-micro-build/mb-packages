@@ -11,6 +11,9 @@ import {
   CONFIG_PROVIDER
 } from "../const";
 import {
+  EUiType
+} from "../enum";
+import {
   IProps
 } from "../types";
 
@@ -25,8 +28,10 @@ const ConfigProvider = defineComponent({
       type: Object as PropType<App>,
       default: undefined
     },
+
     type: {
-      type: String as PropType<IProps["type"]>
+      type: String as PropType<IProps["type"]>,
+      default: EUiType.ELEMENT
     }
   },
 
