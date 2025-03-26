@@ -3,8 +3,7 @@ import {
 } from "@mb-kit/react-ant-design-x";
 
 const COMPONENT_MAP = {
-  Button,
-  Link: Button
+  Button
 };
 
 export default COMPONENT_MAP;

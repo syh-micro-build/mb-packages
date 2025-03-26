@@ -1,13 +1,8 @@
 import {
-  useProps,
-  EUiType
-} from "@mb-kit/react-config-provider";
-import {
   PropsComponents
 } from "@mb-kit/schema-validator";
 import {
-  ReactElement,
-  useMemo
+  ReactElement
 } from "react";
 
 import {
@@ -22,24 +17,16 @@ export default function El({
   value
 }: IProps): ReactElement {
 
-  const {
-    type
-  } = useProps();
-
-  const componentMap = useMemo(() => {
-    if (type === EUiType.ANT_DESIGN) {
-      return AntDesignComponentMap;
-    }
-
-    return AntDesignComponentMap;
-  }, [type]);
+  // const {
+  //   type
+  // } = useProps();
 
   const {
     type: valueType,
     options
   } = value;
 
-  const Component = componentMap[valueType];
+  const Component = AntDesignComponentMap[valueType];
 
   return <Component {...options} />;
 }

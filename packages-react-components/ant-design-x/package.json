@@ -34,8 +34,7 @@
   },
   "dependencies": {
     "@ant-design/v5-patch-for-react-19": "catalog:",
-    "antd": "catalog:",
-    "react-dom": "catalog:"
+    "antd": "catalog:"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "catalog:",
@@ -51,6 +50,7 @@
     "@types/react": "catalog:",
     "@vitejs/plugin-react": "catalog:",
     "react": "catalog:",
+    "react-dom": "catalog:",
     "storybook": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
