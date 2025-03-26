@@ -38,7 +38,6 @@
   },
   "dependencies": {
     "@mb-kit/schema-validator": "workspace:^",
-    "@mb-kit/vue-arco-design-x": "workspace:^",
     "@mb-kit/vue-config-provider": "workspace:^",
     "@mb-kit/vue-element-x": "workspace:^",
     "@mb-kit/vue-plugins": "workspace:^",

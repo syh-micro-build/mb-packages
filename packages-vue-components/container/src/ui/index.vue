@@ -5,17 +5,17 @@ import {
   getConfigProviderProps
 } from "@mb-kit/vue-config-provider";
 import {
-  PropsCheckJsonSchema,
-  PropsComponents
-} from "@mb-kit/schema-validator";
-import {
   computed,
   defineProps
 } from "vue";
 
 import {
-  ElementComponentMap,
-  ArcoComponentMap
+  PropsCheckJsonSchema,
+  PropsComponents
+} from "@mb-kit/schema-validator";
+
+import {
+  ElementComponentMap
 } from "../const";
 import {
   loadFrameType
@@ -28,7 +28,7 @@ const configProps = getConfigProviderProps();
 const componentMap = computed(() => {
 
   if(!import.meta.env.VITE_UI_TYPY) {
-    return configProps.type === EUiType.ARCO_DESIGN ? ArcoComponentMap : ElementComponentMap;
+    return configProps.type === EUiType.ARCO_DESIGN ? ElementComponentMap : ElementComponentMap;
   }
 
   return loadFrameType;
@@ -48,6 +48,7 @@ const El = (value: PropsComponents) => {
     return <div>组件 {type} 未找到</div>;
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return <Component {...options as any} />;
 };
 

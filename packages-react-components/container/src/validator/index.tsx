@@ -22,11 +22,6 @@ export default function Validator({
   }
 
   return <ConfigProviderX
-    theme={{
-      token: {
-        borderRadius: 0
-      }
-    }}
     wave={{
       disabled: true
     }}>
