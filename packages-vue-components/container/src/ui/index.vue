@@ -9,8 +9,7 @@ import {
   defineProps
 } from "vue";
 
-import {
-  PropsCheckJsonSchema,
+import checkJsonSchema, {
   PropsComponents
 } from "@mb-kit/schema-validator";
 
@@ -18,10 +17,15 @@ import {
   ElementComponentMap
 } from "../const";
 import {
+  IProps
+} from "../types";
+import {
   loadFrameType
 } from "../utils";
 
-const props = defineProps<PropsCheckJsonSchema>();
+const {
+  value
+} = defineProps<IProps>();
 
 const configProps = getConfigProviderProps();
 
@@ -52,17 +56,23 @@ const El = (value: PropsComponents) => {
   return <Component {...options as any} />;
 };
 
+const obj:IProps["value"] | undefined = checkJsonSchema(value);
+
 const DOM = computed(() => {
-  if ("items" in props && props.items) {
-    return <div class={props.class} style={{
-      padding: props.padding,
-      margin: props.margin
+  if(!obj) {
+    return <div>JSON 数据错误</div>;
+  }
+
+  if ("items" in value && value.items) {
+    return <div class={value.class} style={{
+      padding: value.padding,
+      margin: value.margin
     }}>
-      { props.items.map((item, index) => <El key={index} {...item} />) }
+      { value.items.map((item, index) => <El key={index} {...item} />) }
     </div>;
   }
 
-  return <El {...props as PropsComponents} />;
+  return <El {...value as PropsComponents} />;
 });
 
 </script>

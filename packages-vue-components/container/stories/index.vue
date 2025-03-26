@@ -2,6 +2,7 @@
 import ConfigProvider, {
   EUiType
 } from "@mb-kit/vue-config-provider";
+
 import {
   PropsCheckJsonSchema,
   EUiEleType
@@ -15,7 +16,7 @@ console.log(import.meta.env.VITE_UI_TYPY);
 const data1: PropsCheckJsonSchema = {
   type: EUiEleType.BUTTON,
   options: {
-    label: "Main Str"
+    children: "Main Str"
   }
 };
 
@@ -24,35 +25,31 @@ const data2: PropsCheckJsonSchema = {
     {
       "type": "Button",
       "options": {
-        "label": "plain",
-        "shape": "plain"
+        "children": "plain"
       }
     },
     {
       "type": "Button",
       "options": {
-        "label": "outline",
-        "shape": "outline"
+        "children": "outline"
       }
     },
     {
       "type": "Button",
       "options": {
-        "label": "round",
-        "shape": "round"
+        "children": "round"
       }
     },
     {
       "type": "Button",
       "options": {
-        "label": "circle",
-        "shape": "circle"
+        "children": "circle"
       }
     },
     {
       "type": "Button",
       "options": {
-        "label": "dashed",
+        "children": "dashed",
         "color": "dashed"
       }
     }
@@ -67,9 +64,9 @@ const DOM = () => arr.map(item => <span key={item}>{item}</span>);
 
 <template>
   <ConfigProvider :type="EUiType.ELEMENT">
-    <Container v-bind="data1" />
+    <Container :value="data1" />
     <hr />
-    <Container v-bind="data2" />
+    <Container :value="data2" />
   </ConfigProvider>
   <hr />
 

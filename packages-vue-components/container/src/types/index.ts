@@ -1,1 +1,1 @@
-export type { TProps } from "./props";
+export { IProps } from "./props";

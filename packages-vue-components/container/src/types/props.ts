@@ -2,4 +2,10 @@ import {
   PropsCheckJsonSchema
 } from "@mb-kit/schema-validator";
 
-export type TProps = PropsCheckJsonSchema;
+interface IProps {
+  value: PropsCheckJsonSchema;
+};
+
+export {
+  IProps
+};
