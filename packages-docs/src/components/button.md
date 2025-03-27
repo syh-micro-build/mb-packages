@@ -4,11 +4,10 @@
 
 <demo
   :mixFiles="{
-    description: 'Hello world',
     items: [
       {name: 'React', type: 'react', file: '/button/react.tsx'},
       {name: 'Vue', type: 'vue', file: '/button/vue.vue'},
-      {name: 'JSON', type: 'json', file: '/button/index.json'},
+      {name: 'JSON', type: 'json', file: '/button/index.json'}
     ]
   }" />
 
