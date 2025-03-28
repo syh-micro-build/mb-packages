@@ -1,7 +1,7 @@
 {
-  "name": "@mb-kit/vue-arco-design-x",
+  "name": "@mb-kit/vue-tdesign-x",
   "version": "1.0.0",
-  "description": "Micro build vue arco-design-x.",
+  "description": "Micro build vue tdesign-x.",
   "keywords": [],
   "homepage": "https://github.com/syh-micro-build/mb-packages",
   "bugs": {},
@@ -37,8 +37,8 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
-    "@arco-design/web-vue": "catalog:",
     "@vitejs/plugin-vue-jsx": "catalog:",
+    "tdesign-vue-next": "^1.11.5",
     "vue": "catalog:"
   },
   "devDependencies": {
